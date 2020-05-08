@@ -6,12 +6,11 @@ RUN mkdir -p /var/app && chown -R node /var/app
 # Set working directory
 WORKDIR /var/app
 # Copy project file
-COPY package.json .
-COPY package-lock.json .
-COPY index.mjs .
+COPY . .
 
 ENV NODE_ENV=production
-RUN apk add --update bash
+RUN apk add --update bash curl && rm -rf /var/cache/apk/*
 RUN npm ci --only=prod --silent
-EXPOSE 3003
-CMD node --experimental-modules index.mjs
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=5s CMD curl --fail http://0.0.0.0:3000 || exit 1
+CMD node --experimental-loader ./resolver.mjs --experimental-modules server.mjs

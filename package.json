@@ -1,22 +1,32 @@
 {
-  "name": "emailparser",
+  "name": "@frontender-magazine/mailparser",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Mail parser to get article links from the emails",
+  "main": "server.mjs",
   "type": "module",
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SilentImp/emailParser.git"
   },
-  "keywords": [],
+  "keywords": [
+    "FM Micro Service",
+    "Frontender Magazine",
+    "Service"
+  ],
   "author": "Anton Nemtsev <thesilentimp@gmail.com>",
-  "license": "ISC",
+  "license": "CC-BY-4.0",
   "bugs": {
     "url": "https://github.com/SilentImp/emailParser/issues"
   },
   "homepage": "https://github.com/SilentImp/emailParser#readme",
   "dependencies": {
-    "fastify": "^2.14.1"
+    "dotenv": "^8.2.0",
+    "fastify": "^2.14.1",
+    "fastify-graceful-shutdown": "^2.0.1",
+    "fastify-healthcheck": "^2.1.0",
+    "fastify-multipart": "^1.0.6",
+    "fluent-schema": "^1.0.1",
+    "isomorphic-fetch": "^2.2.1"
   }
 }

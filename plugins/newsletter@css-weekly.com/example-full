@@ -1,0 +1,1381 @@
+Delivered-To: newsilentimp@gmail.com
+Received: by 2002:a54:2a8e:0:0:0:0:0 with SMTP id d14csp4066519ecp;
+        Tue, 5 May 2020 14:28:40 -0700 (PDT)
+X-Received: by 2002:a2e:b4a5:: with SMTP id q5mr3207173ljm.58.1588714119862;
+        Tue, 05 May 2020 14:28:39 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1588714119; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=z0ut17ya8hwgZzCbnHx/oTgQ/U9PP6MDp2whyosfGebBltGrn1jAtoNnbMRS0tZIh9
+         s8skX9/AXdtRlWZBe9T2IHk/Qv5mQ4YbnKY3zBhn6qTPq+dRjfv7mQHGpT6WNAsZVchI
+         8MXAJXEZDtYWtVg1Cu8OLXuRZFjuYyHFuuZRLwBgVRQNY2oGMD/TO0ieVHCZpYVHkwI0
+         SQlFkRiHdzZAO4Imb6lOljZKKvCwumfIegaccv1ufZYUVBv/BqKLxZtja9793KHvBZPd
+         wQP1cPS4PH/CLG+kyN8BvHTnggFOSecWwKsgtkoEFOaIBLkkBVjxSAAQKj5DVMO2iGiR
+         iizA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature:delivered-to;
+        bh=bnryXwFE/RkxFoEIpQ6gM8QsO75z6D8qY16ICBvZQMU=;
+        b=bliUPHnBAYuluHO7wqIvoCD23JplJa8kUHebYyfaICyyP0lkjGO0FX3mFXO0358WkD
+         1/9/+NRS+eYOp1RDWvPp/VuMM+Ij+B478+jDr5jJ1iyaQFaixSLpBu1bLGFnBLIYpZ6g
+         Im+vJ6sWmEjQ1AfY9jUYi+U0xMMg+bQFsO4J/PiyDwLChGqTkTTfmM/3dJuddlirHUl+
+         a0Yy0Mxpok51umVA8qwjAE5jCBAbTaKn9pxxkKSDyk7NGhxAdhsw30wryTYyGImJtXxt
+         8eEIUIW0vBqNAHUqCn5ZPjvv73ThmmIwr2I/y+euoxt0pzQ9qNZFUZ2qZKK2kRak4ni8
+         TyKQ==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=fqY8jmHL;
+       dkim=pass header.i=@css-weekly.com header.s=k1 header.b=xJGd898z;
+       arc=pass (i=1 spf=pass spfdomain=mail86.atl91.mcsv.net dkim=pass dkdomain=gmail.mcsv.net dkim=pass dkdomain=css-weekly.com);
+       spf=pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom="thesilentimp+caf_=newsilentimp=gmail.com@gmail.com"
+Return-Path: <thesilentimp+caf_=newsilentimp=gmail.com@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id e10sor187242ljo.3.2020.05.05.14.28.39
+        for <newsilentimp@gmail.com>
+        (Google Transport Security);
+        Tue, 05 May 2020 14:28:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=fqY8jmHL;
+       dkim=pass header.i=@css-weekly.com header.s=k1 header.b=xJGd898z;
+       arc=pass (i=1 spf=pass spfdomain=mail86.atl91.mcsv.net dkim=pass dkdomain=gmail.mcsv.net dkim=pass dkdomain=css-weekly.com);
+       spf=pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom="thesilentimp+caf_=newsilentimp=gmail.com@gmail.com"
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:delivered-to:dkim-signature:dkim-signature
+         :subject:from:reply-to:to:date:message-id:feedback-id:list-id
+         :list-unsubscribe:list-unsubscribe-post:mime-version;
+        bh=bnryXwFE/RkxFoEIpQ6gM8QsO75z6D8qY16ICBvZQMU=;
+        b=FTPTPR+Y0ylHmKLHpzay8Pt+VQuvm25B7TfIfR/ec8omOI2obVu0zcjpaH4lIMptsT
+         eZMZQCxXNVC/fj9AJMH6YV7Jd7vpgA++u1VgYI4C6OKG4Hr8N1oXM/qGNqDdOJnsUw2J
+         r2kvum9Fvn8ZeEhuHQ/0YH5tW2Kh1rPjHVxVdnCqSQ2c3wbDXw19CDnFmffkTAdwoL5J
+         uY0OvazMhwfZKUQ6nbgv85JMjzRNOWz8musLpmF2th1j/vFd63uPjRSW6UWPLNKhCVEi
+         K2oksQOXRQ8lh85d0il9p0qtG4E3K/ZjY1d5+A92wxqKUbjr8qnAwk91KdH3tzfeVmLF
+         ID9w==
+X-Gm-Message-State: AGi0PubXtPtwkYKLgplyRN9VpO5CSEjxwEVV3O0bS/r7Fjz1TNsQdV3c wnq9ewKk3OB6PLoY5NqSp7ONbGFdR4C8Z7X12o/UTbM3NT8DauY=
+X-Received: by 2002:a2e:9055:: with SMTP id n21mr3082327ljg.46.1588714119258;
+        Tue, 05 May 2020 14:28:39 -0700 (PDT)
+X-Forwarded-To: newsilentimp@gmail.com
+X-Forwarded-For: thesilentimp@gmail.com newsilentimp@gmail.com
+Delivered-To: thesilentimp@gmail.com
+Received: by 2002:ab3:5403:0:0:0:0:0 with SMTP id e3csp609864ltb;
+        Tue, 5 May 2020 14:28:37 -0700 (PDT)
+X-Google-Smtp-Source: APiQypIt4P7/D/MVIXZ48jaWc5B8yyBz23gcT/90FnxePXOTnVYM1Dniijwlm7G6ElM1cuQ6atgc
+X-Received: by 2002:a5b:41:: with SMTP id e1mr7792336ybp.346.1588714117007;
+        Tue, 05 May 2020 14:28:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1588714117; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WaOmEqAgtHsuGH4B3mq1XhGdhRz/qOS0TfNSShRfuVARv/6m/4leNMVFpmf+78tlGo
+         DRBjmVTCKDK71D+PB/zEF6SyuOx22/TqqDsVNH323OWPpSsWRRIxnWKDjDhwXHn2KktX
+         Me/4csUnRMPfsaHSOVskri3V6MPGAY+2+9Buc0LFNWHkMD+UyDJHoLPeaHprUr42+j4M
+         aOELC6h32gCSPgj2p3WMUKJskIlCTGihP8MW/niqSQPeZJGrLveAq7dK734ye0pM70bq
+         EZBhy386SkkKqPORAgbq3VnoG2RkXKsKjzof+wzJ+2uzLebg1icqNs5ZqIHrwDHvxfSj
+         yhSw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=bnryXwFE/RkxFoEIpQ6gM8QsO75z6D8qY16ICBvZQMU=;
+        b=KlVu0PDLS+fb1if5cqWUgMQ3skK0ddSXx97IFssEGQxqaaoZe9/kmVueqQ4CtIGpaa
+         0HNfHimYUt8Hv0eRuIPAMNl3a8DmmTNqKlqABmK2WL3/dgW5O56AM/FteT2PkriMYxf/
+         gs3qoWUJQhwZaZ+OTvX8a+r1l9t45kkE/hWMoTNui+kk20Zv/oli60kkhtcpgVbYS+E9
+         YgKfU8OnrDxIIE9Ml31E8eA5wEq6CscvXNtGItSCEI5GwC8iRZITkibnyAylcYaadUAl
+         lsK4OQrk3s/XbDjNaWqaYksTSpsg0A6/insk3MD9xc805Al1fhyIi6vNZdg1JdaUT8pd
+         V1Yw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=fqY8jmHL;
+       dkim=pass header.i=@css-weekly.com header.s=k1 header.b=xJGd898z;
+       spf=pass (google.com: domain of bounce-mc.us2_6854562.1723884-63b2a789f5@mail86.atl91.mcsv.net designates 198.2.130.86 as permitted sender) smtp.mailfrom=bounce-mc.us2_6854562.1723884-63b2a789f5@mail86.atl91.mcsv.net
+Return-Path: <bounce-mc.us2_6854562.1723884-63b2a789f5@mail86.atl91.mcsv.net>
+Received: from mail86.atl91.mcsv.net (mail86.atl91.mcsv.net. [198.2.130.86])
+        by mx.google.com with ESMTPS id k130si2615634ybk.349.2020.05.05.14.28.36
+        for <thesilentimp@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 05 May 2020 14:28:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us2_6854562.1723884-63b2a789f5@mail86.atl91.mcsv.net designates 198.2.130.86 as permitted sender) client-ip=198.2.130.86;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.mcsv.net; s=k1; t=1588714116; bh=bnryXwFE/RkxFoEIpQ6gM8QsO75z6D8qY16ICBvZQMU=; h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+	 List-Unsubscribe:Content-Type:MIME-Version; b=fqY8jmHLVKf0h/7P1UqVuBx2mmmZI/HrvEXd8Q0N2nIHRGp9oy+4TIR7DOZgYVMxJ
+	 SfqQ9f2OgBiMhKXkesW/Aqkh78kOb6j1bdAjDbJrKLxVEy/jNuUauB02KYmPiPyDRH
+	 FlhlvNBC0aCL8t3DNHrELCGX3ddxuj17ZgDFgzRM=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=css-weekly.com; s=k1; t=1588714116; i=newsletter@css-weekly.com; bh=bnryXwFE/RkxFoEIpQ6gM8QsO75z6D8qY16ICBvZQMU=; h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+	 Content-Type:MIME-Version; b=xJGd898zVyWy0Uklqxw+A9xp6t3pMF6dt00fXpPnyD/FA9aEqakXewXqWu1tyXL+f
+	 GS+wxUrdmBtvPvNh1Tf7LhMb9cWiTGO/GZSRB9oYFtBol563dxhVfTjtA2z6Y3arB8
+	 +lpZSuB3iY/ujx9qA6YfaTecsHvBW+wFRLhV2lvY=
+Received: from localhost (localhost [127.0.0.1]) by mail86.atl91.mcsv.net (Mailchimp) with ESMTP id 49GtBX0tSmzQXgC57 for <thesilentimp@gmail.com>; Tue,
+  5 May 2020 21:28:36 +0000 (GMT)
+Subject: Issue #409: Animating DOM Changes, Atomic CSS-in-JS, Selection in CSS
+From: CSS Weekly <newsletter@css-weekly.com>
+Reply-To: CSS Weekly <newsletter@css-weekly.com>
+To: <thesilentimp@gmail.com>
+Date: Tue,
+  5 May 2020 21:28:35 +0000
+Message-ID: <22abf1e39f850260e7d9af1c9.63b2a789f5.20200505212819.8a27d9ff6b.b173e2e1@mail86.atl91.mcsv.net>
+X-Mailer: MailChimp Mailer - **CID8a27d9ff6b63b2a789f5**
+X-Campaign: mailchimp22abf1e39f850260e7d9af1c9.8a27d9ff6b
+X-campaignid: mailchimp22abf1e39f850260e7d9af1c9.8a27d9ff6b
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=22abf1e39f850260e7d9af1c9&id=8a27d9ff6b&e=63b2a789f5
+X-MC-User: 22abf1e39f850260e7d9af1c9
+Feedback-ID: 6854562:6854562.1723884:us2:mc
+List-ID: 22abf1e39f850260e7d9af1c9mc list <22abf1e39f850260e7d9af1c9.679125.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <https://css-weekly.us2.list-manage.com/unsubscribe?u=22abf1e39f850260e7d9af1c9&id=3df91c6206&e=63b2a789f5&c=8a27d9ff6b>, <mailto:unsubscribe-mc.us2_22abf1e39f850260e7d9af1c9.8a27d9ff6b-63b2a789f5@mailin.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_417638412"
+MIME-Version: 1.0
+
+--_----------=_MCPart_417638412
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+CSS Weekly
+Issue #409 =E2=80=A2 May 5, 2020
+view online version (https://css-weekly.com/issue-409/)
+
+
+
+
+
+Animating DOM Changes (https://medium.com/samsung-internet-dev/animating-do=
+m-changes-33b031927e96?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm=
+_medium=3Demail)
+
+
+https://medium.com/samsung-internet-dev/animating-dom-changes-33b031927e96?=
+utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail
+
+Ada Rose Cannon shares some tips on smoothly adding, removing, resizing, an=
+d reordering elements.
+
+Read more (https://medium.com/samsung-internet-dev/animating-dom-changes-33=
+b031927e96?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Dem=
+ail)
+
+Atomic CSS-in-JS (https://sebastienlorber.com/atomic-css-in-js?utm_source=
+=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+
+https://sebastienlorber.com/atomic-css-in-js?utm_source=3DCSS-Weekly&utm_ca=
+mpaign=3DIssue-409&utm_medium=3Demail
+
+S=C3=A9bastien Lorber explains what atomic CSS is and how it relates to fun=
+ctional / utility-first CSS like Tailwind CSS.
+
+Read more (https://sebastienlorber.com/atomic-css-in-js?utm_source=3DCSS-We=
+ekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+
+
+From Our Sponsor (https://css-weekly.com/advertise)
+
+
+
+
+
+Don't wait, start your journey toward a software engineering career today! =
+(https://www.paved.com/redirect/yrjwxbzftrhsmzhm8vghl2cyumi)
+
+
+https://www.paved.com/redirect/yrjwxbzftrhsmzhm8vghl2cyumi
+
+Learn key software engineering skills like HTML/CSS and JavaScript in as li=
+ttle as 4 weeks. Springboard is an outcomes-driven online school offering m=
+entor-guided courses that allow people a path toward in-demand careers in t=
+ech like software engineering, data science, UI/UX design and more. 1320.gi=
+f?opens=3D1
+
+Learn more and get started (https://www.paved.com/redirect/b9tzni7zg1wbqmk4=
+13x5sw5ij7i)
+
+
+
+Articles & Tutorials
+
+
+
+
+
+Selection in CSS (https://ishadeed.com/article/selection-in-css/?utm_source=
+=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+Ahmad Shadeed goes through everything about the text selection in CSS, whic=
+h includes the pseudo-classes ::selection and user-select.
+
+Read more (https://ishadeed.com/article/selection-in-css/?utm_source=3DCSS-=
+Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+The CSS =E2=80=9Ccontent=E2=80=9D Property Accepts Alternative Text (https:=
+//www.stefanjudis.com/today-i-learned/css-content-accepts-alternative-text/=
+?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+Stefan Judis explains how the content property supports a way to define alt=
+ernative text for generated content.
+
+Read more (https://www.stefanjudis.com/today-i-learned/css-content-accepts-=
+alternative-text/?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medi=
+um=3Demail)
+
+Adding CSS to a Page via HTTP Headers (https://www.impressivewebs.com/addin=
+g-css-to-a-page-via-http-headers/?utm_source=3DCSS-Weekly&utm_campaign=3DIs=
+sue-409&utm_medium=3Demail)
+
+Louis Lazaris explores if it=E2=80=99s possible to add CSS to pages by mean=
+s of HTTP headers.
+
+Read more (https://www.impressivewebs.com/adding-css-to-a-page-via-http-hea=
+ders/?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+Implementing Dark Mode In React Apps Using styled-components (https://www.s=
+mashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/?utm_sou=
+rce=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+Blessing Krofegha shows how to efficiently implement dark mode in a React a=
+pp on a simple web page, using the styled-components library and leveraging=
+ some React features like hooks.
+
+Read more (https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-st=
+yled-components/?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_mediu=
+m=3Demail)
+
+How to Create Pure CSS Games (https://medium.com/cssclass-com/how-to-create=
+-pure-css-games-2a29c777bf4?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-40=
+9&utm_medium=3Demail)
+
+Elad Shechter will teach you how to create pure CSS games.
+
+Read more (https://medium.com/cssclass-com/how-to-create-pure-css-games-2a2=
+9c777bf4?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demai=
+l)
+
+
+
+Promoted Link (https://css-weekly.com/advertise/#job-ad)
+
+
+
+
+
+(https://rebrand.ly/cssw-photile)
+Photile.co (https://rebrand.ly/cssw-photile)
+
+Photile for Instagram is a web-based app that helps you create photo collag=
+es from your Instagram photos quickly and easily.
+
+Create Now (https://rebrand.ly/cssw-photile)
+
+
+
+Tools
+
+
+
+
+
+Generic Components (https://modest-bhaskara-e8742f.netlify.app/?utm_source=
+=3DCSS-Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+A collection of generic web components with a focus on accessibility, ease =
+of use, and style.
+
+Check it out (https://modest-bhaskara-e8742f.netlify.app/?utm_source=3DCSS-=
+Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+700+ CSS Icons (https://css.gg/?utm_source=3DCSS-Weekly&utm_campaign=3DIssu=
+e-409&utm_medium=3Demail)
+
+Open-source CSS, SVG, and Figma UI icons, available in SVG Sprite, styled-c=
+omponents, NPM & API.
+
+Check it out (https://css.gg/?utm_source=3DCSS-Weekly&utm_campaign=3DIssue-=
+409&utm_medium=3Demail)
+
+
+
+Inspiration
+
+
+
+
+
+CSS Parish (https://codepen.io/FelixLuciano/pen/rNVyxxg?utm_source=3DCSS-We=
+ekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+
+https://codepen.io/FelixLuciano/pen/rNVyxxg?utm_source=3DCSS-Weekly&utm_cam=
+paign=3DIssue-409&utm_medium=3Demail
+
+Luciano Felix created a beautiful illustration using only CSS.
+
+Get inspired (https://codepen.io/FelixLuciano/pen/rNVyxxg?utm_source=3DCSS-=
+Weekly&utm_campaign=3DIssue-409&utm_medium=3Demail)
+
+
+
+Until Next Week
+
+
+
+
+
+Thanks for reading! If you find the content valuable, please consider suppo=
+rting the newsletter on Patreon (https://bit.ly/cssweekly-patreon) .
+
+Happy coding,
+Zoran Jambor (https://twitter.com/ZoranJambor)
+
+
+
+
+
+
+Find CSS Weekly on Twitter and Facebook: https://twitter.com/CSSWeekly http=
+s://www.facebook.com/CSSWeekly
+
+
+
+
+
+
+You're subscribed because you wanted weekly report about latest and greates=
+t from CSS world.
+Unsubscribe (https://css-weekly.us2.list-manage.com/unsubscribe?u=3D22abf1e=
+39f850260e7d9af1c9&id=3D3df91c6206&e=3D63b2a789f5&c=3D8a27d9ff6b) =E2=80=A2=
+ Update Subscription Preferences (https://css-weekly.us2.list-manage.com/pr=
+ofile?u=3D22abf1e39f850260e7d9af1c9&id=3D3df91c6206&e=3D63b2a789f5)
+
+Powered by (https://bit.ly/mailchimp-cssweekly)
+--_----------=_MCPart_417638412
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>CSS Weekly Issue #409</title>
+    <style type=3D"text/css">
+      #outlook a {
+        padding:0;
+      }
+
+      body {
+        margin:0;
+        padding:0;
+        width:100% !important;
+        -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+        background:#f5f5f5;
+        font-family:sans-serif;
+      }
+
+      .ExternalClass {
+        width:100%;
+      }
+
+      .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass fo=
+nt,.ExternalClass td,.ExternalClass div {
+        line-height:100%;
+      }
+
+      #backgroundTable {
+        margin:0;
+        padding:0;
+        width:100% !important;
+        line-height:100% !important;
+        background:#f5f5f5;
+      }
+
+      img {
+        outline:0;
+        text-decoration:none;
+        -ms-interpolation-mode:bicubic;
+      }
+
+      a img {
+        border:0;
+      }
+
+      .image_fix {
+        display:block;
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+        color:#4f3c39 !important;
+      }
+
+      h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+        color:#4f3c39 !important;
+        border-bottom:none !important;
+      }
+
+      h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a=
+:visited {
+        color:#4f3c39 !important;
+        border-bottom:none !important;
+      }
+
+      h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover {
+        color:#9c8886 !important;
+        border-bottom:none !important;
+      }
+
+      h1 a:active,h2 a:active,h3 a:active,h4 a:active,h5 a:active,h6 a:acti=
+ve {
+        color:#666 !important;
+        border-bottom:none !important;
+      }
+
+      h1 {
+        font-size:20px;
+        line-height:100%;
+      }
+
+      h2 {
+        font-size:18px;
+        line-height:100%;
+      }
+
+      h3 {
+        font-size:16px;
+        line-height:100%;
+      }
+
+      h4 {
+        font-size:15px;
+        line-height:100%;
+      }
+
+      h5 {
+        font-size:14px;
+        line-height:100%;
+      }
+
+      h6 {
+        font-size:13px;
+        line-height:100%;
+      }
+
+      table td {
+        border-collapse:collapse;
+      }
+
+      a,a:visited {
+        color:#999;
+        white-space:normal;
+      }
+
+      a:hover {
+        color:#9c8886;
+      }
+
+      a:active {
+        color:#252525;
+      }
+
+      .link,.link:hover,.link:visited,.link:active {
+        font-family:arial,sans-serif;
+        font-weight:normal;
+        font-style:normal;
+        font-size:18px;
+        line-height:140%;
+        vertical-align:top;
+        color:#1c66c7;
+      }
+
+      p {
+        margin-bottom:20px;
+        margin:0 0 0 20px;
+        padding:0;
+        font-size:16px;
+        color:#404040;
+        line-height:140%;
+      }
+
+      .container {
+        margin:0 auto;
+        padding:0;
+        width:100%;
+        max-width:502px;
+        display:block;
+      }
+
+      .bodyPaddingTop,.bodyPaddingBottom {
+        height:20px;
+        line-height:100%;
+      }
+
+      .bodyPaddingRight,.bodyPaddingLeft {
+        width:20px;
+      }
+
+      .contentPaddingRight,.conetntPaddingLeft {
+        width:50px;
+      }
+
+      .sectionTitle {
+        border-bottom:0;
+        margin:70px 0 0;
+        background:#f5f5f5;
+        width:100%;
+        font-size:24px;
+        border-bottom:0;
+        font-weight:bold;
+      }
+
+      @media only screen and (max-width:550px) {
+        td[class=3DbodyPaddingTop] {
+          height:10px !important;
+        }
+
+        td[class=3DbodyPaddingLeft],td[class=3DbodyPaddingRight] {
+          width:10px !important;
+        }
+
+        td[class=3DcontentPaddingLeft],td[class=3DcontentPaddingRight] {
+          width:30px !important;
+        }
+
+        td[class=3DcontentPaddingTop],td[class=3DcontentPaddingBottom] {
+          height:30px !important;
+        }
+      }
+
+      @media only screen and (max-width:380px) {
+        img[class=3DsmallImg] {
+          float:none !important;
+          margin:0 0 10px !important;
+          margin-left:0 !important;
+          margin-bottom:10px !important;
+          max-width:100% !important;
+        }
+
+        td[id=3DwidthContainer] {
+          min-width:200px !important;
+        }
+      }
+
+      @media only screen and (max-width:350px) {
+        span[class=3Dview-online-separator] {
+          display:none;
+        }
+      }
+    </style>
+  </head>
+  <body bgcolor=3D"#F5F5F5" style=3D"-webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; margin:0; padding:0; background:#F5F5F5; font-family:sa=
+ns-serif; width:100%; height:100%;">
+
+    <center>
+      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"cent=
+er" id=3D"backgroundTable" style=3D"margin:0px auto;padding:0;width:100%;ma=
+x-width:100%;line-height:100%;background:#F5F5F5;">
+        <tr>
+          <td>=C2=A0</td>
+          <td align=3D"center" width=3D"542" style=3D"width:542px;">
+            <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=
+=3D"center" style=3D"margin:0px auto;padding:0;width:100%;line-height:100%;=
+">
+              <tr>
+                <td class=3D"bodyPaddingTop" height=3D"20" style=3D"border-=
+collapse:collapse;height:20px;line-height:20px;">=C2=A0</td>
+              </tr>
+              <tr>
+                <td class=3D"bodyPaddingLeft" align=3D"center" width=3D"20"=
+>=C2=A0</td>
+                <td align=3D"center" width=3D"502" style=3D"margin:0 auto;p=
+adding:0;width:100%;max-width:502px;display:block;font-size:1px;line-height=
+:1px;min-width:400px;" id=3D"widthContainer">
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" a=
+lign=3D"center" style=3D"border:1px solid #ccc;border-radius:5px;background=
+:#fff;width:100%;text-align:left;">
+                    <tr>
+                      <td class=3D"contentPaddingTop" height=3D"40" style=
+=3D"margin:0 auto;padding:0;line-height:100%;height:40px;">=C2=A0</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" align=3D"center" style=3D"width:100%;margin-bottom:10px;">
+                          <tr>
+                            <td class=3D"contentPaddingLeft" width=3D"50" s=
+tyle=3D"margin:0;padding:0;line-height:100%;width:50px;">=C2=A0</td>
+                            <td align=3D"left" style=3D"text-align:left;wid=
+th:auto;max-width:100%;">
+                              <div style=3D"margin:0;padding:0;line-height:=
+120%;font-size:27px;"><img src=3D"https://css-weekly.com/newsletters/_resou=
+rces/cssweekly-logo.png" alt=3D"CSS Weekly" width=3D"163" height=3D"37" sty=
+le=3D"width:163px; height:37px; line-height:140%; font-size:27px; margin:0;=
+ padding:0; -ms-interpolation-mode:bicubic;">
+                              </div>
+                              <div style=3D"margin:0;margin-left:0;margin-b=
+ottom:0;padding:0;color:#B0A9A7;font-size:13px;line-height:140%;text-indent=
+:0;font-family:arial, sans-serif;">
+                                Issue #409 <span style=3D"margin-left:5px; =
+margin-right:5px;">=E2=80=A2</span>
+                                May 5, 2020 <br><a href=3D"https://css-week=
+ly.us2.list-manage.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3D74067=
+0acff&e=3D63b2a789f5" style=3D"white-space:nowrap;margin:0;margin-left:0;ma=
+rgin-bottom:0;margin-top:5px;padding:0;display:inline-block;color:#B0A9A7;f=
+ont-size:13px;line-height:140%;text-indent:0;font-family:arial, sans-serif;=
+">view online version</a>
+                              </div>
+                              <div style=3D"margin:0;margin-left:0;margin-b=
+ottom:0;padding:0;height:13px;color:#B0A9A7;font-size:13px;line-height:13px=
+;text-indent:0;"></div>
+                              <div style=3D"display:block;width:100%;margin=
+:0;padding:0;height:1px;line-height:0px;font-size:0px;border-bottom-style:s=
+olid;border-bottom-width:1px;border-bottom-color:#E5E5E5;">=C2=A0</div>
+                            </td>
+                            <td class=3D"contentPaddingRight" width=3D"50" =
+style=3D"margin:0;padding:0;line-height:100%;width:50px;">=C2=A0</td>
+                          </tr>
+                        </table>
+                        <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" align=3D"center" style=3D"width:100%;">
+                          <tr>
+                            <td height=3D"15" style=3D"margin:0 auto;paddin=
+g:0;line-height:100%;height:15px;">=C2=A0</td>
+                          </tr>
+                          <tr>
+                            <td class=3D"contentPaddingLeft" width=3D"50" s=
+tyle=3D"margin:0;padding:0;line-height:0;width:50px;display:block;">=C2=A0<=
+/td>
+                            <td>
+                              <div style=3D"margin:0;margin-top:0;margin-bo=
+ttom:0;padding:0;color:#252525;font-size:15px;line-height:100%;height:15px;=
+">=C2=A0</div>
+                              <div style=3D"margin:0;margin-top:0;margin-bo=
+ttom:0;padding:0;color:#252525;font-size:18px;line-height:24px;font-family:=
+arial, sans-serif;font-weight:bold;"><a href=3D"https://css-weekly.us2.list=
+-manage.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3Dd6ec978f9a&e=3D6=
+3b2a789f5" style=3D"color:#252525;text-decoration:none;font-weight:bold;">A=
+nimating DOM Changes</a>
+                            </div>
+                            <div style=3D"margin:0;margin-top:0;margin-bott=
+om:0;padding:0;display:block;font-size:2px;line-height:2px;height:2px;">=C2=
+=A0</div>
+                            <div style=3D"margin:0;margin-top:0;margin-bott=
+om:0;padding:0;display:block;font-size:13px;line-height:13px;height:13px;">=
+=C2=A0</div>
+                            <a href=3D"https://css-weekly.us2.list-manage.c=
+om/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3D4b76b26057&e=3D63b2a789f5=
+" style=3D"color:#545454;text-decoration:none;font-size:12px;line-height:15=
+0%;"><img src=3D"https://css-weekly.com/wp-content/uploads/2020/04/animatin=
+g-dom-changes.jpg" width=3D"398" style=3D"width:100%; height:auto; display:=
+block; -ms-interpolation-mode:bicubic;" alt=3D"animating-dom-changes.jpg"><=
+/a>
+                            <div style=3D"margin:0;margin-top:0;margin-bott=
+om:0;height:13px;line-height:13px;font-size:13px;">=C2=A0</div>
+                            <div style=3D"margin:0;margin-top:0;margin-bott=
+om:0;padding:0;color:#404040;display:block;font-size:14px;line-height:20px;=
+font-family:arial, sans-serif;">Ada Rose Cannon shares some tips on smoothl=
+y adding, removing, resizing, and reordering elements.</div>
+                            <div style=3D"margin:0;margin-top:0;margin-bott=
+om:0;padding:0;display:block;font-size:12px;line-height:12px;height:12px;">=
+=C2=A0</div>
+                            <div style=3D"margin:0;margin-top:0;margin-bott=
+om:0;padding:0;color:#404040;display:block;font-size:14px;line-height:20px;=
+font-family:arial, sans-serif;"><a class=3D"article-call-to-action" style=
+=3D"text-decoration:underline;color:#9c8886;" href=3D"https://css-weekly.us=
+2.list-manage.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3Dced6883e96=
+&e=3D63b2a789f5">Read more</a>
+                          </div>
+                          <div style=3D"margin:0;margin-top:0;margin-bottom=
+:0;padding:0;color:#252525;font-size:30px;line-height:100%;height:30px;">=
+=C2=A0</div>
+                          <div style=3D"margin:0;margin-top:0;margin-bottom=
+:0;padding:0;color:#252525;font-size:18px;line-height:24px;font-family:aria=
+l, sans-serif;font-weight:bold;"><a href=3D"https://css-weekly.us2.list-man=
+age.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3D07389e2710&e=3D63b2a=
+789f5" style=3D"color:#252525;text-decoration:none;font-weight:bold;">Atomi=
+c CSS-in-JS</a>
+                        </div>
+                        <div style=3D"margin:0;margin-top:0;margin-bottom:0=
+;padding:0;display:block;font-size:2px;line-height:2px;height:2px;">=C2=A0<=
+/div>
+                        <div style=3D"margin:0;margin-top:0;margin-bottom:0=
+;padding:0;display:block;font-size:13px;line-height:13px;height:13px;">=C2=
+=A0</div>
+                        <a href=3D"https://css-weekly.us2.list-manage.com/t=
+rack/click?u=3D22abf1e39f850260e7d9af1c9&id=3Df1123ca4e7&e=3D63b2a789f5" st=
+yle=3D"color:#545454;text-decoration:none;font-size:12px;line-height:150%;"=
+><img src=3D"https://css-weekly.com/wp-content/uploads/2020/04/atomic-css-i=
+n-js.jpg" width=3D"398" style=3D"width:100%; height:auto; display:block; -m=
+s-interpolation-mode:bicubic;" alt=3D"atomic-css-in-js.jpg"></a>
+                        <div style=3D"margin:0;margin-top:0;margin-bottom:0=
+;height:13px;line-height:13px;font-size:13px;">=C2=A0</div>
+                        <div style=3D"margin:0;margin-top:0;margin-bottom:0=
+;padding:0;color:#404040;display:block;font-size:14px;line-height:20px;font=
+-family:arial, sans-serif;">S=C3=A9bastien Lorber explains what atomic CSS =
+is and how it relates to functional / utility-first CSS like Tailwind CSS.<=
+/div>
+                        <div style=3D"margin:0;margin-top:0;margin-bottom:0=
+;padding:0;display:block;font-size:12px;line-height:12px;height:12px;">=C2=
+=A0</div>
+                        <div style=3D"margin:0;margin-top:0;margin-bottom:0=
+;padding:0;color:#404040;display:block;font-size:14px;line-height:20px;font=
+-family:arial, sans-serif;"><a class=3D"article-call-to-action" style=3D"te=
+xt-decoration:underline;color:#9c8886;" href=3D"https://css-weekly.us2.list=
+-manage.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3D1a30b7b17d&e=3D6=
+3b2a789f5">Read more</a>
+                      </div>
+                      <div style=3D"margin:0;margin-top:0px;margin-bottom:0=
+;padding:0;color:#252525;font-size:45px;line-height:100%;height:45px;">=C2=
+=A0</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan=3D"3">
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" align=3D"center" style=3D"width:100%;vertical-align:middle;background-co=
+lor:#F5F5F5;border-spacing:0;border-collapse:collapse;">
+                        <tr>
+                          <td colspan=3D"3" height=3D"10" style=3D"margin:0=
+ auto;padding:0;line-height:100%;height:10px;font-size:10px;">=C2=A0</td>
+                        </tr>
+                        <tr>
+                          <td class=3D"contentPaddingLeft" width=3D"50" sty=
+le=3D"margin:0;padding:0;line-height:100%;width:50px;vertical-align:middle;=
+">=C2=A0</td>
+                          <td style=3D"vertical-align:middle;">
+                            <div style=3D"border-bottom:none;margin:0;margi=
+n-top:0;margin-bottom:0;width:100%;font-size:22px;color:#4F3C39;line-height=
+:22px;font-weight:bold;font-family:arial, sans-serif;vertical-align:middle;=
+"><a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e=
+39f850260e7d9af1c9&id=3Df8a57408c8&e=3D63b2a789f5" target=3D"_blank" style=
+=3D"color:#4F3C39;text-decoration:none;">From Our Sponsor</a>
+                          </div>
+                        </td>
+                        <td class=3D"contentPaddingRight" width=3D"50" styl=
+e=3D"margin:0;padding:0;line-height:100%;width:50px;">=C2=A0</td>
+                      </tr>
+                      <tr>
+                        <td colspan=3D"3" height=3D"10" style=3D"margin:0 a=
+uto;padding:0;line-height:100%;height:10px;font-size:10px;">=C2=A0</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height=3D"15" style=3D"margin:0 auto;padding:0;line-h=
+eight:100%;height:15px;">=C2=A0</td>
+                </tr>
+                <tr>
+                  <td class=3D"contentPaddingLeft" width=3D"50" style=3D"ma=
+rgin:0;padding:0;line-height:0;width:50px;display:block;">=C2=A0</td>
+                  <td>
+                    <div style=3D"margin:0;margin-top:0;margin-bottom:0;pad=
+ding:0;color:#252525;font-size:15px;line-height:100%;height:15px;">=C2=A0</=
+div>
+                    <div style=3D"margin:0;margin-top:0;margin-bottom:0;pad=
+ding:0;color:#252525;font-size:18px;line-height:24px;font-family:arial, san=
+s-serif;font-weight:bold;"><a href=3D"https://css-weekly.us2.list-manage.co=
+m/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3Dbc42987ae9&e=3D63b2a789f5"=
+ style=3D"color:#252525;text-decoration:none;font-weight:bold;">Don't wait,=
+ start your journey toward a software engineering career today!</a>
+                  </div>
+                  <div style=3D"margin:0;margin-top:0;margin-bottom:0;paddi=
+ng:0;display:block;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+                  <div style=3D"margin:0;margin-top:0;margin-bottom:0;paddi=
+ng:0;display:block;font-size:13px;line-height:13px;height:13px;">=C2=A0</di=
+v>
+                  <a href=3D"https://css-weekly.us2.list-manage.com/track/c=
+lick?u=3D22abf1e39f850260e7d9af1c9&id=3D348da236fe&e=3D63b2a789f5" style=3D=
+"color:#545454;text-decoration:none;font-size:12px;line-height:150%;"><img =
+src=3D"https://css-weekly.com/wp-content/uploads/2020/04/springboard-softwa=
+re-engineering-career1.jpg" width=3D"398" style=3D"width:100%; height:auto;=
+ display:block; -ms-interpolation-mode:bicubic;" alt=3D"springboard-softwar=
+e-engineering-career1.jpg"></a>
+                  <div style=3D"margin:0;margin-top:0;margin-bottom:0;heigh=
+t:13px;line-height:13px;font-size:13px;">=C2=A0</div>
+                  <div style=3D"margin:0;margin-top:0;margin-bottom:0;paddi=
+ng:0;color:#404040;display:block;font-size:14px;line-height:20px;font-famil=
+y:arial, sans-serif;">Learn key software engineering skills like HTML/CSS a=
+nd JavaScript in as little as 4 weeks. Springboard is an outcomes-driven on=
+line school offering mentor-guided courses that allow people a path toward =
+in-demand careers in tech like software engineering, data science, UI/UX de=
+sign and more. <img src=3D"https://www.paved.com/open/1320.gif?opens=3D1" w=
+idth=3D"1" height=3D"1" alt=3D"1320.gif?opens=3D1">
+                  </div>
+                  <div style=3D"margin:0;margin-top:0;margin-bottom:0;paddi=
+ng:0;display:block;font-size:12px;line-height:12px;height:12px;">=C2=A0</di=
+v>
+                  <div style=3D"margin:0;margin-top:0;margin-bottom:0;paddi=
+ng:0;color:#404040;display:block;font-size:14px;line-height:20px;font-famil=
+y:arial, sans-serif;"><a class=3D"article-call-to-action" style=3D"text-dec=
+oration:underline;color:#9c8886;" href=3D"https://css-weekly.us2.list-manag=
+e.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3Dbe0344e5a0&e=3D63b2a78=
+9f5">Learn more and get started</a>
+                </div>
+                <div style=3D"margin:0;margin-top:0px;margin-bottom:0;paddi=
+ng:0;color:#252525;font-size:45px;line-height:100%;height:45px;">=C2=A0</di=
+v>
+              </td>
+            </tr>
+            <tr>
+              <td colspan=3D"3">
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" ali=
+gn=3D"center" style=3D"width:100%;vertical-align:middle;background-color:#F=
+5F5F5;border-spacing:0;border-collapse:collapse;">
+                  <tr>
+                    <td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;=
+padding:0;line-height:100%;height:10px;font-size:10px;">=C2=A0</td>
+                  </tr>
+                  <tr>
+                    <td class=3D"contentPaddingLeft" width=3D"50" style=3D"=
+margin:0;padding:0;line-height:100%;width:50px;vertical-align:middle;">=C2=
+=A0</td>
+                    <td style=3D"vertical-align:middle;">
+                      <div style=3D"border-bottom:none;margin:0;margin-top:=
+0;margin-bottom:0;width:100%;font-size:22px;color:#4F3C39;line-height:22px;=
+font-weight:bold;font-family:arial, sans-serif;vertical-align:middle;">Arti=
+cles &amp; Tutorials</div>
+                    </td>
+                    <td class=3D"contentPaddingRight" width=3D"50" style=3D=
+"margin:0;padding:0;line-height:100%;width:50px;">=C2=A0</td>
+                  </tr>
+                  <tr>
+                    <td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;=
+padding:0;line-height:100%;height:10px;font-size:10px;">=C2=A0</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height=3D"15" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:15px;">=C2=A0</td>
+            </tr>
+            <tr>
+              <td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin=
+:0;padding:0;line-height:0;width:50px;display:block;">=C2=A0</td>
+              <td>
+                <div style=3D"margin:0;margin-top:0px;margin-bottom:0;paddi=
+ng:0;color:#252525;font-size:20px;line-height:100%;height:20px;">=C2=A0</di=
+v>
+                <div style=3D"margin:0;margin-bottom:0;padding:0;color:#252=
+525;font-size:18px;line-height:24px;font-family:arial, sans-serif;font-weig=
+ht:bold;"><a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=
+=3D22abf1e39f850260e7d9af1c9&id=3D37ec250d4d&e=3D63b2a789f5" style=3D"color=
+:#252525;text-decoration:none;">Selection in CSS</a>
+              </div>
+              <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0=
+;display:block;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+              <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0=
+;color:#404040;display:block;font-size:14px;line-height:20px;font-family:ar=
+ial, sans-serif;">Ahmad Shadeed goes through everything about the text sele=
+ction in CSS, which includes the pseudo-classes <em>::selection</em> and <e=
+m>user-select</em>.</div>
+              <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0=
+;display:block;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+              <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0=
+;color:#404040;display:block;font-size:14px;line-height:20px;font-family:ar=
+ial, sans-serif;"><a class=3D"article-call-to-action" style=3D"text-decorat=
+ion:underline;color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.co=
+m/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3D0d845a275a&e=3D63b2a789f5"=
+>Read more</a>
+            </div>
+            <div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0=
+;color:#252525;font-size:35px;line-height:100%;height:35px;">=C2=A0</div>
+            <div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;=
+font-size:18px;line-height:24px;font-family:arial, sans-serif;font-weight:b=
+old;"><a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22a=
+bf1e39f850260e7d9af1c9&id=3Daa6ef9691d&e=3D63b2a789f5" style=3D"color:#2525=
+25;text-decoration:none;">The CSS =E2=80=9Ccontent=E2=80=9D Property Accept=
+s Alternative Text</a>
+          </div>
+          <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;dis=
+play:block;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+          <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;col=
+or:#404040;display:block;font-size:14px;line-height:20px;font-family:arial,=
+ sans-serif;">Stefan Judis explains how the <em>content</em> property suppo=
+rts a way to define alternative text for generated content.</div>
+          <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;dis=
+play:block;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+          <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;col=
+or:#404040;display:block;font-size:14px;line-height:20px;font-family:arial,=
+ sans-serif;"><a class=3D"article-call-to-action" style=3D"text-decoration:=
+underline;color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/tr=
+ack/click?u=3D22abf1e39f850260e7d9af1c9&id=3D7e4864a4f3&e=3D63b2a789f5">Rea=
+d more</a>
+        </div>
+        <div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;col=
+or:#252525;font-size:35px;line-height:100%;height:35px;">=C2=A0</div>
+        <div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;font=
+-size:18px;line-height:24px;font-family:arial, sans-serif;font-weight:bold;=
+"><a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e=
+39f850260e7d9af1c9&id=3Df1a27e365c&e=3D63b2a789f5" style=3D"color:#252525;t=
+ext-decoration:none;">Adding CSS to a Page via HTTP Headers</a>
+      </div>
+      <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display=
+:block;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+      <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#=
+404040;display:block;font-size:14px;line-height:20px;font-family:arial, san=
+s-serif;">Louis Lazaris explores if it=E2=80=99s possible to add CSS to pag=
+es by means of HTTP headers.</div>
+      <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display=
+:block;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+      <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#=
+404040;display:block;font-size:14px;line-height:20px;font-family:arial, san=
+s-serif;"><a class=3D"article-call-to-action" style=3D"text-decoration:unde=
+rline;color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/=
+click?u=3D22abf1e39f850260e7d9af1c9&id=3D7e0ad0fd31&e=3D63b2a789f5">Read mo=
+re</a>
+    </div>
+    <div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#=
+252525;font-size:35px;line-height:100%;height:35px;">=C2=A0</div>
+    <div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;font-siz=
+e:18px;line-height:24px;font-family:arial, sans-serif;font-weight:bold;"><a=
+ href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39f8=
+50260e7d9af1c9&id=3D0a696fdd89&e=3D63b2a789f5" style=3D"color:#252525;text-=
+decoration:none;">Implementing Dark Mode In React Apps Using styled-compone=
+nts</a>
+  </div>
+  <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:blo=
+ck;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+  <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#4040=
+40;display:block;font-size:14px;line-height:20px;font-family:arial, sans-se=
+rif;">Blessing Krofegha shows how to efficiently implement dark mode in a R=
+eact app on a simple web page, using the <em>styled-components</em> library=
+ and leveraging some React features like hooks.</div>
+  <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:blo=
+ck;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+  <div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#4040=
+40;display:block;font-size:14px;line-height:20px;font-family:arial, sans-se=
+rif;"><a class=3D"article-call-to-action" style=3D"text-decoration:underlin=
+e;color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/clic=
+k?u=3D22abf1e39f850260e7d9af1c9&id=3D09a4851661&e=3D63b2a789f5">Read more</=
+a>
+</div>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:35px;line-height:100%;height:35px;">=C2=A0</div>
+<div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;font-size:18=
+px;line-height:24px;font-family:arial, sans-serif;font-weight:bold;"><a hre=
+f=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39f85026=
+0e7d9af1c9&id=3Dba14a5317d&e=3D63b2a789f5" style=3D"color:#252525;text-deco=
+ration:none;">How to Create Pure CSS Games</a>
+</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">Elad Shechter will teach you how to create pure CSS games.</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;"><a class=3D"article-call-to-action" style=3D"text-decoration:underline;=
+color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/click?=
+u=3D22abf1e39f850260e7d9af1c9&id=3Ddc10ed620c&e=3D63b2a789f5">Read more</a>
+</div>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:45px;line-height:100%;height:45px;">=C2=A0</div>
+</td>
+</tr>
+<tr>
+<td colspan=3D"3">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width:100%;vertical-align:middle;background-color:#F5F5F5;border-spa=
+cing:0;border-collapse:collapse;">
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td style=3D"vertical-align:middle;">
+  <div style=3D"border-bottom:none;margin:0;margin-top:0;margin-bottom:0;wi=
+dth:100%;font-size:22px;color:#4F3C39;line-height:22px;font-weight:bold;fon=
+t-family:arial, sans-serif;vertical-align:middle;"><a href=3D"https://css-w=
+eekly.us2.list-manage.com/track/click?u=3D22abf1e39f850260e7d9af1c9&id=3D27=
+6fce8d63&e=3D63b2a789f5" style=3D"color:#4F3C39;text-decoration:none;">Prom=
+oted Link</a>
+</div>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;">=C2=A0</td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"15" style=3D"margin:0 auto;padding:0;line-height:100%;height:=
+15px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:0;width:50px;display:block;">=C2=A0</td>
+<td>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:20px;line-height:100%;height:20px;">=C2=A0</div>
+<a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39=
+f850260e7d9af1c9&id=3Dd6f87cc1bd&e=3D63b2a789f5" style=3D"color:#545454;tex=
+t-decoration:none;font-size:0;height:0;line-height:0;">=C2=A0<img class=3D"=
+smallImg" width=3D"130" src=3D"https://css-weekly.com/wp-content/uploads/20=
+20/05/photile.jpg" style=3D"margin-top:5px; padding-top:0px; margin-bottom:=
+10px; margin-left:20px; margin-right:0; -ms-interpolation-mode:bicubic; wid=
+th:130px; max-width:30%;" align=3D"right" vspace=3D"5" hspace=3D"10" alt=3D=
+"photile.jpg"></a>
+<div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;font-size:18=
+px;line-height:24px;font-family:arial, sans-serif;font-weight:bold;"><a hre=
+f=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39f85026=
+0e7d9af1c9&id=3D92951ec63d&e=3D63b2a789f5" style=3D"color:#252525;text-deco=
+ration:none;">Photile.co</a>
+</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">Photile for Instagram is a web-based app that helps you create photo co=
+llages from your Instagram photos quickly and easily.</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;"><a class=3D"article-call-to-action" style=3D"text-decoration:underline;=
+color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/click?=
+u=3D22abf1e39f850260e7d9af1c9&id=3Dc9336786fa&e=3D63b2a789f5">Create Now</a=
+>
+</div>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:45px;line-height:100%;height:45px;">=C2=A0</div>
+</td>
+</tr>
+<tr>
+<td colspan=3D"3">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width:100%;vertical-align:middle;background-color:#F5F5F5;border-spa=
+cing:0;border-collapse:collapse;">
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td style=3D"vertical-align:middle;">
+<div style=3D"border-bottom:none;margin:0;margin-top:0;margin-bottom:0;widt=
+h:100%;font-size:22px;color:#4F3C39;line-height:22px;font-weight:bold;font-=
+family:arial, sans-serif;vertical-align:middle;">Tools</div>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;">=C2=A0</td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"15" style=3D"margin:0 auto;padding:0;line-height:100%;height:=
+15px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:0;width:50px;display:block;">=C2=A0</td>
+<td>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:20px;line-height:100%;height:20px;">=C2=A0</div>
+<div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;font-size:18=
+px;line-height:24px;font-family:arial, sans-serif;font-weight:bold;"><a hre=
+f=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39f85026=
+0e7d9af1c9&id=3Dd93a45b3fe&e=3D63b2a789f5" style=3D"color:#252525;text-deco=
+ration:none;">Generic Components</a>
+</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">A collection of generic web components with a focus on accessibility, e=
+ase of use, and style.</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;"><a class=3D"article-call-to-action" style=3D"text-decoration:underline;=
+color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/click?=
+u=3D22abf1e39f850260e7d9af1c9&id=3Ddc93eefb4c&e=3D63b2a789f5">Check it out<=
+/a>
+</div>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:35px;line-height:100%;height:35px;">=C2=A0</div>
+<div style=3D"margin:0;margin-bottom:0;padding:0;color:#252525;font-size:18=
+px;line-height:24px;font-family:arial, sans-serif;font-weight:bold;"><a hre=
+f=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39f85026=
+0e7d9af1c9&id=3Dacf22083a3&e=3D63b2a789f5" style=3D"color:#252525;text-deco=
+ration:none;">700+ CSS Icons</a>
+</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">Open-source CSS, SVG, and Figma UI icons, available in SVG Sprite, styl=
+ed-components, NPM &amp; API.</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;"><a class=3D"article-call-to-action" style=3D"text-decoration:underline;=
+color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/click?=
+u=3D22abf1e39f850260e7d9af1c9&id=3D2c42545a61&e=3D63b2a789f5">Check it out<=
+/a>
+</div>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:45px;line-height:100%;height:45px;">=C2=A0</div>
+</td>
+</tr>
+<tr>
+<td colspan=3D"3">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width:100%;vertical-align:middle;background-color:#F5F5F5;border-spa=
+cing:0;border-collapse:collapse;">
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td style=3D"vertical-align:middle;">
+<div style=3D"border-bottom:none;margin:0;margin-top:0;margin-bottom:0;widt=
+h:100%;font-size:22px;color:#4F3C39;line-height:22px;font-weight:bold;font-=
+family:arial, sans-serif;vertical-align:middle;">Inspiration</div>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;">=C2=A0</td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"15" style=3D"margin:0 auto;padding:0;line-height:100%;height:=
+15px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:0;width:50px;display:block;">=C2=A0</td>
+<td>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#252525=
+;font-size:15px;line-height:100%;height:15px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#252525=
+;font-size:18px;line-height:24px;font-family:arial, sans-serif;font-weight:=
+bold;"><a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22=
+abf1e39f850260e7d9af1c9&id=3D4075b4ded4&e=3D63b2a789f5" style=3D"color:#252=
+525;text-decoration:none;font-weight:bold;">CSS Parish</a>
+</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:2px;line-height:2px;height:2px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:13px;line-height:13px;height:13px;">=C2=A0</div>
+<a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39=
+f850260e7d9af1c9&id=3Daa20713646&e=3D63b2a789f5" style=3D"color:#545454;tex=
+t-decoration:none;font-size:12px;line-height:150%;"><img src=3D"https://css=
+-weekly.com/wp-content/uploads/2020/04/css-parish.jpg" width=3D"398" style=
+=3D"width:100%; height:auto; display:block; -ms-interpolation-mode:bicubic;=
+" alt=3D"css-parish.jpg"></a>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;height:13px;line-height=
+:13px;font-size:13px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">Luciano Felix created a beautiful illustration using only CSS.</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;"><a class=3D"article-call-to-action" style=3D"text-decoration:underline;=
+color:#9c8886;" href=3D"https://css-weekly.us2.list-manage.com/track/click?=
+u=3D22abf1e39f850260e7d9af1c9&id=3Dc0c593e23b&e=3D63b2a789f5">Get inspired<=
+/a>
+</div>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:45px;line-height:100%;height:45px;">=C2=A0</div>
+</td>
+</tr>
+<tr>
+<td colspan=3D"3">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width:100%;vertical-align:middle;background-color:#F5F5F5;border-spa=
+cing:0;border-collapse:collapse;">
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td style=3D"vertical-align:middle;">
+<div style=3D"border-bottom:none;margin:0;margin-top:0;margin-bottom:0;widt=
+h:100%;font-size:22px;color:#4F3C39;line-height:22px;font-weight:bold;font-=
+family:arial, sans-serif;vertical-align:middle;">Until Next Week</div>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;">=C2=A0</td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"15" style=3D"margin:0 auto;padding:0;line-height:100%;height:=
+15px;">=C2=A0</td>
+</tr>
+<tr>
+<td height=3D"15" style=3D"margin:0 auto;padding:0;line-height:100%;height:=
+15px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td>
+<div style=3D"margin:0;margin-bottom:0;padding:0;color:#404040;display:bloc=
+k;font-size:14px;line-height:140%;font-family:arial, sans-serif;">
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">Thanks for reading! If you find the content valuable, please consider <=
+a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39f=
+850260e7d9af1c9&id=3D1c90ab5e49&e=3D63b2a789f5" target=3D"_blank" style=3D"=
+color:#9C8886;white-space:normal;">supporting the newsletter on Patreon</a>=
+.</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;color:#404040=
+;display:block;font-size:14px;line-height:20px;font-family:arial, sans-seri=
+f;">Happy coding,<br><a href=3D"https://css-weekly.us2.list-manage.com/trac=
+k/click?u=3D22abf1e39f850260e7d9af1c9&id=3Da51a2a6b12&e=3D63b2a789f5" targe=
+t=3D"_blank" style=3D"color:#9C8886;white-space:normal;">Zoran Jambor</a>
+</div>
+<div style=3D"margin:0;margin-top:0;margin-bottom:0;padding:0;display:block=
+;font-size:12px;line-height:12px;height:12px;">=C2=A0</div>
+</div>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;display:block;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:0;width:50px;display:block;">=C2=A0</td>
+<td>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"30" style=3D"margin:0 auto;padding:0;line-height:30px;height:=
+30px;font-size:30px;">=C2=A0</td>
+</tr>
+<tr>
+<td colspan=3D"3">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" st=
+yle=3D"width:100%;vertical-align:middle;background-color:#F5F5F5;border-rad=
+ius:0 0 5px 5px;border-spacing:0;border-collapse:collapse;">
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td style=3D"vertical-align:middle;">
+<table style=3D"font-size:12px;line-height:150%;width:100%;color:#666;font-=
+family:arial, sans-serif;">
+<tr>
+<td style=3D"color:#666;">Find CSS Weekly on Twitter and Facebook:</td>
+<td align=3D"right" style=3D"width:100px;text-align:right;">
+<a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39=
+f850260e7d9af1c9&id=3Ddcd984a553&e=3D63b2a789f5"><img src=3D"https://css-we=
+ekly.com/newsletters/_resources/twitter.png" alt=3D"Follow CSS Weekly on Tw=
+itter" title=3D"Follow CSS Weekly on Twitter" style=3D"margin-left:10px; ma=
+rgin-right:0; -ms-interpolation-mode:bicubic;"></a>
+<a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf1e39=
+f850260e7d9af1c9&id=3Dcfd58df194&e=3D63b2a789f5"><img src=3D"https://css-we=
+ekly.com/newsletters/_resources/facebook.png" alt=3D"Follow CSS Weekly on F=
+acebook" title=3D"Follow CSS Weekly on Twitter" style=3D"margin-left:10px; =
+margin-right:0; -ms-interpolation-mode:bicubic;"></a>
+</td>
+</tr>
+</table>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;">=C2=A0</td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"10" style=3D"margin:0 auto;padding:0;line-heigh=
+t:100%;height:10px;font-size:10px;">=C2=A0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class=3D"bodyPaddingLeft" align=3D"center" width=3D"20">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"bodyPaddingLeft" align=3D"center" width=3D"20">=C2=A0</td>
+<td>
+<table>
+<tr>
+<td class=3D"contentPaddingLeft" width=3D"50" style=3D"margin:0;padding:0;l=
+ine-height:100%;width:50px;vertical-align:middle;">=C2=A0</td>
+<td>
+<div style=3D"margin:0;margin-top:0px;margin-bottom:0;padding:0;color:#2525=
+25;font-size:25px;line-height:100%;height:25px;">=C2=A0</div>
+<div style=3D"margin:0 0 20px;margin-bottom:20px;padding:0;color:#404040;di=
+splay:block;font-size:14px;line-height:150%;font-family:arial, sans-serif;t=
+ext-align:left;">
+You're subscribed because you wanted weekly report about latest and greates=
+t from CSS world.<br><a href=3D"https://css-weekly.us2.list-manage.com/unsu=
+bscribe?u=3D22abf1e39f850260e7d9af1c9&id=3D3df91c6206&e=3D63b2a789f5&c=3D8a=
+27d9ff6b">Unsubscribe</a> <span style=3D"margin-left:7px; margin-right:7px;=
+">=E2=80=A2</span>
+<a href=3D"https://css-weekly.us2.list-manage.com/profile?u=3D22abf1e39f850=
+260e7d9af1c9&id=3D3df91c6206&e=3D63b2a789f5">Update Subscription Preference=
+s</a>
+<br>
+<br><a href=3D"https://css-weekly.us2.list-manage.com/track/click?u=3D22abf=
+1e39f850260e7d9af1c9&id=3Dbb4d6b106b&e=3D63b2a789f5" style=3D"text-decorati=
+on:none;">
+<span style=3D"vertical-align:middle;font-size:12px; color:#999;">Powered b=
+y</span>
+<br><img style=3D"margin-left:0; width:120px; height:39px;" src=3D"https://=
+css-weekly.com/wp-content/themes/cssweekly/img/cssweekly-mailchimp.png" wid=
+th=3D"120" height=3D"39" alt=3D"cssweekly-mailchimp.png"></a>
+</div>
+</td>
+<td class=3D"contentPaddingRight" width=3D"50" style=3D"margin:0;padding:0;=
+line-height:100%;width:50px;display:block;">=C2=A0</td>
+</tr>
+</table>
+</td>
+<td class=3D"bodyPaddingLeft" align=3D"center" width=3D"20">=C2=A0</td>
+</tr>
+<tr>
+<td class=3D"bodyPaddingBottom" height=3D"20" style=3D"height:20px;line-hei=
+ght:20px;">=C2=A0</td>
+</tr>
+</table>
+</td>
+<td>=C2=A0</td>
+</tr>
+</table>
+</center>
+<img src=3D"https://css-weekly.us2.list-manage.com/track/open.php?u=3D22abf=
+1e39f850260e7d9af1c9&id=3D8a27d9ff6b&e=3D63b2a789f5" height=3D"1" width=3D"=
+1"></body>
+</html>
+--_----------=_MCPart_417638412--

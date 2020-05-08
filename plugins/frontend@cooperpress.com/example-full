@@ -1,0 +1,1060 @@
+Delivered-To: frontender@email2webhook.com
+Received: by 2002:a54:2a8e:0:0:0:0:0 with SMTP id d14csp78454ecp;
+        Wed, 29 Apr 2020 06:36:17 -0700 (PDT)
+X-Received: by 2002:a2e:7d0f:: with SMTP id y15mr7556947ljc.91.1588167377158;
+        Wed, 29 Apr 2020 06:36:17 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1588167377; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=deUewuzIYjvZvDMWwet55RL2EkctpwB/a3lREZ3hyYczhknAwSEcw/yK/889qP6PHq
+         e+LDKsUiTFTHT7q+TaNAHnRbeYHXEXrjdyN+2FX0iamX10X+ir12kSFUNrXstpBNA3SI
+         nm3Vq6ct7VngdOpAIH3EDc8rQ1IwZr/6k98wUyTPoxEKQ2w5F/kPytGPO3CxY2dA+65Y
+         1lbJAjFXKK+0SkdhuzyTc5rtCKwjHR90XfB9ILjQ4sM0U1zX7yhNS2oRsQ3OfuL08+Ar
+         OI+i0gJcU5r1EC8hSjpUKCxVooI6kvOEStoUTTvaOcRFq4Ekv53PRkqkUxSPhppz60xs
+         IXQQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:subject:message-id:to:mime-version:from:date
+         :dkim-signature:dkim-signature:delivered-to;
+        bh=x4G5y274pXil9fBNqqdNQ8msGU9Sy/jP9Vo4UZ19sCw=;
+        b=Wz5gTg0paxh29HMEkLYykR5HmHNUOxNi1Tc+p7xkP6VKVqVslDwzdqAu5JxfSDYih2
+         W+d1av05XGChZKXauopW1TWx93RqEWFCKYQrArWDMcKVq03h7eubb/yaeVrUqmDp/2Wc
+         ok9+ytKcSfTw7sGjmKkHHdcjjxvworMJqIhfo9rArWLfI7pZnyytenxPPcqgQjOc2a4K
+         wTkoplRzjG2G2K+JPQ4BV4BjOdOhP2aJCHgpfISMc9ARNBr73Y+dUyGaBTq7KNfxQAaj
+         JNYskzmr3uTrVUKFesql3AtzaeyEQLOpPAlQ5YCsMC30qcAIzcoBp7mxHLFhaMRqDjAK
+         oNpw==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@cooperpress.com header.s=s1 header.b=IIeDBYmC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=eA6gS4U+;
+       arc=pass (i=1 spf=pass spfdomain=sg.cooperpress.com dkim=pass dkdomain=cooperpress.com dkim=pass dkdomain=sendgrid.info dmarc=pass fromdomain=cooperpress.com);
+       spf=pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom="thesilentimp+caf_=newsilentimp=gmail.com@gmail.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cooperpress.com
+Return-Path: <thesilentimp+caf_=newsilentimp=gmail.com@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id j124sor498363lfd.62.2020.04.29.06.36.16
+        for <frontender@email2webhook.com>
+        (Google Transport Security);
+        Wed, 29 Apr 2020 06:36:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cooperpress.com header.s=s1 header.b=IIeDBYmC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=eA6gS4U+;
+       arc=pass (i=1 spf=pass spfdomain=sg.cooperpress.com dkim=pass dkdomain=cooperpress.com dkim=pass dkdomain=sendgrid.info dmarc=pass fromdomain=cooperpress.com);
+       spf=pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom="thesilentimp+caf_=newsilentimp=gmail.com@gmail.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cooperpress.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:delivered-to:dkim-signature:dkim-signature:date
+         :from:mime-version:to:message-id:subject:list-unsubscribe;
+        bh=x4G5y274pXil9fBNqqdNQ8msGU9Sy/jP9Vo4UZ19sCw=;
+        b=gDZTf9e+YGZEzzZzrBauhBJMcn6AqDrNb9EJJZGWspnmlVat83fib5NdRVC+wAYqPu
+         9/1Z2IATXGVygZIpsxatjT8WVb8um/gXR1FeyQ79VEW/ykNuPF4RT4KI/e6qyM+I5jCr
+         oIuwIh1CFJnZ2e5pILweVjv7CoLCT8I/fiVsaVmg5n2kzZydllwRVUrNhGWg8wsR4bAv
+         u9UGhjKU4iB86O88ujkPm6rzUiDEzK3yF5G0ZQNBywKwjnZ8n5igo0xVvUjtW0Hb1rYG
+         pq4D7LFGSdBAgOGAi4Xo0ykZm71ULC8kWuWltk+qs3cZKw9C3AhDqbnILRHCOxaJADcv
+         /hGQ==
+X-Gm-Message-State: AGi0PuYau4/AmFep/Pgg2UK8jeANBB3pC5YqvurAsUcI9U2u+EWqI2i7 8P740vKpXmZ4CwvHeie8JCUgmLltidx430LOeI9l2u9UCSUXIq0=
+X-Received: by 2002:ac2:5b92:: with SMTP id o18mr18981339lfn.140.1588167376583;
+        Wed, 29 Apr 2020 06:36:16 -0700 (PDT)
+X-Forwarded-To: frontender@email2webhook.com
+X-Forwarded-For: thesilentimp@gmail.com frontender@email2webhook.com
+Delivered-To: thesilentimp@gmail.com
+Received: by 2002:ab3:5403:0:0:0:0:0 with SMTP id e3csp695980ltb;
+        Wed, 29 Apr 2020 06:36:14 -0700 (PDT)
+X-Google-Smtp-Source: APiQypKZ6OslvhjWpSh+1MwwGmbFRJYxZbEDuRDFzFe0bXHvS62WNixC+DH8jXlki8nVUpuTRcoG
+X-Received: by 2002:a17:907:2049:: with SMTP id pg9mr2651201ejb.248.1588167374617;
+        Wed, 29 Apr 2020 06:36:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1588167374; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZWqS+DUoB429syAuYwW3mgttMX4ddXcGH/2mQh6ehgDKwTBqobl0MwqDRajEZExRTc
+         BfaumEqi746TQWBIgdYuvaIeoXt3wPLlyZIzdGnieN0zGBRiSaWfkkee9zk74tkTw25G
+         LPhoz4QSY+qtYska84BbnlJlU/eUiKnhD+IhR8xOjxEKrIf5QTeRwSLDYDGXArEF5StJ
+         y8KvTbmcFIUplCd7jsGtvMjer26+FrvD9/RPu7Hd6ZFa7WzR/VfIIx700r9OCASHkbre
+         viS9zk1UvB7yipW+tvSiPwVpB20t7VsVCS6V0dVBXyh9VMHHJZD1hz+O6csZmyWosC4Z
+         NZ9w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:subject:message-id:to:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=x4G5y274pXil9fBNqqdNQ8msGU9Sy/jP9Vo4UZ19sCw=;
+        b=KGUwUCawXfTlHlo0lHEtrPW3TaVu3DrvXOj7GDfa73ICtmHKbef0d23cYIARccJIKb
+         HkVsDZ1iq5tiL9fX4c0wTQy/E2J7o4yGYwKovmuJqKXQhXhXrzJFKuzzTUo5MuhvVLhs
+         YHmmlbwDME5w8GWlPuY5mt83zMJqT8kw5hM55N4KSs9BS4g0mnE7A3MxtRfDwhZla1C/
+         fBGBO6QvKEv/6WxC/0Vyqo67Vx3IXJTiH+M5bWV+4pv9DhZuxV4Qzxm+JCWNGhsGCj70
+         AWj4Qi0ujT1+M9G2EIbKqnkHwDY7uirtszPxCEt8PPhKu9Prum2UI9raEK05isk025Tm
+         9U2Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cooperpress.com header.s=s1 header.b=IIeDBYmC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=eA6gS4U+;
+       spf=pass (google.com: domain of bounces+3465002-20e1-thesilentimp=gmail.com@sg.cooperpress.com designates 168.245.52.89 as permitted sender) smtp.mailfrom="bounces+3465002-20e1-thesilentimp=gmail.com@sg.cooperpress.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=cooperpress.com
+Return-Path: <bounces+3465002-20e1-thesilentimp=gmail.com@sg.cooperpress.com>
+Received: from o3.ptr904.cooperpress.com (o3.ptr904.cooperpress.com. [168.245.52.89])
+        by mx.google.com with ESMTPS id w7si3526764edu.237.2020.04.29.06.36.13
+        for <thesilentimp@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 29 Apr 2020 06:36:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+3465002-20e1-thesilentimp=gmail.com@sg.cooperpress.com designates 168.245.52.89 as permitted sender) client-ip=168.245.52.89;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=cooperpress.com; h=content-type:from:mime-version:to:subject:list-unsubscribe; s=s1; bh=x4G5y274pXil9fBNqqdNQ8msGU9Sy/jP9Vo4UZ19sCw=; b=IIeDBYm C1/sA8UPZv3znMR5wQVyksW3gbCvYEklUY0Ikl7dyus+i+4moidWxQPWqs/5mat3 mTT2rwickDqU0h/OxtIfJ3qLRiZT50DVR6makpL9fzmV1Wd911uHNH++tBS9N8LP BDUAvjX2LqcS3IBosU2As4Kb6eVoXCilhpYg=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info; h=content-type:from:mime-version:to:subject:list-unsubscribe:x-feedback-id; s=smtpapi; bh=x4G5y274pXil9fBNqqdNQ8msGU9Sy/jP9Vo4UZ19sCw=; b=eA 6gS4U+WHQ6XwVHpXl3WRK0IQeQv4AQb3SNFRusgGmQGNrueMfPCpr1XaIpLq896B VnMML7VMN7xI4LlMem9xq4L45ThkgzHW40q1aVQ2XqbcJuOF2qG6ZuXusanq55Yb B8nZVzpk8IjTp4x+0GPfmYt0dwmHPXlbvazpDR6X8=
+Received: by filter1287p1las1.sendgrid.net with SMTP id filter1287p1las1-13206-5EA97B02-17
+        2020-04-29 13:02:58.785454177 +0000 UTC m=+1163446.509469735
+Received: from MzQ2NTAwMg (unknown) by ismtpd0004p1lon1.sendgrid.net (SG) with HTTP id NmdMLbLLR-GNI8vhZ9Vmcw Wed, 29 Apr 2020 13:02:58.435 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=a4d31509dd2018117b359870b60c7bf8103a2b4bbaaaa639c9283c999ccb
+Date: Wed, 29 Apr 2020 13:36:11 +0000 (UTC)
+From: Frontend Focus <frontend@cooperpress.com>
+Mime-Version: 1.0
+To: thesilentimp@gmail.com
+Message-ID: <NmdMLbLLR-GNI8vhZ9Vmcw@ismtpd0004p1lon1.sendgrid.net>
+Subject: The ✨ magic ✨ of CSS math functions
+List-Unsubscribe: <mailto:unsub-fcd522234e@n2.cooperpress.com>
+X-SG-EID: oMUluPlQxjhbRTaimm7Uidcw6yUvcMnr7ippgiMAJq9A1zfi9Hg6DBSB2N4x3oAEl/AIidTm8A6jfs mlFiSmtCyUoBlK2+10A2aL9ohTMXAQ5C2+c0uz9l3E4Eftki00Z2K0spm3vHVdVP3GORCmM9Ov9utm IlOqOBo6MWTOkPVYRw8C/5WHpUen5t56F6eFdSppHMkvfyMf7iVfKtzMcbDU59RIEnYzGD/Rkc9d/k o=
+X-Feedback-ID: 3465002:HRXkh4VeDw85yjYUQlbvjOL4WzbsF497d3I16NCZSWU=:HRXkh4VeDw85yjYUQlbvjOL4WzbsF497d3I16NCZSWU=:SG
+
+--a4d31509dd2018117b359870b60c7bf8103a2b4bbaaaa639c9283c999ccb
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+This week's HTML, CSS and browser news.
+
+#438 =E2=80=94 April 29, 2020
+
+Read on the Web ( https://frontendfoc.us/issues/438 )
+
+Frontend Focus
+
+Current browser support for CSS math functions. Via: caniuse.com
+( https://caniuse.com/#feat=3Dcss-math-functions )
+
+=E2=96=B6 min(), max(), and clamp()` Are CSS Magic=20
+( https://www.youtube.com/watch?v=3DU9VF-4euyRo ) =E2=80=94 The min, max, a=
+nd
+clamp functions are now starting to see more widespread browser
+support ( https://caniuse.com/#feat=3Dcss-math-functions ). Here=E2=80=99s
+a video running through how these properties can be used to
+really open up responsive typography techniques.
+
+Kevin Powell
+
+Accessible Font Sizing, Explained=20
+( https://css-tricks.com/accessible-font-sizing-explained/ ) =E2=80=94
+Bootstrap core team member Andr=C3=A9s Galante runs through how we can
+ensure our font sizes are accessible by asking what sort of best
+practices we can rely on to make an accessible
+reading experience.
+
+CSS-Tricks
+
+Learn Advanced Creative Coding with WebGL & Shaders=20
+( https://frontendmasters.com/courses/webgl-shaders/?utm_source=3Dfrontendf=
+ocus&utm_medium=3Demail&utm_campaign=3Dadvancedcreative )
+ =E2=80=94 Go deeper into creative coding. Join Matt DesLauriers to
+learn 3D vectors and shader effects using WebGL, ThreeJS,
+and GLSL.
+
+Frontend Masters sponsor
+
+CSS for Internationalisation=20
+( https://www.chenhuijing.com/blog/css-for-i18n/ ) =E2=80=94 An excellent
+guide to the various features in CSS that can be used as part of
+an internationalisation strategy that goes beyond
+mere translation.
+
+Chen Hui Jing
+
+AMP Introduces 'User-Friendly' Content Encryption Support=20
+( https://blog.amp.dev/2020/04/27/introducing-the-fastest-and-most-user-fri=
+endly-content-encryption/ )
+ =E2=80=94 AMP aims to be all about providing speed to mobile consumers
+of content but paywalls just, well, get in the way. So Google and
+the AMP folks have come up with a way where protected content can
+be served and unlocked client-side for more performance.
+Cynically, of course, you could consider this yet another form of
+DRM for Web content...
+
+The AMP Blog
+
+Responsive Web And Desktop Development With Flutter=20
+( https://www.smashingmagazine.com/2020/04/responsive-web-desktop-developme=
+nt-flutter/ )
+ =E2=80=94 A look at the current state of Flutter for browser-based apps
+and how to create a responsive app using it.
+
+Carmine Zaccagnino
+
+=F0=9F=92=BB Jobs
+
+Find a Job Through Vettery=20
+( https://www.vettery.com/tech?utm_source=3Dnewsletter&utm_medium=3Dcooper-=
+frontendfocus&utm_term=3Dtech&utm_content=3Dgrouped&utm_campaign=3Dad-77580=
+ )
+ =E2=80=94 Vettery specializes in tech roles and is completely free for
+job seekers. Create a profile to get started.
+
+Vettery
+
+Frontend Developer at X-Team (Remote)=20
+( https://x-team.com/remote-frontend-developer-jobs/?utm_source=3Dcooperpre=
+ss&utm_medium=3Demail-ad&utm_campaign=3Dfrontend )
+ =E2=80=94 Join the most energizing community for developers. Work from
+anywhere with the world's leading brands.
+
+X-Team
+
+=E2=84=B9=EF=B8=8F Interested in running a job listing in Frontend Focus? T=
+here's
+more info here. ( https://booking.cooperpress.com/jobs )
+
+=F0=9F=93=99 News, Tutorials & Opinion
+
+Spacing in CSS ( https://ishadeed.com/article/spacing-in-css/ )
+=E2=80=94 This is pretty much everything you need to know about spacing
+in CSS, covering grid layout, flexbox, positioning, and
+lots more.
+
+Ahmad Shadeed
+
+=E2=96=B6 Performance Profiling for Web Applications=20
+( https://www.youtube.com/watch?v=3Dj9LW94EN7n4 ) =E2=80=94 An overview of
+how to use Chrome DevTools to understand a Web application=E2=80=99s
+performance bottlenecks.
+
+Sam Saccone
+
+JS VidCon - Virtual Conference for Developers=20
+( https://jsvidcon.com/ ) =E2=80=94 JS VidCon, on May 7th, where developers
+from all over the world can share & gain knowledge from the
+comfort of their home.
+
+EventHandler sponsor
+
+Gardened ( https://ethanmarcotte.com/wrote/gardened/ ) =E2=80=94 A
+thought-provoking piece by Ethan that looks at some of the
+problems inherent in our self-regulated industry, in particular
+related to performance and accessibility.
+
+Ethan Marcotte
+
+CSS Clamp: The Goldilocks of CSS Math Functions=20
+( https://www.stevefenton.co.uk/2020/04/css-clamp-the-goldilocks-of-css-mat=
+h-functions/ )
+ =E2=80=94 As with the video featured above, here's a quick look at how
+to use min, max, and size with the clamp property.
+
+Steve Fenton
+
+Creating A Lightweight CSS-Only Tooltip for All Screen Sizes=20
+( https://rimdev.io/css-only-tooltip-for-all-screen-sizes/ )
+
+Ted Krueger
+
+How to Make A Reading Progress Bar for Your Blog=20
+( https://dev.to/robole/pimp-your-blog-by-adding-a-reading-progress-bar-573=
+i )
+
+
+Rob OLeary
+
+=F0=9F=94=A7  Code, Tools and Resources
+
+98.css: A Design System for Building Faithful Recreations of
+Old UIs ( https://jdan.github.io/98.css/ ) =E2=80=94 If for any reason
+you need to your interface to look like Windows 98 then this
+library has you sorted. Here=E2=80=99s the associated repo=20
+( https://github.com/jdan/98.css ).
+
+Jordan Scales
+
+Color Accessibility: Tools and Resources to Help You Design
+Inclusive Products=20
+( https://stephaniewalter.design/blog/color-accessibility-tools-resources-t=
+o-design-inclusive-products/ )
+ =E2=80=94 We=E2=80=99ve linked to this before, but it=E2=80=99s recently b=
+een updated
+and remains a solid resource.
+
+St=C3=A9phanie Walter
+
+Will It CORS? ( https://httptoolkit.tech/will-it-cors/ ) =E2=80=94 A
+handy online tool/wizard for establishing how your (potential)
+use case will (or won=E2=80=99t!) operate alongside CORS (Cross-Origin
+Resource Sharing).
+
+HTTP Toolkit
+
+Faster CI/CD for All Your Software Projects Using Buildkite=20
+( https://buildkite.com/?pk_campaign=3Dfefocus-290420&pk_source=3Dcp-fefocu=
+s&pk_medium=3Dnewsletter )
+
+
+Buildkite sponsor
+
+Shorthand: A CSS Framework for Designers=20
+( https://shorthandcss.com/ ) =E2=80=94 Includes a =E2=80=9Clite=E2=80=9D (=
+only gray) and
+=E2=80=9Cfull=E2=80=9D version. This is similar to utility class-based
+frameworks, so the draw here is that you don=E2=80=99t have to write any
+CSS, just add classes.
+
+Jiten Bansal
+
+1loc: A Collection of One-line JS Snippets ( https://1loc.dev/ )  =E2=80=94=
+ A neat little collection of vanilla JavaScript one-liners
+divided into various categories (arrays, date/time, DOM, etc).
+
+Nguyen Huu Phuoc
+
+=F0=9F=95=B0 ICYMI (Some older stuff that's worth checking
+out...)
+
+* Tim Kadlec shares thoughts on the 'blunt
+instrument' of loading stylesheets via preload=20
+( https://timkadlec.com/remembers/2020-02-13-when-css-blocks/ ),
+and some performance advice around how you go about loading CSS
+and the DOM order.
+* Dynamic elements: Nothing new here for frontend experts, but
+this is a good summary for beginners=20
+( https://www.kirupa.com/html5/dynamic_elements.htm ) discussing
+how elements can be built dynamically outside of the initial
+markup.
+* Here's an in-depth look at a fairly simple feature: the
+disabled attribute for form elements=20
+( https://catalin.red/disabled-form-controls/ ) (and how to handle
+them).
+* Kevin Powell shares six simple (beginner) typography tips to
+achieve a more professional looking site. Skip to around the 3:20
+mark ( https://youtu.be/6ardZEhjvV0?t=3D201 ) to get straight into
+it.
+* How to create a fully responsive fluid layout in just 20 lines
+of CSS=20
+( https://css-tricks.com/responsive-grid-magazine-layout-in-just-20-lines-o=
+f-css/ )
+ (that also includes responsively resizing multi-column
+elements).
+* Author Brian Hicks explores reducing asset sizes with
+subsetting=20
+( https://bytes.zone/posts/reducing-asset-size-with-subsetting/ ).
+He uses a headless Chrome instance with Puppeteer to automate
+font subsetting on his static pages for savings of 87% on the
+original size.
+
+A Cooperpress ( https://cooperpress.com/ ) publication
+=E2=80=94 Curated by Chris Brandrick ( https://twitter.com/chrisbrandrick )=
+  & Peter Cooper ( https://twitter.com/peterc ).
+
+Change your email address=20
+( https://frontendfoc.us/edit_subscription/fcd522234e ) or Stop
+getting this newsletter=20
+( https://frontendfoc.us/leave/fcd522234e )
+
+=C2=A9 Cooper Press Ltd =C2=B7 Fairfield Enterprise Centre, Louth,
+LN11 0LS, United Kingdom
+--a4d31509dd2018117b359870b60c7bf8103a2b4bbaaaa639c9283c999ccb
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+    <meta charset=3D"utf-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+    <meta name=3D"format-detection" content=3D"date=3Dno">
+    <meta name=3D"format-detection" content=3D"telephone=3Dno">
+   =20
+  <style>body {
+margin: 0; padding: 0; height: 100%; width: 100%; background-color: white; =
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering:=
+ optimizeLegibility; font-feature-settings: "kern" 1; direction: ltr;
+}
+body {
+font-family: -apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-si=
+ze: 15px; line-height: 1.55em;
+}
+img {
+border: 0; outline: none; height: auto; text-decoration: none; max-width: 1=
+00%; line-height: 100%;
+}
+@media screen and (max-width: 600px) {
+  table[id=3D"main"] {
+    max-width: 600px !important; width: 100% !important; min-width: 100% !i=
+mportant;
+  }
+  .nomob {
+    display: none !important;
+  }
+  .onlymob {
+    display: inline-block !important;
+  }
+  .rightifmob {
+    text-align: right !important;
+  }
+  .som {
+    max-width: 33% !important;
+  }
+  div.footer p {
+    text-align: left !important;
+  }
+  div.footer td {
+    text-align: left !important;
+  }
+  .el-columns .column {
+    display: block; width: 100% !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  table.mobilealignleft {
+    width: 100%;
+  }
+  .mobilealignleft {
+    text-align: left !important;
+  }
+}
+</style>
+</head>
+<body style=3D'height: 100%; width: 100%; background-color: white; -webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimiz=
+eLegibility; font-feature-settings: "kern" 1; direction: ltr; font-family: =
+-apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; lin=
+e-height: 1.55em; margin: 0; padding: 0;'>
+<div id=3D"preview" class=3D"noarchive" style=3D"display: none; color: #666=
+;">This week's HTML, CSS and browser news.</div>
+<!--[if (gte mso 9)|(IE)]>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#fff=
+fff" width=3D"600"><tr><td valign=3D"top" style=3D"width: 600px;" bgcolor=
+=3D"#ffffff"><![endif]-->
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=
+=3D"main" width=3D"100%" style=3D"table-layout: fixed; font-family: -apple-=
+system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-heigh=
+t: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: c=
+ollapse; max-width: 600px; height: 100% !important; direction: ltr; padding=
+: 0px;">
+  <tr><td style=3D"font-family: -apple-system,BlinkMacSystemFont,Helvetica,=
+sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; border-collapse: collapse;">
+  <div id=3D"content">    <!-- left/right splitbar -->
+    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;"><tr>
+<td width=3D"50%" align=3D"left" style=3D"padding-left: 4px; font-family: -=
+apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line=
+-height: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse;"><p style=3D"font-size: 12px; color: #999999; text-transform=
+: uppercase; line-height: 1.0em; margin-top: 0.8em; margin-bottom: 0.8em;">=
+#438 =E2=80=94 April 29, 2020</p></td>
+<td width=3D"50%" align=3D"right" style=3D"padding-right: 4px; font-family:=
+ -apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; li=
+ne-height: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-col=
+lapse: collapse;"><p style=3D"font-size: 12px; text-transform: uppercase; l=
+ine-height: 1.0em; margin-top: 0.8em; margin-bottom: 0.8em;"><a href=3D"htt=
+ps://frontendfoc.us/issues/438" style=3D"text-decoration: none; color: #D94=
+306;">Read on the Web</a></p></td>
+</tr></table>
+    <!-- masthead -->
+    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"back=
+ground-color: #f06529; text-align: center; color: #ffffff; mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;" class=3D"el-masth=
+ead"><tr><td style=3D"font-family: -apple-system,BlinkMacSystemFont,Helveti=
+ca,sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt;=
+ mso-table-rspace: 0pt; border-collapse: collapse; padding: 0 12px;"><p sty=
+le=3D"font-size: 1.8em; font-weight: 600; line-height: 1.0em; margin-top: 0=
+.8em; margin-bottom: 0.8em;">Frontend Focus</p></td></tr></table>
+<table width=3D"100%" class=3D"el-fullwidthimage" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co=
+llapse: collapse;"><tr><td style=3D"font-family: -apple-system,BlinkMacSyst=
+emFont,Helvetica,sans-serif; font-size: 15px; line-height: 1.55em; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;">
+  <a href=3D"https://frontendfoc.us/link/87419/fcd522234e" style=3D"text-de=
+coration: none; color: #D94306;"><img src=3D"https://res.cloudinary.com/cpr=
+ess/image/upload/w_1280,e_sharpen:60/v1588150502/t74toluzzntgrl6qsiq7.jpg" =
+alt=3D"" width=3D"640" style=3D"outline: none; height: auto; text-decoratio=
+n: none; max-width: 100%; line-height: 100%; width: 100%; border: 0;"></a>
+</td></tr></table>
+<p style=3D"text-align: right; font-size: 0.6em; color: #999999; margin-top=
+: 0em; margin-bottom: 0em;">Current browser support for CSS math functions.=
+ Via: <a href=3D"https://frontendfoc.us/link/87420/fcd522234e" style=3D"tex=
+t-decoration: none; color: #D94306;">caniuse.com</a></p>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;"><tr><td s=
+tyle=3D"height: 4px; font-family: -apple-system,BlinkMacSystemFont,Helvetic=
+a,sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; border-collapse: collapse;"></td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  video" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-=
+collapse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -app=
+le-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-he=
+ight: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse=
+: collapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink">=E2=96=B6=C2=A0=C2=A0<a href=3D"https:/=
+/frontendfoc.us/link/87419/fcd522234e" title=3D"www.youtube.com" style=3D"t=
+ext-decoration: none; color: #D94306; font-size: 1.15em; line-height: 1.25e=
+m; font-weight: 400;"><code style=3D'font-family: menlo, monaco, "Ubuntu Mo=
+no", courier, monospace; font-weight: normal; background-color: inherit;'>m=
+in(), </code>max()<code style=3D'font-family: menlo, monaco, "Ubuntu Mono",=
+ courier, monospace; font-weight: normal; background-color: inherit;'>, and=
+ </code>clamp()` Are CSS Magic</a></span> =E2=80=94 The <code>min</code>, <=
+code>max</code>, and <code>clamp</code> functions are now starting to see <=
+a href=3D"https://frontendfoc.us/link/87420/fcd522234e" style=3D"text-decor=
+ation: none; color: #D94306;">more widespread browser support</a>. Here=E2=
+=80=99s a video running through how these properties can be used to really =
+open up responsive typography=C2=A0techniques.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">K=
+evin Powell </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87421/fcd522234e" title=3D"css-tricks.com" style=3D"text-decoration: none; =
+color: #D94306;">Accessible Font Sizing, Explained</a></span> =E2=80=94 Boo=
+tstrap core team member Andr=C3=A9s Galante runs through how we can ensure =
+our font sizes are accessible by asking what sort of best practices we can =
+rely on to make an accessible reading=C2=A0experience.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">C=
+SS-Tricks </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+  <a target=3D"_blank" href=3D"https://frontendfoc.us/link/87422/fcd522234e=
+" style=3D"text-decoration: none; color: #D94306;"><img src=3D"https://copm=
+.s3.amazonaws.com/3635ea29.jpeg" width=3D"105" height=3D"110" style=3D"padd=
+ing-top: 12px; padding-left: 12px; outline: none; height: auto; text-decora=
+tion: none; max-width: 100%; line-height: 100%; border: 0;" align=3D"right"=
+ alt=3D"" class=3D"som"></a>
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87422/fcd522234e" title=3D"frontendmasters.com" style=3D"text-decoration: n=
+one; color: #D94306;">Learn Advanced Creative Coding with WebGL &amp; Shade=
+rs</a></span> =E2=80=94 Go deeper into creative coding. Join Matt DesLaurie=
+rs to learn 3D vectors and shader effects using WebGL, ThreeJS, and=C2=A0GL=
+SL.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">F=
+rontend Masters <span style=3D"text-transform: uppercase; margin-left: 4px;=
+ font-size: 0.9em; border-radius: 2px; background-color: #ffc; color: #997 =
+!important; padding: 1px 4px; border: 1px solid #dd6;" class=3D"tag-sponsor=
+">sponsor</span></p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87423/fcd522234e" title=3D"www.chenhuijing.com" style=3D"text-decoration: n=
+one; color: #D94306;">CSS for Internationalisation</a></span> =E2=80=94 An =
+excellent guide to the various features in CSS that can be used as part of =
+an internationalisation strategy that goes beyond mere=C2=A0translation.</p=
+>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">C=
+hen Hui Jing </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87450/fcd522234e" title=3D"blog.amp.dev" style=3D"text-decoration: none; co=
+lor: #D94306;">AMP Introduces 'User-Friendly' Content Encryption Support</a=
+></span> =E2=80=94 AMP aims to be all about providing speed to mobile consu=
+mers of content but paywalls just, well, get in the way. So Google and the =
+AMP folks have come up with a way where protected content can be served and=
+ unlocked client-side for more performance. Cynically, of course, you <em>c=
+ould</em> consider this yet another form of DRM for Web=C2=A0content...</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">T=
+he AMP Blog </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87424/fcd522234e" title=3D"www.smashingmagazine.com" style=3D"text-decorati=
+on: none; color: #D94306;">Responsive Web And Desktop Development With Flut=
+ter</a></span> =E2=80=94 A look at the current state of Flutter for browser=
+-based apps and how to create a responsive app using=C2=A0it.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">C=
+armine Zaccagnino </p>
+</td></tr></table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-headi=
+ng" style=3D"background-color: none !important; text-align: left; margin-to=
+p: 16px !important; color: #333333; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; border-collapse: collapse;"><tr><td style=3D"font-family: -apple-sys=
+tem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: =
+1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: coll=
+apse; padding: 0;"><p style=3D"font-size: 1.6em !important; font-weight: 40=
+0 !important; text-transform: none !important; line-height: 1.4em; border-b=
+ottom-width: 8px; border-bottom-color: #f4f4f4; border-bottom-style: solid;=
+ margin: 0.5em 0;">=F0=9F=92=BB <strong style=3D"font-weight: 600;">Jobs</s=
+trong></p></td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87425/fcd522234e" title=3D"www.vettery.com" style=3D"text-decoration: none;=
+ color: #D94306;">Find a Job Through Vettery</a></span> =E2=80=94 Vettery s=
+pecializes in tech roles and is completely free for job seekers. Create a p=
+rofile to get started.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">V=
+ettery </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87426/fcd522234e" title=3D"x-team.com" style=3D"text-decoration: none; colo=
+r: #D94306;">Frontend Developer at X-Team (Remote)</a></span> =E2=80=94 Joi=
+n the most energizing community for developers. Work from anywhere with the=
+ world's leading=C2=A0brands.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">X=
+-Team </p>
+</td></tr></table>
+<p style=3D"line-height: 2em; font-size: 0.8em; color: #999; margin-top: 0.=
+8em; margin-bottom: 0.8em;">=E2=84=B9=EF=B8=8F <em>Interested in running a =
+job listing in Frontend Focus? There's <a href=3D"https://booking.cooperpre=
+ss.com/jobs" style=3D"text-decoration: none; color: #D94306;">more info her=
+e.</a></em></p>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-headi=
+ng" style=3D"background-color: none !important; text-align: left; margin-to=
+p: 16px !important; color: #333333; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; border-collapse: collapse;"><tr><td style=3D"font-family: -apple-sys=
+tem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: =
+1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: coll=
+apse; padding: 0;"><p style=3D"font-size: 1.6em !important; font-weight: 40=
+0 !important; text-transform: none !important; line-height: 1.4em; border-b=
+ottom-width: 8px; border-bottom-color: #f4f4f4; border-bottom-style: solid;=
+ margin: 0.5em 0;">=F0=9F=93=99 <strong style=3D"font-weight: 600;">News, T=
+utorials &amp; Opinion</strong></p></td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87428/fcd522234e" title=3D"ishadeed.com" style=3D"text-decoration: none; co=
+lor: #D94306;">Spacing in CSS</a></span> =E2=80=94 This is pretty much ever=
+ything you need to know about spacing in CSS, covering grid layout, flexbox=
+, positioning, and lots=C2=A0more.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">A=
+hmad Shadeed </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  video" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-=
+collapse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -app=
+le-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-he=
+ight: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse=
+: collapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink">=E2=96=B6=C2=A0=C2=A0<a href=3D"https:/=
+/frontendfoc.us/link/87429/fcd522234e" title=3D"www.youtube.com" style=3D"t=
+ext-decoration: none; color: #D94306;">Performance Profiling for Web Applic=
+ations</a></span> =E2=80=94 An overview of how to use Chrome DevTools to un=
+derstand a Web application=E2=80=99s performance=C2=A0bottlenecks.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">S=
+am Saccone </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87430/fcd522234e" title=3D"jsvidcon.com" style=3D"text-decoration: none; co=
+lor: #D94306;">JS VidCon - Virtual Conference for Developers</a></span> =E2=
+=80=94 JS VidCon, on May 7th, where developers from all over the world can =
+share &amp; gain knowledge from the comfort of their home.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">E=
+ventHandler <span style=3D"text-transform: uppercase; margin-left: 4px; fon=
+t-size: 0.9em; border-radius: 2px; background-color: #ffc; color: #997 !imp=
+ortant; padding: 1px 4px; border: 1px solid #dd6;" class=3D"tag-sponsor">sp=
+onsor</span></p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87431/fcd522234e" title=3D"ethanmarcotte.com" style=3D"text-decoration: non=
+e; color: #D94306;">Gardened</a></span> =E2=80=94 A thought-provoking piece=
+ by Ethan that looks at some of the problems inherent in our self-regulated=
+ industry, in particular related to performance and=C2=A0accessibility.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">E=
+than Marcotte </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87432/fcd522234e" title=3D"www.stevefenton.co.uk" style=3D"text-decoration:=
+ none; color: #D94306;">CSS Clamp: The Goldilocks of CSS Math Functions</a>=
+</span> =E2=80=94 As with the video featured above, here's a quick look at =
+how to use <code>min</code>, <code>max</code>, and <code>size</code> with t=
+he <code>clamp</code> property.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">S=
+teve Fenton </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87433/fcd522234e" title=3D"rimdev.io" style=3D"text-decoration: none; color=
+: #D94306;">Creating A Lightweight CSS-Only Tooltip for All Screen Sizes</a=
+></span></p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">T=
+ed Krueger </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87434/fcd522234e" title=3D"dev.to" style=3D"text-decoration: none; color: #=
+D94306;">How to Make A Reading Progress Bar for Your Blog</a></span></p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">R=
+ob OLeary </p>
+</td></tr></table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-headi=
+ng" style=3D"background-color: none !important; text-align: left; margin-to=
+p: 16px !important; color: #333333; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; border-collapse: collapse;"><tr><td style=3D"font-family: -apple-sys=
+tem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: =
+1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: coll=
+apse; padding: 0;"><p style=3D"font-size: 1.6em !important; font-weight: 40=
+0 !important; text-transform: none !important; line-height: 1.4em; border-b=
+ottom-width: 8px; border-bottom-color: #f4f4f4; border-bottom-style: solid;=
+ margin: 0.5em 0;">=F0=9F=94=A7 <strong style=3D"font-weight: 600;"> Code, =
+Tools and Resources</strong></p></td></tr></table>
+<table width=3D"100%" class=3D"el-fullwidthimage" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co=
+llapse: collapse;"><tr><td style=3D"font-family: -apple-system,BlinkMacSyst=
+emFont,Helvetica,sans-serif; font-size: 15px; line-height: 1.55em; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;">
+  <a href=3D"https://frontendfoc.us/link/87435/fcd522234e" style=3D"text-de=
+coration: none; color: #D94306;"><img src=3D"https://res.cloudinary.com/cpr=
+ess/image/upload/w_1280,e_sharpen:60/v1588075777/qxoxgagj1u5ziukvtnqe.png" =
+alt=3D"" width=3D"640" style=3D"outline: none; height: auto; text-decoratio=
+n: none; max-width: 100%; line-height: 100%; width: 100%; border: 0;"></a>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87435/fcd522234e" title=3D"jdan.github.io" style=3D"text-decoration: none; =
+color: #D94306;">98.css: A Design System for Building Faithful Recreations =
+of Old UIs</a></span> =E2=80=94 If for any reason you need to your interfac=
+e to look like Windows 98 then this library has you sorted. <a href=3D"http=
+s://frontendfoc.us/link/87436/fcd522234e" style=3D"text-decoration: none; c=
+olor: #D94306;">Here=E2=80=99s the associated=C2=A0repo</a>.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">J=
+ordan Scales </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87437/fcd522234e" title=3D"stephaniewalter.design" style=3D"text-decoration=
+: none; color: #D94306;">Color Accessibility: Tools and Resources to Help Y=
+ou Design Inclusive Products</a></span> =E2=80=94 We=E2=80=99ve linked to t=
+his before, but it=E2=80=99s recently been updated and remains a solid=C2=
+=A0resource.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">S=
+t=C3=A9phanie Walter </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87438/fcd522234e" title=3D"httptoolkit.tech" style=3D"text-decoration: none=
+; color: #D94306;">Will It CORS?</a></span> =E2=80=94 A handy online tool/w=
+izard for establishing how your (potential) use case will (or won=E2=80=99t=
+!) operate alongside CORS (Cross-Origin Resource=C2=A0Sharing).</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">H=
+TTP Toolkit </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87439/fcd522234e" title=3D"buildkite.com" style=3D"text-decoration: none; c=
+olor: #D94306;">Faster CI/CD for All Your Software Projects Using Buildkite=
+</a></span></p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">B=
+uildkite <span style=3D"text-transform: uppercase; margin-left: 4px; font-s=
+ize: 0.9em; border-radius: 2px; background-color: #ffc; color: #997 !import=
+ant; padding: 1px 4px; border: 1px solid #dd6;" class=3D"tag-sponsor">spons=
+or</span></p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87440/fcd522234e" title=3D"shorthandcss.com" style=3D"text-decoration: none=
+; color: #D94306;">Shorthand: A CSS Framework for Designers</a></span> =E2=
+=80=94 Includes a =E2=80=9Clite=E2=80=9D (only gray) and =E2=80=9Cfull=E2=
+=80=9D version. This is similar to utility class-based frameworks, so the d=
+raw here is that you don=E2=80=99t have to write any CSS, just add=C2=A0cla=
+sses.</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">J=
+iten Bansal </p>
+</td></tr></table>
+
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"el-item =
+item  " style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; margin-bottom: 6px;"><tr><td style=3D"font-family: -apple-sy=
+stem,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height:=
+ 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 0px 18px;">
+ =20
+  <p class=3D"desc" style=3D"color: #444; margin-top: 0.8em; margin-bottom:=
+ 0;"><span style=3D"font-weight: 400 !important; font-size: 1.3em !importan=
+t; color: #000;" class=3D"mainlink"><a href=3D"https://frontendfoc.us/link/=
+87441/fcd522234e" title=3D"1loc.dev" style=3D"text-decoration: none; color:=
+ #D94306;">1loc: A Collection of One-line JS Snippets</a></span> =E2=80=94 =
+A neat little collection of vanilla JavaScript one-liners divided into vari=
+ous categories (arrays, date/time, DOM, etc).</p>
+  <p class=3D"name" style=3D"color: #5a5a5a; margin-top: 4px; margin-bottom=
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em;">N=
+guyen Huu Phuoc </p>
+</td></tr></table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;"><tr><td s=
+tyle=3D"height: 12px; font-family: -apple-system,BlinkMacSystemFont,Helveti=
+ca,sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt;=
+ mso-table-rspace: 0pt; border-collapse: collapse;"></td></tr></table>
+<!-- normal content section -->
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"content =
+el-content briefs" style=3D"color: #444; mso-table-lspace: 0pt; mso-table-r=
+space: 0pt; border-collapse: collapse;"><tr><td style=3D"font-family: -appl=
+e-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-hei=
+ght: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse:=
+ collapse; padding: 0px 15px;">
+                  <p style=3D"line-height: 1.7em; font-size: 1.2em; color: =
+#333333; margin-top: 0.8em; margin-bottom: 0.8em;">=F0=9F=95=B0 <strong sty=
+le=3D"font-weight: 600;">ICYMI</strong> <em style=3D"color: #999999;">(Some=
+ older stuff that's worth checking out...)</em></p>
+                 =20
+                  <ul>
+                                                            =20
+                    <li style=3D"margin-bottom: 1.0em; line-height: 1.4em;"=
+>Tim Kadlec shares <a href=3D"https://frontendfoc.us/link/87442/fcd522234e"=
+ style=3D"text-decoration: none; color: #D94306; font-weight: 600;">thought=
+s on the 'blunt instrument' of loading stylesheets via preload</a>, and som=
+e performance advice around how you go about loading CSS and the DOM order.=
+</li>
+                   =20
+                    <li style=3D"margin-bottom: 1.0em; line-height: 1.4em;"=
+>Dynamic elements: Nothing new here for frontend experts, but this is <a hr=
+ef=3D"https://frontendfoc.us/link/87443/fcd522234e" style=3D"text-decoratio=
+n: none; color: #D94306; font-weight: 600;">a good summary for beginners</a=
+> discussing how elements can be built dynamically outside of the initial m=
+arkup.</li>
+                   =20
+                                      =20
+                    <li style=3D"margin-bottom: 1.0em; line-height: 1.4em;"=
+>Here's an in-depth look at a fairly simple feature: <a href=3D"https://fro=
+ntendfoc.us/link/87444/fcd522234e" style=3D"text-decoration: none; color: #=
+D94306; font-weight: 600;">the disabled attribute for form elements</a> (<e=
+m>and how to handle them</em>).</li>
+                   =20
+                    <li style=3D"margin-bottom: 1.0em; line-height: 1.4em;"=
+>Kevin Powell shares six simple (beginner) typography tips to achieve a mor=
+e professional looking site. Skip to around the <a href=3D"https://frontend=
+foc.us/link/87445/fcd522234e" style=3D"text-decoration: none; color: #D9430=
+6; font-weight: 600;">3:20 mark</a> to get straight into it.</li>
+                =20
+                    <li style=3D"margin-bottom: 1.0em; line-height: 1.4em;"=
+>How to create a fully responsive fluid layout <a href=3D"https://frontendf=
+oc.us/link/87446/fcd522234e" style=3D"text-decoration: none; color: #D94306=
+; font-weight: 600;">in just 20 lines of CSS</a> (<em>that also includes re=
+sponsively resizing multi-column elements</em>).</li>
+                   =20
+                    <li style=3D"margin-bottom: 1.0em; line-height: 1.4em;"=
+>Author Brian Hicks explores <a href=3D"https://frontendfoc.us/link/87447/f=
+cd522234e" style=3D"text-decoration: none; color: #D94306; font-weight: 600=
+;">reducing asset sizes with subsetting</a>. He uses a headless Chrome inst=
+ance with Puppeteer to automate font subsetting on his static pages for sav=
+ings of 87% on the original size.</li>
+                   =20
+                  </ul>
+</td></tr></table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;"><tr><td s=
+tyle=3D"height: 8px; font-family: -apple-system,BlinkMacSystemFont,Helvetic=
+a,sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; border-collapse: collapse;"></td></tr></table>
+</div>
+  </td></tr>
+</table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+<div id=3D"footer" class=3D"noarchive">
+      <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-top-width: 1px; border-top-color: #dddddd; border-top-style: solid; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;"><tr=
+><td style=3D"text-align: center; font-family: -apple-system,BlinkMacSystem=
+Font,Helvetica,sans-serif; font-size: 15px; line-height: 1.55em; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 20p=
+x 15px;">
+      <p style=3D"font-size: 12px; line-height: 1.5em; margin-top: 0.8em; m=
+argin-bottom: 0.8em;">A <strong style=3D"font-weight: 600;"><a href=3D"http=
+s://cooperpress.com/" style=3D"text-decoration: none; color: #D94306;">Coop=
+erpress</a></strong> publication =E2=80=94=C2=A0Curated by <a href=3D"https=
+://frontendfoc.us/link/87451/fcd522234e" style=3D"text-decoration: none; co=
+lor: #D94306;">Chris Brandrick</a> &amp; <a href=3D"https://frontendfoc.us/=
+link/87452/fcd522234e" style=3D"text-decoration: none; color: #D94306;">Pet=
+er Cooper</a>.</p>
+      <p style=3D"font-size: 0.9em; margin-top: 0.8em; margin-bottom: 0.8em=
+;"><span class=3D"nomob"><a href=3D"https://frontendfoc.us/edit_subscriptio=
+n/fcd522234e" style=3D"text-decoration: underline; color: #D94306;">Change =
+your email address</a> or </span><a href=3D"https://frontendfoc.us/leave/fc=
+d522234e" style=3D"text-decoration: underline; color: #D94306;">Stop gettin=
+g this newsletter</a></p>
+      <p style=3D"font-size: 12px; margin-top: 0.8em; margin-bottom: 0.8em;=
+">=C2=A9 Cooper Press Ltd =C2=B7 Fairfield Enterprise Centre, Louth, LN11 0=
+LS, United Kingdom</p>
+      </td></tr></table>
+   =20
+  </div>
+<img src=3D"https://frontendfoc.us/open/438/fcd522234e" width=3D"1" height=
+=3D"1" /></body>
+</html>
+
+--a4d31509dd2018117b359870b60c7bf8103a2b4bbaaaa639c9283c999ccb--

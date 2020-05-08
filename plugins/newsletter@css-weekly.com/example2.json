@@ -1,0 +1,65 @@
+{
+    "body": {
+        "sender": "newsilentimp@gmail.com",
+        "size": "55037",
+        "recipient": "email2webhook@email2webhook.com",
+        "content": {
+            "to": [
+                {
+                    "display": "frontender@email2webhook.com",
+                    "address": "frontender@email2webhook.com",
+                    "is_group": false
+                }
+            ],
+            "from": [
+                {
+                    "display": "Anton Nemtsev",
+                    "address": "newsilentimp@gmail.com",
+                    "is_group": false
+                }
+            ],
+            "cc": [],
+            "subject": "Fwd: Issue #409: Animating DOM Changes, Atomic CSS-in-JS, Selection in CSS",
+            "body": "---------- Forwarded message ---------\nFrom: CSS Weekly <newsletter@css-weekly.com>\nDate: Tue, May 5, 2020 at 11:28 PM\nSubject: Issue #409: Animating DOM Changes, Atomic CSS-in-JS, Selection in\nCSS\nTo: <thesilentimp@gmail.com>\n\n\n\n\n\n\n\n[image: CSS Weekly]\nIssue #409 â¢ May 5, 2020\nview online version\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=740670acff&e=63b2a789f5>\n\n\n\n\n\nAnimating DOM Changes\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=d6ec978f9a&e=63b2a789f5>\n\n\n[image: animating-dom-changes.jpg]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=4b76b26057&e=63b2a789f5>\n\nAda Rose Cannon shares some tips on smoothly adding, removing, resizing,\nand reordering elements.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=ced6883e96&e=63b2a789f5>\n\nAtomic CSS-in-JS\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=07389e2710&e=63b2a789f5>\n\n\n[image: atomic-css-in-js.jpg]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=f1123ca4e7&e=63b2a789f5>\n\nSÃ©bastien Lorber explains what atomic CSS is and how it relates to\nfunctional / utility-first CSS like Tailwind CSS.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=1a30b7b17d&e=63b2a789f5>\n\n\n\nFrom Our Sponsor\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=f8a57408c8&e=63b2a789f5>\n\n\n\n\n\nDon't wait, start your journey toward a software engineering career today!\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=bc42987ae9&e=63b2a789f5>\n\n\n[image: springboard-software-engineering-career1.jpg]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=348da236fe&e=63b2a789f5>\n\nLearn key software engineering skills like HTML/CSS and JavaScript in as\nlittle as 4 weeks. Springboard is an outcomes-driven online school offering\nmentor-guided courses that allow people a path toward in-demand careers in\ntech like software engineering, data science, UI/UX design and more. [image:\n1320.gif?opens=1]\n\nLearn more and get started\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=be0344e5a0&e=63b2a789f5>\n\n\n\nArticles & Tutorials\n\n\n\n\n\nSelection in CSS\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=37ec250d4d&e=63b2a789f5>\n\nAhmad Shadeed goes through everything about the text selection in CSS,\nwhich includes the pseudo-classes *::selection* and *user-select*.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=0d845a275a&e=63b2a789f5>\n\nThe CSS âcontentâ Property Accepts Alternative Text\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=aa6ef9691d&e=63b2a789f5>\n\nStefan Judis explains how the *content* property supports a way to define\nalternative text for generated content.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=7e4864a4f3&e=63b2a789f5>\n\nAdding CSS to a Page via HTTP Headers\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=f1a27e365c&e=63b2a789f5>\n\nLouis Lazaris explores if itâs possible to add CSS to pages by means of\nHTTP headers.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=7e0ad0fd31&e=63b2a789f5>\n\nImplementing Dark Mode In React Apps Using styled-components\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=0a696fdd89&e=63b2a789f5>\n\nBlessing Krofegha shows how to efficiently implement dark mode in a React\napp on a simple web page, using the *styled-components* library and\nleveraging some React features like hooks.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=09a4851661&e=63b2a789f5>\n\nHow to Create Pure CSS Games\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=ba14a5317d&e=63b2a789f5>\n\nElad Shechter will teach you how to create pure CSS games.\n\nRead more\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=dc10ed620c&e=63b2a789f5>\n\n\n\nPromoted Link\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=276fce8d63&e=63b2a789f5>\n\n\n\n\n\n [image: photile.jpg]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=d6f87cc1bd&e=63b2a789f5>\nPhotile.co\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=92951ec63d&e=63b2a789f5>\n\nPhotile for Instagram is a web-based app that helps you create photo\ncollages from your Instagram photos quickly and easily.\n\nCreate Now\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=c9336786fa&e=63b2a789f5>\n\n\n\nTools\n\n\n\n\n\nGeneric Components\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=d93a45b3fe&e=63b2a789f5>\n\nA collection of generic web components with a focus on accessibility, ease\nof use, and style.\n\nCheck it out\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=dc93eefb4c&e=63b2a789f5>\n\n700+ CSS Icons\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=acf22083a3&e=63b2a789f5>\n\nOpen-source CSS, SVG, and Figma UI icons, available in SVG Sprite,\nstyled-components, NPM & API.\n\nCheck it out\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=2c42545a61&e=63b2a789f5>\n\n\n\nInspiration\n\n\n\n\n\nCSS Parish\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=4075b4ded4&e=63b2a789f5>\n\n\n[image: css-parish.jpg]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=aa20713646&e=63b2a789f5>\n\nLuciano Felix created a beautiful illustration using only CSS.\n\nGet inspired\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=c0c593e23b&e=63b2a789f5>\n\n\n\nUntil Next Week\n\n\n\n\n\nThanks for reading! If you find the content valuable, please consider\nsupporting\nthe newsletter on Patreon\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=1c90ab5e49&e=63b2a789f5>\n.\n\nHappy coding,\nZoran Jambor\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=a51a2a6b12&e=63b2a789f5>\n\n\n\n\n\n\nFind CSS Weekly on Twitter and Facebook: [image: Follow CSS Weekly on\nTwitter]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=dcd984a553&e=63b2a789f5>\n[image:\nFollow CSS Weekly on Facebook]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=cfd58df194&e=63b2a789f5>\n\n\n\n\n\nYou're subscribed because you wanted weekly report about latest and\ngreatest from CSS world.\nUnsubscribe\n<https://css-weekly.us2.list-manage.com/unsubscribe?u=22abf1e39f850260e7d9af1c9&id=3df91c6206&e=63b2a789f5&c=8a27d9ff6b>\nâ¢ Update Subscription Preferences\n<https://css-weekly.us2.list-manage.com/profile?u=22abf1e39f850260e7d9af1c9&id=3df91c6206&e=63b2a789f5>\n\nPowered by\n[image: cssweekly-mailchimp.png]\n<https://css-weekly.us2.list-manage.com/track/click?u=22abf1e39f850260e7d9af1c9&id=bb4d6b106b&e=63b2a789f5>\n",
+            "headers": {
+                "received-spf": "Pass (mailfrom) identity=mailfrom; client-ip=209.85.208.45; helo=mail-ed1-f45.google.com; envelope-from=newsilentimp@gmail.com; receiver=<UNKNOWN> ",
+                "authentication-results": "email2webhook.com; dkim=pass (2048-bit key; unprotected) header.d=gmail.com header.i=@gmail.com header.b=\"Xc+10/V1\"; dkim-atps=neutral",
+                "received": [
+                    "from mail-ed1-f45.google.com (mail-ed1-f45.google.com [209.85.208.45]) by email2webhook.com (Postfix) with ESMTPS id 8D2A0408A6 for <frontender@email2webhook.com>; Mon, 11 May 2020 02:43:16 +0530 (IST)",
+                    "by mail-ed1-f45.google.com with SMTP id y24so6238935edo.0        for <frontender@email2webhook.com>; Sun, 10 May 2020 14:13:16 -0700 (PDT)"
+                ],
+                "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20161025;        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;        bh=soHdDo1Dhuf4h9nAUUddzyKIUW1LDKU5AxwQ6GpZ+zM=;        b=Xc+10/V1NKZCNPp9zKtNMxEtAHHc0FdmfRBia4of7iAsBNRBnEY/Nrts3Jdp7YlTXF         uT45XREa3LTA6b9+qAvxwx+vs+irKCK5eb3mxyw/RZgLBwa6fm5JFE8xldudAaqLNoBZ         VO8gtyp7fx5ZKXW2/ZuZmtUBuvtFJw3XJ0/iHdQfwFK1SpEaAglOgXT89WkgwIIKLGrm         2Wi+vUJwb8c2BYnOFj8sHn/d3Bn+rloJLLbR6gQ4kVd3gP+oXhW77r704wohQF4Tn3XF         kI82fpAEvhWb7PTXhT7PE4ppLi/A0cuLEyLYYUJCAHBCF7rSRIZyOC/BS7g86xDv4KW1         A3Gg==",
+                "x-google-dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:mime-version:references:in-reply-to:from:date         :message-id:subject:to;        bh=soHdDo1Dhuf4h9nAUUddzyKIUW1LDKU5AxwQ6GpZ+zM=;        b=ZEVOPEkTfUPpmITFLZ8UXaX60CBftpb6vxXHk86eBLdrh6x9IGatOISPxEEIV/SFFj         K2PX/kEKVqWokYavo63p1LEaDUiP75zG6bMNF3apqo9nB6EKjBOo9YE0LUH5b4BQBuso         1xRxNOee93YT+AuBEVbBxXbOhK6q8gbTvYfxshlEPF+9gM2ko3WScaO/2JGStxJ3/ovv         1VBPTUMUo4eV7EvXd2y2JmD3zeRW8AFIXNoNaU+BJVwRn7hhw6E7L2V0rL4yP+mSSQ7P         Fbj6NOC29jkkRGkUh0HzEpp5AIxiFoIn1cCqrsSLSfLaAEYytLgbFzDe2iq4/4OQvdmF         Or8w==",
+                "x-gm-message-state": "AOAM5333h75ZHmyB8M4EZZrjLOdJmP2+IW7/QPpfihCR6pnNeGQb+QI5 RaVgjnGcxsIk52GZ7YBAUXzTZBq17Dr8DXilceVbyodM",
+                "x-google-smtp-source": "ABdhPJxKn16AUZF3nO25pfcXlZtRBtXZzGykK7kEPMUZOGvOQcpMaRpgrMRnuxmxDakke4N77+En/PPwMPttOk1N+XA=",
+                "x-received": "by 2002:a05:6402:1713:: with SMTP id y19mr1340571edu.40.1589145193843; Sun, 10 May 2020 14:13:13 -0700 (PDT)",
+                "mime-version": "1.0",
+                "references": "<22abf1e39f850260e7d9af1c9.63b2a789f5.20200505212819.8a27d9ff6b.b173e2e1@mail86.atl91.mcsv.net>",
+                "in-reply-to": "<22abf1e39f850260e7d9af1c9.63b2a789f5.20200505212819.8a27d9ff6b.b173e2e1@mail86.atl91.mcsv.net>",
+                "from": "Anton Nemtsev <newsilentimp@gmail.com>",
+                "date": "Sun, 10 May 2020 23:13:02 +0200",
+                "message-id": "<CA+JO0fLa4rWiA3na52pPEqcn+BVYkaAwwyXCvtNiW7y0dLgcMg@mail.gmail.com>",
+                "subject": "Fwd: Issue #409: Animating DOM Changes, Atomic CSS-in-JS, Selection in CSS",
+                "to": "frontender@email2webhook.com",
+                "content-type": "multipart/alternative; boundary=\"000000000000c690da05a551b2cf\""
+            }
+        }
+    },
+    "headers": {
+        "host": "mail.frontender.info",
+        "x-real-ip": "172.69.135.209",
+        "x-forwarded-for": "45.77.45.57, 172.69.135.209",
+        "x-forwarded-proto": "https",
+        "connection": "close",
+        "content-length": "11208",
+        "accept-encoding": "gzip",
+        "cf-ipcountry": "SG",
+        "cf-ray": "5916a9de3a8ee23f-SIN",
+        "cf-visitor": "{\"scheme\":\"https\"}",
+        "accept": "*/*",
+        "content-type": "application/json",
+        "cf-request-id": "02a2087ee30000e23f0e365200000001",
+        "cf-connecting-ip": "45.77.45.57",
+        "cdn-loop": "cloudflare"
+    }
+}

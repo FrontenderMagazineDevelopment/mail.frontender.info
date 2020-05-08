@@ -1,0 +1,1367 @@
+Delivered-To: newsilentimp@gmail.com
+Received: by 2002: a50: 3a9d: 0: 0: 0: 0: 0 with SMTP id v29csp360794ecc;
+        Fri, 8 May 2020 09:46:16 -0700 (PDT)
+X-Received: by 2002: a2e: 953 :: with SMTP id 80mr2334131ljj.276.1588956376735;
+        Fri, 08 May 2020 09:46:16 -0700 (PDT)
+ARC-Seal: i = 2; a = rsa-SHA256; t = 1588956376; cv = pass;
+        d = google.com; arc-s = 20160816;
+        b = Q + CevUHDCQhsPjNU2OvEZR / 3nkjqWPIverIO3duOaIgEjPysYFR5BWvWOJpPBkcCFi
+         3t6b + r4GKnhyKD6mDEZhkPvg1eTgWVfjs8yQsC9kwfSF2LDJoxdOq2L2ZAu3jA2OD2fu
+         fr7BRnYcZc1uAlZoDXWvZtvGEeU pOJZFQVu9CYnbMWtZuOAL396tV1vcHCMHv5DoG3 + +
+         WHiNwYcu + aclr65w0g5st5CXitpE9Ymt9JILn0zRzXRX nTV + / + XYINlq9Im 3GeqzHwEP
+         HJxFU9iMazgDkfDRmqfHFn23vBHvGEtVMcCdUXH7tzymYABj39TnX + IpSVLXvSaMQjMd
+         galQ ==
+ARC-Message-Signature: i = 2; a = rsa-SHA256; c = relaxed / relaxed; d = google.com; arc-s = 20160816;
+        h = list-unsubscribe subject: message-id: is: mime-version: from: date
+         : Dkim-signature: signature-dkim: delivered-it;
+        bh = erqpQd8hJkUdhgSadO / EwxneBAusK3o8ZGTX1Btp7H4 =;
+        b = iUIPKya0fxG4JWv9 mbV8xVP + / + Ab8OYMKUQOa amUxbZkJCpgOxLbp5e2p / bl4RCrMp
+         FEjZfKak1MU9ImdueXVtxqhp0ZKbvPdC2Y5C EERG + + + luhqaKJ03mMtXK36tC321x / 4b
+         8DyZlAxln9STKNMP7ZevvFLIYGgjKVvGRlIOIkCndk Yh19BKcE + + + JZFkK1di hbgUOWj
+         1byz5Htm3QvRryXWQNcKm1kPmwpPUkxJYFb1QXlkkwQknBCthMuVsIqghenh / JvbcoLU
+         b6cAcSbvRk7wSVpgB4gSwf3ZD3YxM5yYsfx7nnvQbs / Fjr9drbKSB7JZIhhZ8UHyaHMV
+         dWRA ==
+ARC-Authentication-Results: i = 2; mx.google.com;
+       dkim = pass header.i=@peterc.org header.s = s1 header.b = "jKUIWv / P";
+       dkim = pass header.i=@sendgrid.info header.s = smtpapi header.b = axBPIP5l;
+       arc = pass (i = 1 spf = pass spfdomain = sg.peterc.org dkim = pass dkdomain = peterc.org dkim = pass dkdomain = sendgrid.info dmarc = pass fromdomain = peterc.org);
+       spf = pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom = "thesilentimp+caf_=newsilentimp=gmail.com@gmail.com" ;
+       dmarc = pass (p = NONE sp = NONE dis = NONE) header.from = peterc.org
+Return-Path: <thesilentimp+caf_=newsilentimp=gmail.com@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id t10sor943944lfe. 29.2020.05.08.09.46.16
+        for <newsilentimp@gmail.com>
+        (Google Transport Security);
+        Fri, 08 May 2020 09:46:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) client-ip = 209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim = pass header.i=@peterc.org header.s = s1 header.b = "jKUIWv / P";
+       dkim = pass header.i=@sendgrid.info header.s = smtpapi header.b = axBPIP5l;
+       arc = pass (i = 1 spf = pass spfdomain = sg.peterc.org dkim = pass dkdomain = peterc.org dkim = pass dkdomain = sendgrid.info dmarc = pass fromdomain = peterc.org);
+       spf = pass (google.com: domain of thesilentimp+caf_=newsilentimp=gmail.com@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom = "thesilentimp+caf_=newsilentimp=gmail.com@gmail.com" ;
+       dmarc = pass (p = NONE sp = NONE dis = NONE) header.from = peterc.org
+X-Google-DKIM-Signature: v = 1; a = rsa-SHA256; c = relaxed / relaxed;
+        d = 1e100.net; s = 20161025;
+        h = x-gm-message-state: Delivered-: dkim-signature: signature-dkim DATE
+         : From: mime-version: to: message-id subject: list-unsubscribe;
+        bh = erqpQd8hJkUdhgSadO / EwxneBAusK3o8ZGTX1Btp7H4 =;
+        b = XQU8VoU6S1db7YSxBWOmdwk52rB / CaDF5D6Jbf9e / 0aWRuVOGmwCrJ9OkC + y / hdw21
+         jRUbqZoWmEmvJlwp / YZm3KqajaCDvvlZXjw / x + 1rM9BeJyzeAXjFXmPnvBFjgKclhRtY
+         5yVoScRMpPZZZ0oeBIAmb1fq / 19Cjp5qX9tn0tqR + fdj67qz8MwfAaez2NCutnZ0eEq8
+         JhVbAyLK0OXW8pvvomttMkjuSb2IU1DlqGA9 + RiRmAKpSwgrq3mHRRMYIU9x38SQAs1I
+         GE8yM / ZgJMBrCMJjvt8hPCV6j5C5kqOT3Mo1Ys1uzjIrBuRGtRYxrlnXChOSqXaewrYA
+         5epg ==
+X-Gm-Message-State: AOAM531b6pHQtrd / VP2Au5Mk1UOBjf2Ac5f4nK + xOFnJ5n0c55j1fTVN Di5BjnbRzj7gIjV9rVSWyE4NUrgYIHB0GWgV0dSVZQX =
+X-Received: by 2002: ac2: 5685 :: with SMTP id 5mr2500894lfr.5.1588956376257;
+        Fri, 08 May 2020 09:46:16 -0700 (PDT)
+X-Forwarded-To: newsilentimp@gmail.com
+X-Forwarded-For: thesilentimp@gmail.com newsilentimp@gmail.com
+Delivered-To: thesilentimp@gmail.com
+Received: by 2002: ab3: 5403: 0: 0: 0: 0: 0 with SMTP id e3csp349332ltb;
+        Fri, 8 May 2020 09:46:14 -0700 (PDT)
+X-Google-Smtp-Source: APiQypIzZksb / OabXQmSJcc3ooJhYVdW2XiLaXBtSazluaYqiVE0ohmrswsoYXxIy6Z8KycKQCLJ
+X-Received: by 2002: a50: 9f0a :: with SMTP id b10mr2960363edf.159.1588956374599;
+        Fri, 08 May 2020 09:46:14 -0700 (PDT)
+ARC-Seal: i = 1; a = rsa-SHA256; t = 1588956374; cv = none;
+        d = google.com; arc-s = 20160816;
+        b = + kau6gbEnYalTtJ mDXOaRT67 / Ro2QnaLoeEDgKyGz4ZgBeSSCpVyYagwR0X9N2MXkz
+         9OBewxKESxia5UktOIsZBnKXLNgTTyXs0IbI1 wR4SujOcOE8hgjhLa4vE6Arl7OhF + + U
+         8pNxNsyw0Ufc TM8 + + 57o / hM2tJuqfoxNWCqJq13zU9fdTc5uKQYKRKmKscmtMXuSa723
+         YaYBVg4qFsG / kWYoM3oR2fGAPMao // PP7RBKYBxLewn4vkN2loHRk7gkpEq04wIk2dIO
+         3 / ohM84RK4emdfZQ + + 0EKZ vPdipiTFDScVtdKroCNtNur5w15VZl1iUn3yL4ibYNzsDS
+         hc4w ==
+ARC-Message-Signature: i = 1; a = rsa-SHA256; c = relaxed / relaxed; d = google.com; arc-s = 20160816;
+        h = list-unsubscribe subject: message-id: is: mime-version: from: date
+         : Dkim-signature: signature-dkim;
+        bh = erqpQd8hJkUdhgSadO / EwxneBAusK3o8ZGTX1Btp7H4 =;
+        b = + aXB0grvTa1Lwgj0B9eSPHIp6ydM bAzfF8PT35W8zDE8nkKj2sV75Q3zTYvE7hIcQr
+         FkC7x 7FRGVJj1AtY5uMYTjyAGBmQ0Uw3oh2euxp9AqnLyW2hCWxrsdgbwF + + O0nu2opD
+         z7 / L0aszZX2arNwzh1YqpB / DoQ6ZvE12 / o bOdqyMTauxvPWg + / + OW D6DZZkKZ5Ea7HHR
+         Df6u3czaytuymmOAwPcoKnN6b47Nx96cIuyHWJ3jiR2hdTLD1AXhTPUFBqeA2Ox7jxet
+         i8VrHsdkOO / poMW / jbUBVyaO6Zv7Qti0qNJjkq1PcF1izU9uRzXVd / fOzul / 7ugG63LT
+         pRTA ==
+ARC-Authentication-Results: i = 1; mx.google.com;
+       dkim = pass header.i=@peterc.org header.s = s1 header.b = "jKUIWv / P";
+       dkim = pass header.i=@sendgrid.info header.s = smtpapi header.b = axBPIP5l;
+       spf = pass (google.com: domain of bounces+3465002-20e1-thesilentimp=gmail.com@sg.peterc.org designates 168.245.52.89 as permitted sender) smtp.mailfrom = "bounces + 3465002-20e1-thesilentimp = gmail. com@sg.peterc.org ";
+       dmarc = pass (p = NONE sp = NONE dis = NONE) header.from = peterc.org
+Return-Path: <bounces+3465002-20e1-thesilentimp=gmail.com@sg.peterc.org>
+Received: from o3.ptr904.cooperpress.com (o3.ptr904.cooperpress.com. [168.245.52.89])
+        by mx.google.com with ESMTPS id u3si1265691edo.526.2020.05.08.09.46.13
+        for <thesilentimp@gmail.com>
+        (version = TLS1_2 cipher = ECDHE-ECDSA-AES128-GCM-SHA256 bits = 128/128);
+        Fri, 08 May 2020 09:46:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+3465002-20e1-thesilentimp=gmail.com@sg.peterc.org designates 168.245.52.89 as permitted sender) client-ip = 168.245.52.89;
+DKIM-Signature: v = 1; a = rsa-SHA256; c = relaxed / relaxed; d = peterc.org; h = content-type: from: mime-version: this subject: unsubscribe list-; s = s1; bh = erqpQd8hJkUdhgSadO / EwxneBAusK3o8ZGTX1Btp7H4 =; b = jKUIWv / PQ4 / kchdLCWiMo1TXva31rCUa27VweJSDRXzZL53D2N9MGoiI9p / HzXHLf1peDzi UC99ypuN / pFlvccCDws4sbMotCcStERiN6BNkW3F3H3m3H3M3M3
+DKIM-Signature: v = 1; a = rsa-SHA256; c = relaxed / relaxed; d = sendgrid.info; h = content-type: from: mime-version: this subject: unsubscribe list-: x-feedback-id; s = smtpapi; bh = erqpQd8hJkUdhgSadO / EwxneBAusK3o8ZGTX1Btp7H4 =; b = ax BPIP5ls0F9DkM7yjfm6ePmJDKMDdQlb7ILIb4VhpGoH / t8vIYGmFLBMFuXBMO860 Tw5EFYe6r2VA CZdL5yeZTELQ4CaLLuy91BinP6d9nff5Cy7vLKVTRPVChtQC + + Ha kGZFOTY9O7xLk / joccNNQi0L1CN042hIZDEyGjyqo =
+Received: by filter0904p1iad2.sendgrid.net with SMTP id filter0904p1iad2-26327-5EB58A10-1F
+        2020-05-08 16: 34: 24.557253978 +0000 UTC m = + 1963697.007020889
+Received: from MzQ2NTAwMg (unknown) by ismtpd0008p1lon1.sendgrid.net (SG) with HTTP id HXAXlYkoRGWb6CTREbo6Jw Fri, 08 May 2020 16: 34: 24.203 +0000 (UTC)
+Content-Type: multipart / alternative; boundary = a537217fcc2280b2f267a5e314216cdaaf071fd3f3b2c33397ded1db79a6
+Date: Fri, 08 May 2020 16:46:10 +0000 (UTC)
+From: JavaScript Weekly <jsw@peterc.org>
+Mime-Version: 1.0
+It's: thesilentimp@gmail.com
+Message-ID: <HXAXlYkoRGWb6CTREbo6Jw@ismtpd0008p1lon1.sendgrid.net>
+Subject: It's 26, JS one liners, and comparing Ember to React
+List-Unsubscribe: <mailto: unsub-fc9f5faa6f@n2.cooperpress.com>
+SG-X-EID: oMUluPlQxjhbRTaimm7Uidcw6yUvcMnr7ippgiMAJq / WGvnUCJcl7zikfUz9Z2vFQy81VmSQB2WZP9 yXuzdeibudqCY2MXdQWEGqKzv94sPGeFkKDoB3JQu630ShdP030 ++ 0Mtu6U9N4KLxbVUNJm9VcTF9r nRAafm / NDwkeVcMkazns89 / B3stBuYxWAAR / GrtMRbF7stDPbZcH TzaUmvKbDXI2oU + / ++ HIuQ2E3 W 4 =
+X-Feedback-ID: 3465002: HRXkh4VeDw85yjYUQlbvjOL4WzbsF497d3I16NCZSWU =: HRXkh4VeDw85yjYUQlbvjOL4WzbsF497d3I16NCZSWU =: SG
+
+--a537217fcc2280b2f267a5e314216cdaaf071fd3f3b2c33397ded1db79a6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text / plain; charset = UTF-8
+Mime-Version: 1.0
+
+Plus more JavaScript links, tutorials, and projects.
+
+# 487 = E2 = 80 = 94 May 8, 2020
+
+Unsubscribe (https://javascriptweekly.com/leave/fc9f5faa6f): Read on th =
+e Web (https://javascriptweekly.com/issues/487)
+
+JavaScript Weekly
+
+There is 26 Released: The Popular Testing Framework = 20
+(https://jestjs.io/blog/2020/05/05/jest-26) = E2 = 80 = 94 Is is a popular
+testing framework that works with pretty much everything. this
+release focuses on getting the dependency count and install size
+down (this causes some breaking changes, unsurprisingly), adds a
+new fake timer implementation, drops Node 8 support, and initial,
+experimental ESM support to play with.
+
+Christoph Nakazawa
+
+1LOC: A Collection of One-Line JS Snippets (https://1loc.dev/) = E2 = 80 = 94 =
+ A neat little collection of vanilla JavaScript one-liners
+divided into various categories (arrays, date / time, checking
+objects, DOM work, etc.) You can submit your own for
+inclusion too.
+
+Nguyen Huu Phuoc
+
+Hardcore Functional Programming in JavaScript = 20
+(https://frontendmasters.com/courses/hardcore-js-v2/?utm_source=3Djsweekly=
+& utm_medium = 3Demail & utm_campaign = 3Djavascriptv2)
+ = E2 = 80 = 94 Brian Lonsdorf teaches you functional programming concepts in
+JavaScript such as pure functions, currying, composition,
+functors, monads and more.
+
+Frontend Masters sponsor
+
+Comparing Ember Octane and React = 20
+(https://www.pzuraq.com/comparing-ember-octane-and-react/) = E2 = 80 = 94 This
+is about as detailed a comparison as you could hope for and a
+demonstration of just how much Ember (https://emberjs.com/)
+contributes to the JavaScript ecosystem. Octane = 20
+(https://emberjs.com/editions/octane/) really kicks things up a
+notch for Ember, too.
+
+Chris Garrett
+
+Deno 1.0 is Due Next Week: Here's What You Need to Know = 20
+(https://blog.logrocket.com/deno-1-0-what-you-need-to-know/) = E2 = 80 = 94 In
+2018 Node's creator Ryan Dahl told us 10 Things I Regret About
+Node.js (https://www.youtube.com/watch?v=3DM3BM9TB-8yA) and
+revealed a prototype of Deno, a new V8-based runtime, and here's
+what you need to know about it. Short of time? This two-minute
+video (https://www.youtube.com/watch?v=3DF0G9lZ7gecE) sums up the
+biggest wins quickly.
+
+David Else
+
+(https://denoweekly.com/)
+Our newest newsletter ..
+
+Carrying on from the Deno item above, yes, we've started
+Deno Weekly (https://denoweekly.com/) and a new newsletter
+dedicated to the newest runtime in the JavaScript / TypeScript
+world. Issue 2 goes out just after 1.0 is released next week.
+
+Even if you don't stick with Deno long term, feel free to
+subscribe then unsubscribe at any time = E2 = 80 = 94 we won't take offence = F0 =
+9F = = 98 = 84
+
+Subscribe to Deno Weekly here (https://denoweekly.com/)
+or enjoy issue 1 here. (https://denoweekly.com/issues/1)
+
+= F0 = 9F = 92 = BB Jobs
+
+JavaScript Developer at X-Team (Remote) = 20
+(https://x-team.com/remote-javascript-developer-jobs/?utm_source=3Dcooperp=
+ress & utm_medium = 3Demail-ad & utm_campaign = 3Djs)
+ = E2 = 80 = 94 Join X-Team and work on projects for companies like Riot
+Games, FOX, Coinbase, and more. Work from anywhere.
+
+X-Team
+
+Find a Job Through Vettery = 20
+(https://www.vettery.com/tech?utm_source=3Dnewsletter&utm_medium=3Dcooper-=
+javascriptweekly & utm_term = 3Dtech & utm_content = 3Dgrouped & utm_campaign = 3Dad-77 =
+584)
+ = E2 = 80 = 94 Vettery specializes in tech roles and is completely free for
+job seekers. Create a profile to get started.
+
+Vettery
+
+= F0 = 9F = 93 = 9A Tutorials
+
+Debug Anything: The Basics = 20
+(https://charlesagile.com/debug-series-nodejs-browser-javascript)
+= E2 = 80 = 94 A six part series (all ready to read now) on debugging your
+JavaScript and TypeScript code with the debugger built into
+Visual Studio Code.
+
+Charles Szilagyi
+
+How To Build a Vue Survey App Using Firebase = 20
+(https://www.smashingmagazine.com/2020/05/vue-survey-app-firebase-authenti=
+cation-database /)
+ = E2 = 80 = 94 A step-by-step guide to building a functional survey app
+using Vue.js and Firebase for both authentication and as
+a database.
+
+David Atanda
+
+A Brief Look at ES2020's Promise.any = 20
+(https://mariosfakiolas.com/blog/es2020-promise-any/) = E2 = 80 = 94 When you
+need to know when at least 1 promise got resolved among an
+iterable of Promise objects, Promise.any () is the solution.
+
+Marios Fakiolas
+
+ES2020: Everything You Need to Know = 20
+(https://www.martinmck.com/posts/es2020-everything-you-need-to-know/)
+ = E2 = 80 = 94 An ES2020 roundup!
+
+Martin McKeaveney
+
+Git Best Practices for SOC 2 Compliance Quick Wins = 20
+(https://try.datree.io/soc2-compliance-git-guide?utm_source=3Dcooperpress&=
+utm_medium = 3Djsweekly)
+ = E2 = 80 = 94 Get quick wins for your SOC 2 compliance audit, and raise
+developer productivity at the same time.
+
+Datree.io sponsor
+
+Building a Crossword Puzzle Generator = 20
+(https://mitchum.blog/building-a-crossword-puzzle-generator-with-javascrip=
+t /)
+ = E2 = 80 = 94 As a NY Times crossword addict, I love a good crossword, but
+if you = E2 = 80 = 99d rather figure out how to make your computer solve them,
+be my guest = F0 = 9F = 98 = 84 This post guides you on how to approach
+the problem.
+
+Mitchum
+
+Getting Started with Sapper and Svelte = 20
+(https://chrisboakes.com/getting-started-with-sapper-and-svelte/)
+= E2 = 80 = 94 Sapper (https://sapper.svelte.dev/) is a
+Svelte-powered framework.
+
+Chris Boakes
+
+A ES2015 + Cheatsheet (https://devhints.io/es6) = E2 = 80 = 94 A one-page
+guide to ES2015 + features based around brief example snippets.
+
+Devhints.io
+
+How to Fix ESLint Errors Upon Save in VS Code = 20
+(https://davidwalsh.name/eslint-vscode) = E2 = 80 = 94 A quick-fire tip.
+
+David Walsh
+
+How to Build a Blog with Next 9.3, Netlify, and Markdown = 20
+(https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-nex=
+t-9.3-and-netlify /)
+ = E2 = 80 = 94 Learn how to build a Next.js-powered Markdown blog and deploy
+it to the Netlify platform.
+
+Cassidy Williams
+
+A Canvas Engine Comparison: PixiJS vs Two.js vs Paper.js = 20
+(https://benchmarks.slaylines.io/) = E2 = 80 = 94 A benchmark of three popular
+2D rendering engines / drawing APIs. Note: This will tax
+your system.
+
+SlayLines
+
+= F0 = 9F = 8E = 89 BTW, if you like videos, we need to shout out Florin Pop's
+YouTube channel = 20
+(https://www.youtube.com/channel/UCeU-1X402kT-JlLdAitxSMA/) as
+he's just passed 20k subscribers by posting neat JavaScript
+videos and live streams nearly every day for the past six months!
+= F0 = 9F = 98 = 81 Lots of great stuff on there for JavaScript developers of all
+skill levels.
+
+= F0 = 9F = 94 = A7 Code & Tools
+
+Selecto.js: Make Elements Selectable Within an Area = 20
+(https://github.com/daybrush/selecto) = E2 = 80 = 94 Let = E2 = 80 = 99s say you hav =
+ea
+number of elements that represent choices, data, whatever, and
+you want users to be able to select a subset of them by
+clicking / pointing and dragging. That = E2 = 80 = 99s what this does. Live
+examples here = 20
+(https://daybrush.com/selecto/storybook/?path=3D/story/selecto--welcome)
+.
+
+Daybrush (Younkue Choi)
+
+Visual Studio Code April 2020 Released = 20
+(https://code.visualstudio.com/updates/v1_45) = E2 = 80 = 94 Probably the most
+widely used editor in the JavaScript space now and April brings
+some neat new features like being able to work on GitHub issues
+within the editor = 20
+(https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration =
+)
+.
+
+Microsoft
+
+Stream Chat API & JavaScript SDK for Custom Chat Apps = 20
+(https://getstream.io/chat/?utm_campaign=3D2020_05_08_javascriptweekly&utm=
+_medium = 3Dpromoted_newsletter & utm_source = 3Djavascriptweeklypromoted)
+ = E2 = 80 = 94 Build real-time chat in less time. Rapidly ship in-app
+messaging with our highly reliable chat infrastructure.
+
+Stream sponsor
+
+Majestic 1.7: A Zero Config GUI for Jest = 20
+(https://github.com/Raathigesh/majestic) = E2 = 80 = 94 A tool to help make
+your Javascript testing life a little easier. Run npx majestic in
+the folder of any project that uses Is to give it a quick try.
+
+Raathi Kugarajan
+
+Pico: Take Browser Screenshots Client-Side with JavaScript = 20
+(https://github.com/gripeless/pico#readme) = E2 = 80 = 94 Different from
+capturing a webpage using Puppeteer or a similar tool in that the
+screenshot taking happens entirely client side.
+
+Gripeless
+
+React Flow: A Library for Rendering Interactive Graphs = 20
+(https://webkid.io/blog/react-flow-node-based-graph-library/) = E2 = 80 = 94
+If you have a need to lay out graphs in a visual way and be able
+to smoothly pan and zoom around such graphs, this is an
+interesting new library. Live demo here = 20
+(https://react-flow.netlify.app/).
+
+Moritz Klack
+
+MongoDB Is Easy. Now Make It Powerful. Free Download for
+30 Days. = 20
+(https://studio3t.com/download/?utm_source=3Dcooper&utm_medium=3Dnewslette=
+r & utm_campaign = 3Djswmay08)
+
+
+Studio 3T sponsor
+
+NeutralinoJS: Build Cross-Platform Apps Using JS, HTML and CSS
+(https://github.com/neutralinojs/neutralinojs) = E2 = 80 = 94 Sounds just
+like Electron, right? Not quite. NeutralinoJS use less memory and
+are smaller (https://github.com/neutralinojs/evaluation) as
+they don = E2 = 80 = 99t ship a full browser inside. 1.4.0 just dropped = 20
+(https://github.com/neutralinojs/neutralinojs/releases/tag/v1.4.0)
+.
+
+Neutralinojs
+
+Slugify 1.0: Simply Turns Strings into URL / Filename-Friendly
+'Slugs' (https://github.com/sindresorhus/slugify) = E2 = 80 = 94 eg = E2 = 80 =
+= 98I = E2 = 99 = A5
+Dogs = E2 = 80 = 99 becomes = E2 = 80 = 98i-love-dogs = E2 = 80 = 99. It deals with some non =
+-Latin scripts
+too.
+
+Sindre Sorhus
+
+RxJS Primitives: A Set of Libraries That Provide Operators for
+RxJS (https://tanepiper.github.io/rxjs-primitives/)
+
+Tane Piper
+
+= E2 = 9A = A1 = EF = B8 = 8F Quick releases:
+
+* Madge 3.9 (https://github.com/pahen/madge)
+= E2 = 80 = 94 Plot graphs of your module dependencies.
+* Glider 1.7.2 (https://nickpiscitelli.github.io/Glider.js/) = E2 = 80 = 94
+Dependency-free carousel alternative.
+* vue-virtual-scroll-list 2.2 = 20
+(https://github.com/tangbc/vue-virtual-scroll-list) = E2 = 80 = 94 High
+performance large list rendering.
+* Pickr 1.6 (https://github.com/Simonwep/pickr) = E2 = 80 = 94 Color picker,
+now with i18n support.
+* vue-test-utils 1.0 = 20
+(https://github.com/vuejs/vue-test-utils/releases/tag/v1.0.0) = E2 = 80 = 94
+Official Vue.js testing utilities.
+* Espree 7.0 (https://github.com/eslint/espree) = E2 = 80 = 94
+Esprima-compatible JavaScript parser.
+
+Published by Cooperpress (https://cooperpress.com/) and
+edited by Peter Cooper (https://twitter.com/peterc)
+
+'JavaScript' is a trademark of Oracle Corporation in the US
+We are not endorsed by or affiliated with Oracle.
+
+Change your email address = 20
+(https://javascriptweekly.com/edit_subscription/fc9f5faa6f) or
+stop getting this newsletter = 20
+(https://javascriptweekly.com/leave/fc9f5faa6f).
+
+= C2 = A9 Cooper Press Ltd = C2 = B7 Fairfield Enterprise Center, Louth,
+LN11 0LS, United Kingdom
+--a537217fcc2280b2f267a5e314216cdaaf071fd3f3b2c33397ded1db79a6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text / html; charset = UTF-8
+Mime-Version: 1.0
+
+<! DOCTYPE html>
+<Html>
+  <Head>
+<meta http-equiv = 3D "Content-Type" content = 3D "text / html; charset = 3DUTF-8">
+    <meta charset = 3D "utf-8">
+    <meta name = 3D "viewport" content = 3D "width = 3Ddevice-width">
+    <meta name = 3D "format-detection" content = 3D "date = 3Dno">
+    <meta name = 3D "format-detection" content = 3D "telephone = 3Dno">
+   20 =
+  <style> body {
+margin: 0; padding: 0; height: 100%; width: 100%; background-color: white; =
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: =
+ optimizeLegibility; font-feature-settings: "kern" 1; direction: ltr;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; font-si =
+with: 15px; line-height: 1.55em;
+}
+img {
+border: 0; outline: none; height: auto; text-decoration: none; max-width: 1 =
+00%; line-height: 100%;
+}
+@media screen and (max-width: 600px) {
+  table [id = 3D "main"] {
+    max-width: 600px! important; width: 100%! important; min-width: 100%! i =
+mportant;
+  }
+  .nomob {
+    display: none! important;
+  }
+  .onlymob {
+    display: inline-block! important;
+  }
+  .rightifmob {
+    text-align: right! important;
+  }
+  .som {
+    max-width: 33%! important;
+  }
+  div.footer p {
+    text-align: left! important;
+  }
+  div.footer td {
+    text-align: left! important;
+  }
+  .el-columns .column {
+    display: block; width: 100%! important;
+  }
+}
+</ Style>
+</ Head>
+<body style = 3D'height: 100%; width: 100%; background-color: white; -webkit- =
+text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimiz =
+eLegibility; font-feature-settings: "kern" 1; direction: ltr; font-family: =
+-apple-system BlinkMacSystemFont, Helvetica, sans-serif; font-size: 15px; lin =
+e-height: 1.55em; margin: 0; padding: 0; '>
+<div id = 3D "preview" class = 3D "noarchive" style = 3D "display: none; color: # 666 =
+; "> Plus more JavaScript links, tutorials, and projects. </div>
+<! - [if (gte mso 9) | (IE)]>
+<table cellpadding = 3D "0" cellspacing = 3D "0" align = 3D "center" bgcolor = 3D "# fff =
+fff "width = 3D" 600 "> <tr> <td valign = 3D" top "style = 3D" width: 600px; "bgcolor =
+= 3D "#ffffff"> <! [Endif] ->
+<table align = 3D "center" border = 3D "0" cellpadding = 3D "0" cellspacing = 3D "0" id =
+= 3D "main" width = 3D "100%" style = 3D "table-layout: fixed; font-family: -apple- =
+system BlinkMacSystemFont, Helvetica, sans-serif; font-size: 15px; line-heigh =
+t: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: c =
+ollapse; max-width: 600px; height: 100%! important; direction: ltr; padding =
+: 0px; ">
+  <tr> <td style = 3D "font-family: -apple-system, BlinkMacSystemFont, Helvetica, =
+sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; MS =
+o-table-rspace: 0pt; border-collapse: collapse; ">
+  <div id = 3D "content"> <! - left / right splitbar ->
+    <table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" style = 3D "mso- =
+table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "> <tr>
+<td width = 3D "50%" align = 3D "left" style = 3D "padding-left: 4px; font-family: - =
+apple-system BlinkMacSystemFont, Helvetica, sans-serif; font-size: 15px; line =
+-height: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <p style = 3D" font-size: 12px; color: # 999999; text-transform =
+: uppercase; line-height: 1.0em; margin-top: 0.8em; margin-bottom: 0.8em; "> =
+# 487 = E2 = 80 = 94 May 8, 2020 </p> </td>
+<td width = 3D "50%" align = 3D "right" style = 3D "padding-right: 4px; font-family: =
+ -apple-system BlinkMacSystemFont, Helvetica, sans-serif; font-size: 15px; li =
+ne-height: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-col =
+lapse: collapse; "> <p style = 3D" font-size: 12px; text-transform: uppercase; l =
+ine-height: 1.0em; margin-top: 0.8em; margin-bottom: 0.8em; "> <a href = 3D" htt =
+ps: //javascriptweekly.com/leave/fc9f5faa6f "style = 3D" text-decoration: none; =
+ color: # 3366aa; "> Unsubscribe </a> = C2 = A0 = C2 = A0: = C2 = A0 = C2 = A0 <a href = 3D" https: =
+//javascriptweekly.com/issues/487 "style = 3D" text-decoration: none; color: # =
+3366aa; "> Read on the Web </a> </p> </td>
+</ Tr> </ table>
+    <! - masthead ->
+    <table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" style = 3D "back =
+ground-color: # f7df1e; text-align: center; color: # 222222; DMSO-table-lspace =
+: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "class = 3D" el-masth =
+ead "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemFont, Helveti =
+ca, sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; =
+ mso-table-rspace: 0pt; border-collapse: collapse; padding: 0 12px; "> <p Jan =
+le = 3D "font-size: 1.8em; font-weight: 600; line-height: 1.0em; margin-top: 0 =
+.8em; margin-bottom: 0.8em; "> JavaScript Weekly </p> </td> </tr> </table>
+<table width = 3D "100%" class = 3D "el-fullwidthimage" cellpadding = 3D "0" cellspa =
+cing = 3D "0" style = 3D "mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co =
+llapse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSyst =
+emFont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table =
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; ">
+  <a href = 3D "https://javascriptweekly.com/link/88094/fc9f5faa6f" style = 3D "t =
+ext-decoration: none; color: # 3366aa; "> <img src = 3D" https: //res.cloudinary.c=
+ohms / cpress / image / upload / w_1280, e_sharpen 60 / v1588954456 / xeujpjzbpxfv4wucmg2n =
+.png "alt = 3D" "width = 3D" 640 "style = 3D" outline: none; height: auto; text-dec =
+oration: none; max-width: 100%; line-height: 100%; width: 100%; border: 0; "=
+> </a>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; font-size: 1.05em; "> <span style = 3D" font-weight: 600; font-size: 1.1em; =
+color: # 000; "class = 3D" mainlink "> <a href = 3D" https://javascriptweekly.com/li=
+nk / 88094 / fc9f5faa6f "title = 3D" jestjs.io "style = 3D" text-decoration: none; what =
+lor: # 3366aa; border-bottom-width: 1px! important; border-bottom-color: # dd =
+d! important; border-bottom-style: solid! important; font-size: 1.1em; line =
+-height: 1.4em; "> It's 26 Released: The Popular Testing Framework </a> </span> =
+ = E2 = 80 = 94 Is is a popular testing framework that works with pretty much =
+everything. This release focuses on getting the dependency count and instal =
+l size down (this causes some breaking changes, unsurprisingly), adds a new =
+ fake timer implementation, drops Node 8 support, and initial, <em> experime =
+ntal </em> ESM support to play = C2 = A0with. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> C =
+hristoph Nakazawa </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88093/fc9f5faa6f=
+"title = 3D" 1loc.dev "style = 3D" text-decoration: none; color: # 3366aa; border =
+-bottom-width: 1px! important; border-bottom-color: #ddd! important; border =
+-bottom-style: solid! important; font-size: 1.05em; "> 1LOC: A Collection of =
+One-Line JS Snippets </a> </span> = E2 = 80 = 94 A neat little collection of vanil =
+la JavaScript one-liners divided into various categories (arrays, date / time =
+, checking objects, DOM work, etc.) You can submit your own for inclusion =
+= C2 = A0too. </ P>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> N =
+guyen Huu Phuoc </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+  <a target = 3D "_blank" href = 3D "https://javascriptweekly.com/link/88085/fc9f=
+5faa6f "style = 3D" text-decoration: none; color: # 3366aa; border-bottom-width =
+: 1px! Important; border-bottom-color: #ddd! important; border-bottom-style =
+: solid! important; "> <img src = 3D" https://copm.s3.amazonaws.com/b25178f4.jpg=
+"width = 3D" 110 "height = 3D" 110 "style = 3D" padding-top: 12px; padding-left: 12 =
+px; outline: none; height: auto; text-decoration: none; max-width: 100%; li =
+ne-height: 100%; border: 0; "align = 3D" right "alt = 3D" "class = 3D" som "> </a>
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88085/fc9f5faa6f=
+"title = 3D" frontendmasters.com "style = 3D" text-decoration: none; color: # 336 =
+6aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! import =
+ant; border-bottom-style: solid! important; font-size: 1.05em; "> Hardcore Fu =
+nctional Programming in JavaScript </a> </span> = E2 = 80 = 94 Brian Lonsdorf teac =
+hes you functional programming concepts in JavaScript such as pure function =
+s, currying, composition, functors, monads and = C2 = A0more. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> F =
+rontend Masters <span style = 3D "text-transform: uppercase; margin-left: 4px; =
+ font-size: 0.9em; border-radius: 2px; background-color: #fffcaa; color: # 9 =
+93! Important; padding: 1px 4px; border: 1px solid # eee455; "class = 3D" tag-s =
+ponsor "> sponsor </ span> </ p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88096/fc9f5faa6f=
+"title = 3D" www.pzuraq.com "style = 3D" text-decoration: none; color: # 3366aa; =
+border-bottom-width: 1px! important; border-bottom-color: #ddd! important; =
+border-bottom-style: solid! important; font-size: 1.05em; "> Comparing Ember =
+Octane and React </a> </span> = E2 = 80 = 94 This is about as detailed a compariso =
+n as you could hope for and a demonstration of just how much <a href = 3D "htt =
+ps: //javascriptweekly.com/link/88135/fc9f5faa6f "style = 3D" text-decoration: =
+none; color: # 3366aa; border-bottom-width: 1px! important; border-bottom-co =
+lor: #ddd! important; border-bottom-style: solid! important; "> Ember </a> con =
+tributes to the JavaScript ecosystem. <a href = 3D "https: //javascriptweekly.c=
+om / link / 88097 / fc9f5faa6f "style = 3D" text-decoration: none; color: # 3366aa; b =
+order-bottom-width: 1px! important; border-bottom-color: #ddd! important; b =
+order-bottom-style: solid! important; "> Octane </a> really kicks things up a =
+notch for Ember, too. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> C =
+hris Garrett </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88120/fc9f5faa6f=
+"title = 3D" blog.logrocket.com "style = 3D" text-decoration: none; color: # 3366 =
+aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! importa =
+nt; border-bottom-style: solid! important; font-size: 1.05em; "> Deno 1.0 is =
+Due Next Week: Here's What You Need to Know </a> </span> = E2 = 80 = 94 In 2018 No =
+de's creator Ryan Dahl told us <a href = 3D "https://javascriptweekly.com/link=
+/ 88121 / fc9f5faa6f "style = 3D" text-decoration: none; color: # 3366aa; border-b =
+ottom-width: 1px! important; border-bottom-color: #ddd! important; border-b =
+ottom-style: solid! important; "> 10 Things I Regret About Node.js </a> and re =
+vealed a prototype of <em> Deno </em>, a new V8-based runtime, and here's wha =
+t you need to know about it. Short of time? <a href = 3D "https: // javascriptwe =
+ekly.com/link/88122/fc9f5faa6f "style = 3D" text-decoration: none; color: # 336 =
+6aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! import =
+ant; border-bottom-style: solid! important; "> This two-minute video </a> sums =
+ up the biggest wins quickly. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> D =
+avid Else </p>
+</ Td> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-subta =
+ble "style = 3D" background-color: # E6FFFA; margin-top: 15px; DMSO-table-lspac =
+e: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "> <tr> <td style = 3D =
+"font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; font-s =
+ize: 15px; line-height: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0p =
+t; border-collapse: collapse; padding: 0px; ">
+<! - normal content section ->
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "content =
+el-content "style = 3D" color: # 444; mso-table-lspace: 0pt; DMSO-table-rspace: =
+ 0pt; border-collapse: collapse; margin-top: 0! important; "> <tr> <td style =
+= 3D "font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; fon =
+t-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; DMSO-table-rspace: =
+ 0pt; border-collapse: collapse; padding: 0px 15px; ">
+
+    <a href = 3D "https://javascriptweekly.com/link/88123/fc9f5faa6f" style = 3D =
+"text-decoration: none; color: # 3366aa; font-weight: 600;"> <img src = 3D "http =
+s: //denoweekly.com/images/deno-logo.png? x "width = 3D" 240 "align = 3D" right "st =
+yle = 3D "max-width: 50%; width: 40%; outline: none; height: auto; text-decora =
+ion: none; line-height: 100%; margin: 12px; border: 0; "> </a>
+      <p style = 3D "font-size: 1.5em; margin-top: 0.8em; margin-bottom: 0.8em =
+; "> <strong style = 3D" font-weight: 600; "> Our newest newsletter .. </strong> </p>
+     20 =
+      <p style = 3D "margin-top: 0.8em; margin-bottom: 0.8em;"> Carrying on fro =
+m the Deno item above, yes, we've started <a href = 3D "https: // javascriptweek =
+ly.com/link/88123/fc9f5faa6f "style = 3D" text-decoration: none; color: # 3366a =
+and; font-weight: 600; "> Deno Weekly </a>, a new newsletter dedicated to the ne =
+west runtime in the JavaScript / TypeScript world. Issue 2 goes out just afte =
+r 1.0 is released next week. </p>
+     20 =
+      <p style = 3D "margin-top: 0.8em; margin-bottom: 0.8em;"> Even if you don =
+'t stick with Deno long term, feel free to subscribe then unsubscribe at an =
+y time = E2 = 80 = 94 we won't take offence = F0 = 9F = 98 = 84 </p>
+     20 =
+      <p style = 3D "margin-top: 0.8em; margin-bottom: 0.8em;"> <a href = 3D "http =
+s: //javascriptweekly.com/link/88123/fc9f5faa6f "style = 3D" text-decoration: u =
+nderline; color: # 3366aa; font-weight: 600; "> Subscribe to Deno Weekly here <=
+/ a> or <a href = 3D "https://javascriptweekly.com/link/88124/fc9f5faa6f" style =
+= 3D "text-decoration: underline; color: # 3366aa; font-weight: 600;"> enjoy is =
+sue 1 here. </a> </p>
+
+      </ Td> </ tr> </ table>
+</ Td> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-headi =
+ng "style = 3D" background-color: none! important; text-align: left; margin-to =
+p: 15px; color: # 333333; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bord =
+er-collapse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMa =
+cSystemFont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; mso =
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; Paddi =
+ng: 0; "> <p style = 3D" font-size: 1.6em! important; font-weight: 400! importan =
+t; text-transform: none! important; line-height: 1.4em; display: inline-blo =
+ck; border-bottom-width: 6px; border-bottom-style: solid; padding-bottom: 2 =
+px; border-bottom-color: # f7df1e; margin: 0.5em 0; "> = F0 = 9F = 92 = BB Jobs </p> </ =
+td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88086/fc9f5faa6f=
+"title = 3D" x-team.com "style = 3D" text-decoration: none; color: # 3366aa; bord =
+er-bottom-width: 1px! important; border-bottom-color: #ddd! important; bord =
+er-bottom-style: solid! important; font-size: 1.05em; "> JavaScript Developer =
+ at X-Team (Remote) </a> </span> = E2 = 80 = 94 Join X-Team and work on projects f =
+or companies like Riot Games, FOX, Coinbase, and more. Work from = C2 = A0anywh =
+ere. </ p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> X =
+-Team </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88087/fc9f5faa6f=
+"title = 3D" www.vettery.com "style = 3D" text-decoration: none; color: # 3366aa; =
+ border-bottom-width: 1px! important; border-bottom-color: #ddd! important; =
+ border-bottom-style: solid! important; font-size: 1.05em; "> Find a Job Thro =
+ugh Vettery </a> </span> = E2 = 80 = 94 Vettery specializes in tech roles and is c =
+ompletely free for job seekers. Create a profile to get = C2 = A0started. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> V =
+ethers </p>
+</ Td> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-headi =
+ng "style = 3D" background-color: none! important; text-align: left; margin-to =
+p: 15px; color: # 333333; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bord =
+er-collapse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMa =
+cSystemFont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; mso =
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; Paddi =
+ng: 0; "> <p style = 3D" font-size: 1.6em! important; font-weight: 400! importan =
+t; text-transform: none! important; line-height: 1.4em; display: inline-blo =
+ck; border-bottom-width: 6px; border-bottom-style: solid; padding-bottom: 2 =
+px; border-bottom-color: # f7df1e; margin: 0.5em 0; "> = F0 = 9F = 93 = 9A Tutorials <=
+/ P> </ td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88095/fc9f5faa6f=
+"title = 3D" charlesagile.com "style = 3D" text-decoration: none; color: # 3366aa =
+; border-bottom-width: 1px! important; border-bottom-color: #ddd! important =
+; border-bottom-style: solid! important; font-size: 1.05em; "> Debug Anything =
+: The Basics </a> </span> = E2 = 80 = 94 A six part series (all ready to read now) =
+ on debugging your JavaScript and TypeScript code with the debugger built i =
+nto Visual Studio = C2 = A0Code. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> C =
+harles Szilagyi </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88098/fc9f5faa6f=
+"title = 3D" www.smashingmagazine.com "style = 3D" text-decoration: none; color: =
+ # 3366aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! i =
+mportant; border-bottom-style: solid! important; font-size: 1.05em; "> How To =
+ Build a Vue Survey App Using Firebase </a> </span> = E2 = 80 = 94 A step-by-step =
+guide to building a functional survey app using Vue.js and Firebase for bot =
+h authentication and as a = C2 = A0database. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> D =
+avid Atanda </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88099/fc9f5faa6f=
+"title = 3D" mariosfakiolas.com "style = 3D" text-decoration: none; color: # 3366 =
+aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! importa =
+nt; border-bottom-style: solid! important; font-size: 1.05em; "> A Brief Look =
+ at ES2020's <code style = 3D'font-family: menlo, monaco, "Ubuntu Mono", cour =
+ier, monospace; font-weight: normal; background-color: inherit; '> Promise.an =
+y </code> </a> </span> = E2 = 80 = 94 When you need to know when at least 1 promise =
+ got resolved among an iterable of <code style = 3D "background-color: #efc;"> =
+Promise </code> objects, <strong style = 3D "font-weight: 600;"> Promise.any () </ =
+strong> is the = C2 = A0solution. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> M =
+arios Fakiolas </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88100/fc9f5faa6f=
+"title = 3D" www.martinmck.com "style = 3D" text-decoration: none; color: # 3366a =
+and; border-bottom-width: 1px! important; border-bottom-color: #ddd! importan =
+t; border-bottom-style: solid! important; font-size: 1.05em; "> ES2020: Every =
+thing You Need to Know </a> </span> = E2 = 80 = 94 An ES2020 = C2 = A0roundup! </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> M =
+artin McKeaveney </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88088/fc9f5faa6f=
+"title = 3D" try.datree.io "style = 3D" text-decoration: none; color: # 3366aa; b =
+order-bottom-width: 1px! important; border-bottom-color: #ddd! important; b =
+order-bottom-style: solid! important; font-size: 1.05em; "> Git Best Practice =
+s for SOC 2 Compliance Quick Wins </a> </span> = E2 = 80 = 94 Get quick wins for y =
+our SOC 2 compliance audit, and raise developer productivity at the same = C2 =
+= A0time. </ P>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> D =
+atree.io <span style = 3D "text-transform: uppercase; margin-left: 4px; font-s =
+ize: 0.9em; border-radius: 2px; background-color: #fffcaa; color: # 993! imp =
+ortant; padding: 1px 4px; border: 1px solid # eee455; "class = 3D" tag-sponsor "=
+> Sponsor </ span> </ p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88101/fc9f5faa6f=
+"title = 3D" mitchum.blog "style = 3D" text-decoration: none; color: # 3366aa; I =
+rder-bottom-width: 1px! important; border-bottom-color: #ddd! important; I =
+rder-bottom-style: solid! important; font-size: 1.05em; "> Building a Crosswo =
+rd Puzzle Generator </a> </span> = E2 = 80 = 94 As a NY Times crossword addict, I =
+<em> love </em> a good crossword, but if you = E2 = 80 = 99d rather figure out how =
+to make your computer solve them, be my guest = F0 = 9F = 98 = 84 This post guides =
+ you on how to approach the = C2 = A0problem. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> M =
+itchum </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88102/fc9f5faa6f=
+"title = 3D" chrisboakes.com "style = 3D" text-decoration: none; color: # 3366aa; =
+ border-bottom-width: 1px! important; border-bottom-color: #ddd! important; =
+ border-bottom-style: solid! important; font-size: 1.05em; "> Getting Started =
+ with Sapper and Svelte </a> </span> = E2 = 80 = 94 <a href = 3D "https: // javascriptw =
+eekly.com/link/88103/fc9f5faa6f "style = 3D" text-decoration: none; color: # 33 =
+66aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! impor =
+tant; border-bottom-style: solid! important; "> Sapper </a> is a Svelte-powere =
+d = C2 = A0framework. </ p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> C =
+hris Boakes </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88104/fc9f5faa6f=
+"title = 3D" devhints.io "style = 3D" text-decoration: none; color: # 3366aa; boron =
+der-bottom-width: 1px! important; border-bottom-color: #ddd! important; boron =
+der-bottom-style: solid! important; font-size: 1.05em; "> A ES2015 + Cheatshee =
+t </a> </span> = E2 = 80 = 94 A one-page guide to ES2015 + features based around br =
+ief example = C2 = A0snippets. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> D =
+evhints.io </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88105/fc9f5faa6f=
+"title = 3D" davidwalsh.name "style = 3D" text-decoration: none; color: # 3366aa; =
+ border-bottom-width: 1px! important; border-bottom-color: #ddd! important; =
+ border-bottom-style: solid! important; font-size: 1.05em; "> How to Fix ESLi =
+nt Errors Upon Save in VS Code </a> </span> = E2 = 80 = 94 A quick-fire = C2 = A0tip. <=
+/ P>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> D =
+avid Walsh </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88106/fc9f5faa6f=
+"title = 3D" www.netlify.com "style = 3D" text-decoration: none; color: # 3366aa; =
+ border-bottom-width: 1px! important; border-bottom-color: #ddd! important; =
+ border-bottom-style: solid! important; font-size: 1.05em; "> How to Build a =
+Blog with Next 9.3, Netlify, and Markdown </a> </span> = E2 = 80 = 94 Learn how to =
+ build a Next.js-powered Markdown blog and deploy it to the Netlify = C2 = A0pl =
+atform. </ p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> C =
+assidy Williams </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88107/fc9f5faa6f=
+"title = 3D" benchmarks.slaylines.io "style = 3D" text-decoration: none; color: =
+# 3366aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! im =
+portant; border-bottom-style: solid! important; font-size: 1.05em; "> A Canva =
+s Engine Comparison: PixiJS vs Two.js vs Paper.js </a> </span> = E2 = 80 = 94 A be =
+nchmark of three popular 2D rendering engines / drawing APIs. <em> Note: This =
+will tax your = C2 = A0system. </em> </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> S =
+layLines </p>
+</ Td> </ tr> </ table>
+<! - normal content section ->
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "content =
+el-content "style = 3D" color: # 444; mso-table-lspace: 0pt; DMSO-table-rspace: =
+ 0pt; border-collapse: collapse; "> <tr> <td style = 3D" font-family: -apple-syst =
+em BlinkMacSystemFont, Helvetica, sans-serif; font-size: 15px; line-height: 1 =
+.55em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: colla =
+pse; padding: 0px 15px; "> <p style = 3D" margin-top: 0.8em; margin-bottom: 0.8e =
+m; "> = F0 = 9F = 8E = 89 BTW, if you like videos, we need to shout out <a href = 3D" h =
+ttps: //javascriptweekly.com/link/88133/fc9f5faa6f "style = 3D" text-decoration =
+: none; color: # 3366aa; font-weight: 600; "> Florin Pop's YouTube channel </a> =
+ as he's just passed 20k subscribers by posting neat JavaScript videos and =
+live streams nearly every day for the past six months! = F0 = 9F = 98 = 81 Lots of =
+ great stuff on there for JavaScript developers of all skill levels. </p> </ t =
+d> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-headi =
+ng "style = 3D" background-color: none! important; text-align: left; margin-to =
+p: 15px; color: # 333333; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bord =
+er-collapse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMa =
+cSystemFont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; mso =
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; Paddi =
+ng: 0; "> <p style = 3D" font-size: 1.6em! important; font-weight: 400! importan =
+t; text-transform: none! important; line-height: 1.4em; display: inline-blo =
+ck; border-bottom-width: 6px; border-bottom-style: solid; padding-bottom: 2 =
+px; border-bottom-color: # f7df1e; margin: 0.5em 0; "> = F0 = 9F = 94 = A7 Code & amp; =
+ Tools </ p> </ td> </ tr> </ table>
+<table width = 3D "100%" class = 3D "el-fullwidthimage" cellpadding = 3D "0" cellspa =
+cing = 3D "0" style = 3D "mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co =
+llapse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSyst =
+emFont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table =
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; ">
+  <a href = 3D "https://javascriptweekly.com/link/88108/fc9f5faa6f" style = 3D "t =
+ext-decoration: none; color: # 3366aa; "> <img src = 3D" https: //res.cloudinary.c=
+om / cpress / image / upload / w_1280, e_sharpen: 60 / iugdtckn0zsma7chxry2.jpg "alt = 3D =
+"" width = 3D "640" style = 3D "outline: none; height: auto; text-decoration: non =
+e; max-width: 100%; line-height: 100%; width: 100%; border: 0; "> </a>
+</ Td> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" style = 3D "mso-tabl =
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "> <tr> <td s =
+enough = 3D "height: 4px; font-family: -apple-system, BlinkMacSystemFont, Helvetic =
+and, sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; border-collapse: collapse; "> </td> </tr> </table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88108/fc9f5faa6f=
+"title = 3D" github.com "style = 3D" text-decoration: none; color: # 3366aa; bord =
+er-bottom-width: 1px! important; border-bottom-color: #ddd! important; bord =
+er-bottom-style: solid! important; font-size: 1.05em; "> Selecto.js: Make Ele =
+ments Selectable Within an Area </a> </span> = E2 = 80 = 94 Let = E2 = 80 = 99s say you =
+have a number of elements that represent choices, data, whatever, and you w =
+ant users to be able to select a subset of them by clicking / pointing and dr =
+agging. That = E2 = 80 = 99s what this does. <a href = 3D "https: //javascriptweekly.=
+com / link / 88109 / fc9f5faa6f "style = 3D" text-decoration: none; color: # 3366aa; =
+border-bottom-width: 1px! important; border-bottom-color: #ddd! important; =
+border-bottom-style: solid! important; "> Live examples = C2 = A0here </a>. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> D =
+aybrush (Younkue Choi) </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88110/fc9f5faa6f=
+"title = 3D" code.visualstudio.com "style = 3D" text-decoration: none; color: # 3 =
+366a; border-bottom-width: 1px! important; border-bottom-color: #ddd! impo =
+rtant; border-bottom-style: solid! important; font-size: 1.05em; "> Visual St =
+udio Code April 2020 Released </a> </span> = E2 = 80 = 94 Probably the most widely =
+ used editor in the JavaScript space now and April brings some neat new fea =
+tures like <a href = 3D "https://javascriptweekly.com/link/88111/fc9f5faa6f" s =
+enough = 3D "text-decoration: none; color: # 3366aa; border-bottom-width: 1px! im =
+portant; border-bottom-color: #ddd! important; border-bottom-style: solid! =
+important; "> being able to work on GitHub issues within the = C2 = A0editor </a>. =
+</ P>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> M =
+icrosoft </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88089/fc9f5faa6f=
+"title = 3D" getstream.io "style = 3D" text-decoration: none; color: # 3366aa; I =
+rder-bottom-width: 1px! important; border-bottom-color: #ddd! important; I =
+rder-bottom-style: solid! important; font-size: 1.05em; "> Stream Chat API & a =
+mp; JavaScript SDK for Custom Chat Apps </a> </span> = E2 = 80 = 94 Build real-tim =
+e chat in less time. Rapidly ship in-app messaging with our highly reliable =
+ chat = C2 = A0infrastructure. </ p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> S =
+tream <span style = 3D "text-transform: uppercase; margin-left: 4px; font-size =
+: 0.9em; border-radius: 2px; background-color: #fffcaa; color: # 993! import =
+ant; padding: 1px 4px; border: 1px solid # eee455; "class = 3D" tag-sponsor "> sp =
+onsor </ span> </ p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88112/fc9f5faa6f=
+"title = 3D" github.com "style = 3D" text-decoration: none; color: # 3366aa; bord =
+er-bottom-width: 1px! important; border-bottom-color: #ddd! important; bord =
+er-bottom-style: solid! important; font-size: 1.05em; "> Majestic 1.7: A Zero =
+ Config GUI for Is </a> </span> = E2 = 80 = 94 A tool to help make your JavaScri =
+pt testing life a little easier. Run <code style = 3D "background-color: #efc; =
+"> npx majestic </code> in the folder of any project that uses Is to give i =
+ta quick = C2 = A0try. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> R =
+aathi Kugarajan </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88113/fc9f5faa6f=
+"title = 3D" github.com "style = 3D" text-decoration: none; color: # 3366aa; bord =
+er-bottom-width: 1px! important; border-bottom-color: #ddd! important; bord =
+er-bottom-style: solid! important; font-size: 1.05em; "> Pico: Take Browser S =
+creenshots Client-Side with JavaScript </a> </span> = E2 = 80 = 94 Different from =
+capturing a webpage using Puppeteer or a similar tool in that the screensho =
+t taking happens <strong style = 3D "font-weight: 600;"> entirely client = C2 = A0s =
+ide. </ strong> </ p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> G =
+ripeless </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88114/fc9f5faa6f=
+"title = 3D" webkid.io "style = 3D" text-decoration: none; color: # 3366aa; borde =
+r-bottom-width: 1px! important; border-bottom-color: #ddd! important; borde =
+r-bottom-style: solid! important; font-size: 1.05em; "> React Flow: A Library =
+ for Rendering Interactive Graphs </a> </span> = E2 = 80 = 94 If you have a need t =
+o lay out graphs in a visual way and be able to smoothly pan and zoom aroun =
+d such graphs, this is an interesting new library. <a href = 3D "https: // javas =
+criptweekly.com/link/88115/fc9f5faa6f "style = 3D" text-decoration: none; colo =
+r: # 3366aa; border-bottom-width: 1px! important; border-bottom-color: #ddd =
+! Important; border-bottom-style: solid! important; "> Live demo = C2 = A0here </a> =
+. </ P>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> M =
+oritz Klack </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88090/fc9f5faa6f=
+"title = 3D" studio3t.com "style = 3D" text-decoration: none; color: # 3366aa; I =
+rder-bottom-width: 1px! important; border-bottom-color: #ddd! important; I =
+rder-bottom-style: solid! important; font-size: 1.05em; "> MongoDB Is Easy. N =
+ow Make It Powerful. Free Download for 30 = C2 = A0Days. </a> </span> </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> S =
+tudio 3T <span style = 3D "text-transform: uppercase; margin-left: 4px; font-s =
+ize: 0.9em; border-radius: 2px; background-color: #fffcaa; color: # 993! imp =
+ortant; padding: 1px 4px; border: 1px solid # eee455; "class = 3D" tag-sponsor "=
+> Sponsor </ span> </ p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88116/fc9f5faa6f=
+"title = 3D" github.com "style = 3D" text-decoration: none; color: # 3366aa; bord =
+er-bottom-width: 1px! important; border-bottom-color: #ddd! important; bord =
+er-bottom-style: solid! important; font-size: 1.05em; "> NeutralinoJS: Build =
+Cross-Platform Apps Using JS, HTML and CSS </a> </span> = E2 = 80 = 94 Sounds just =
+ like Electron, right? Not quite. NeutralinoJS use less memory and <a href =
+= 3D "https://javascriptweekly.com/link/88117/fc9f5faa6f" style = 3D "text-decor =
+ation: none; color: # 3366aa; border-bottom-width: 1px! important; border-bo =
+ttom-color: #ddd! important; border-bottom-style: solid! important; "> are sm =
+aller </a> as they don = E2 = 80 = 99t ship a full browser inside. <a href = 3D "http =
+s: //javascriptweekly.com/link/88118/fc9f5faa6f "style = 3D" text-decoration: n =
+they; color: # 3366aa; border-bottom-width: 1px! important; border-bottom-col =
+or: #ddd! important; border-bottom-style: solid! important; "> 1.4.0 just = C2 =
+= A0dropped </a>. </ P>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> N =
+eutralinojs </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88125/fc9f5faa6f=
+"title = 3D" github.com "style = 3D" text-decoration: none; color: # 3366aa; bord =
+er-bottom-width: 1px! important; border-bottom-color: #ddd! important; bord =
+er-bottom-style: solid! important; font-size: 1.05em; "> Slugify 1.0: Simply =
+Turns Strings into URL / Filename-Friendly 'Slugs' </a> </span> = E2 = 80 = 94 eg =
+= E2 = 80 = 98I = E2 = 99 = A5 Dogs = E2 = 80 = 99 becomes = E2 = 80 = 98i-love-dogs = E2 = 80 = 99. I =
+t deals with some non-Latin scripts too. </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> S =
+indre Sorhus </p>
+</ Td> </ tr> </ table>
+
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-item =
+item "style = 3D" mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla =
+pse: collapse; "> <tr> <td style = 3D" font-family: -apple-system, BlinkMacSystemF =
+ont, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table-l =
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0px =
+15px; ">
+ 20 =
+  <p class = 3D "desc" style = 3D "color: # 444; margin-top: 0.8em; margin-bottom: =
+ 0; "> <span style = 3D" font-weight: 600; font-size: 1.1em; color: # 000; "class =
+= 3D "mainlink"> <a href = 3D "https://javascriptweekly.com/link/88134/fc9f5faa6f=
+"title = 3D" tanepiper.github.io "style = 3D" text-decoration: none; color: # 336 =
+6aa; border-bottom-width: 1px! important; border-bottom-color: #ddd! import =
+ant; border-bottom-style: solid! important; font-size: 1.05em; "> RxJS Primit =
+ives: A Set of Libraries That Provide Operators for RxJS </a> </span> </p>
+  <p class = 3D "name" style = 3D "color: # 5a5a5a; margin-top: 4px; margin-bottom =
+: 0.8em; text-transform: uppercase; font-size: 12px; line-height: 1.2em; "> T =
+ane Piper </p>
+</ Td> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "el-subta =
+ble "style = 3D" background-color: #ffffff; margin-top: 15px; DMSO-table-lspac =
+e: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "> <tr> <td style = 3D =
+"font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; font-s =
+ize: 15px; line-height: 1.55em; mso-table-lspace: 0pt; mso-table-rspace: 0p =
+t; border-collapse: collapse; padding: 0px; ">
+<! - normal content section ->
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" class = 3D "content =
+el-content briefs "style = 3D" color: # 444; mso-table-lspace: 0pt; mso-table-r =
+space: 0pt; border-collapse: collapse; margin-top: 0! important; "> <tr> <td s =
+enough = 3D "font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; =
+ font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; DMSO-table-rsp =
+ace: 0pt; border-collapse: collapse; padding: 0px 15px; ">
+<p style = 3D "line-height: 1.5em; margin-top: 0px; margin-bottom: 0.8em;"> <st =
+rong style = 3D "font-size: 1.1em; font-weight: 600;"> = E2 = 9A = A1 = EF = B8 = 8F Quick =
+ releases </ strong> </ p>
+                  <ul class = 3D "nogap" style = 3D "margin-left: 0; padding-left =
+: 18px; list-style-type: circle; ">
+                 20 =
+                    <li style = 3D "margin-bottom: 8px; line-height: 1.3em;">
+<a href = 3D "https://javascriptweekly.com/link/88126/fc9f5faa6f" style = 3D "tex =
+t-decoration: none; color: # 3366aa; font-weight: 600; "> Madge 3.9 </a> = E2 = 80 =
+= 94 Plot graphs of your module dependencies. </li>
+                    <li style = 3D "margin-bottom: 8px; line-height: 1.3em;">
+<a href = 3D "https://javascriptweekly.com/link/88127/fc9f5faa6f" style = 3D "tex =
+t-decoration: none; color: # 3366aa; font-weight: 600; "> Glider 1.7.2 </a> = E2 =
+= 80 = 94 Dependency-free carousel alternative. </li>
+                    <li style = 3D "margin-bottom: 8px; line-height: 1.3em;">
+<a href = 3D "https://javascriptweekly.com/link/88128/fc9f5faa6f" style = 3D "tex =
+t-decoration: none; color: # 3366aa; font-weight: 600; "> vue-virtual-scroll-l =
+ist 2.2 </a> = E2 = 80 = 94 High performance large list rendering. </li>
+                    <li style = 3D "margin-bottom: 8px; line-height: 1.3em;">
+<a href = 3D "https://javascriptweekly.com/link/88129/fc9f5faa6f" style = 3D "tex =
+t-decoration: none; color: # 3366aa; font-weight: 600; "> Pickr 1.6 </a> = E2 = 80 =
+= 94 Color picker, now with i18n support. </li>
+                    <li style = 3D "margin-bottom: 8px; line-height: 1.3em;">
+<a href = 3D "https://javascriptweekly.com/link/88130/fc9f5faa6f" style = 3D "tex =
+t-decoration: none; color: # 3366aa; font-weight: 600; "> vue-test-utils 1.0 </ =
+a> = E2 = 80 = 94 Official Vue.js testing utilities. </li>
+                    <li style = 3D "margin-bottom: 8px; line-height: 1.3em;">
+<a href = 3D "https://javascriptweekly.com/link/88131/fc9f5faa6f" style = 3D "tex =
+t-decoration: none; color: # 3366aa; font-weight: 600; "> Espree 7.0 </a> = E2 =
+= 80 = 94 Esprima-compatible JavaScript parser. </li>
+                  </ Ul>
+                               20 =
+  </ Td> </ tr> </ table>
+</ Td> </ tr> </ table>
+<table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" style = 3D "mso-tabl =
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "> <tr> <td s =
+enough = 3D "height: 14px; font-family: -apple-system, BlinkMacSystemFont, Helveti =
+ca, sans-serif; font-size: 15px; line-height: 1.55em; mso-table-lspace: 0pt; =
+ mso-table-rspace: 0pt; border-collapse: collapse; "> </td> </tr> </table>
+</ Div>
+  </ Td> </ tr>
+</ Table>
+<! - [if (gte mso 9) | (IE)]> </td> </tr> </table> <! [endif] ->
+<div id = 3D "footer" class = 3D "noarchive">
+   20 =
+      <table width = 3D "100%" cellpadding = 3D "0" cellspacing = 3D "0" style = 3D "bo =
+rder-top-width: 1px; border-top-color: #dddddd; border-top-style: solid; MS =
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; "> <tr =
+> <td style = 3D "text-align: center; font-family: -apple-system, BlinkMacSystem =
+Font, Helvetica, sans-serif; font-size: 15px; line-height: 1.55em; DMSO-table- =
+lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 20p =
+x 15px; ">
+      <p style = 3D "font-size: 12px; line-height: 1.5em; margin-top: 0.8em; m =
+argin-bottom: 0.8em; "> Published by <a href = 3D" https://cooperpress.com/ "Jan =
+le = 3D "text-decoration: none; color: # 3366aa;"> Cooperpress </a> and edited by =
+ <a href = 3D "https://javascriptweekly.com/link/88132/fc9f5faa6f" style = 3D "te =
+xt-decoration: none; color: # 3366aa; "> Peter Cooper </a> </p>
+      <p style = 3D "font-size: 12px; line-height: 1.5em; margin-top: 0.8em; m =
+argin-bottom: 0.8em; "> 'JavaScript' is a trademark of Oracle Corporation in =
+the US <br> We are not endorsed by or affiliated with Oracle. </p>
+      <p style = 3D "font-size: 0.9em; margin-top: 0.8em; margin-bottom: 0.8em =
+; "> <a href = 3D" https://javascriptweekly.com/edit_subscription/fc9f5faa6f "st =
+yle = 3D "text-decoration: underline; color: # 3366aa;"> Change your email addre =
+ss </a> or <a href = 3D "https://javascriptweekly.com/leave/fc9f5faa6f" style =
+= 3D "text-decoration: underline; color: # 3366aa;"> stop getting this newslett =
+</a> er. </ p>
+      <p style = 3D "font-size: 12px; margin-top: 0.8em; margin-bottom: 0.8em; =
+"> = C2 = A9 Cooper Press Ltd = C2 = B7 Fairfield Enterprise Center, Louth, LN11 0 =
+LS, United Kingdom </p>
+      </ Td> </ tr> </ table>
+  </ Div>
+<img src = 3D "https://javascriptweekly.com/open/487/fc9f5faa6f" width = 3D "3" h =
+eight = 3D "2" /> </body>
+</ Html>
+
+--a537217fcc2280b2f267a5e314216cdaaf071fd3f3b2c33397ded1db79a6--

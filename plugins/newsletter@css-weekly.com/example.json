@@ -1,0 +1,69 @@
+{
+    "body": {
+        "sender": "bounce-mcsys.us2_6854562.5d8e945702-frontender=email2webhook.com@mail10.mcsignup.com",
+        "size": "16556",
+        "recipient": "email2webhook@email2webhook.com",
+        "content": {
+            "to": [
+                {
+                    "display": "frontender@email2webhook.com",
+                    "address": "frontender@email2webhook.com",
+                    "is_group": false
+                }
+            ],
+            "from": [
+                {
+                    "display": "CSS Weekly",
+                    "address": "newsletter@css-weekly.com",
+                    "is_group": false
+                }
+            ],
+            "cc": [],
+            "subject": "CSS Weekly: Please Confirm Subscription ",
+            "body": "CSS Weekly\r\n------------------------------------------------\r\n\r\nClick this link to confirm your subscription:\r\n\r\nhttps://us2.mailchimp.com/mctx/clicks?url=http%3A%2F%2Fcss-weekly.us2.list-manage.com%2Fsubscribe%2Fconfirm%3Fu%3D22abf1e39f850260e7d9af1c9%26id%3D3df91c6206%26e%3D0e02995fb3&h=f6d2dcc98dc266ef5dd5d15e65a465a47296f1d14afd0bccb8256952358e64c2&v=1&xid=5d8e945702&uid=6854562&pool=contact_facing&subject=CSS+Weekly%3A+Please+Confirm+Subscription\r\n\r\nIf the link is not clickable, copy-paste it into\r\nyour web browser.\r\n\r\n------------------------------------------------\r\n\r\nIf you received this email by mistake,\r\nsimply delete it. You won't be subscribed if\r\nyou don't click the confirmation link above.\r\n\r\nFor questions, contact:\r\nnewsletter@css-weekly.com",
+            "headers": {
+                "received-spf": "Pass (mailfrom) identity=mailfrom; client-ip=198.2.140.14; helo=mail10.mcsignup.com; envelope-from=bounce-mcsys.us2_6854562.5d8e945702-frontender=email2webhook.com@mail10.mcsignup.com; receiver=<UNKNOWN> ",
+                "authentication-results": "email2webhook.com; dkim=pass (1024-bit key; unprotected) header.d=css-weekly.com header.i=newsletter@css-weekly.com header.b=\"uGChuT3Y\"; dkim-atps=neutral",
+                "received": [
+                    "from mail10.mcsignup.com (mail10.mcsignup.com [198.2.140.14]) by email2webhook.com (Postfix) with ESMTPS id E3A15408A6 for <frontender@email2webhook.com>; Mon, 11 May 2020 02:36:40 +0530 (IST)",
+                    "from 127.0.0.1 (localhost [127.0.0.1]) by mail10.mcsignup.com (Mailchimp) with ESMTP id 49KxSt4Hr6z4f4HPf for <frontender@email2webhook.com>; Sun, 10 May 2020 21:06:38 +0000 (GMT)"
+                ],
+                "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=css-weekly.com; s=k1; t=1589144798; i=newsletter@css-weekly.com; bh=vorxs7Gvw1WBByBJj7dIcW55R6R9XwCKo0+RYWwwFp0=; h=From:Reply-To:To:Date:Message-ID:Subject:Form-Sub:MIME-Version:  Content-Type; b=uGChuT3Y70uihS8XBuDb3BKVZrBwFpFyZ4neDjfz1r2UqfMezl7mTWw/1RmWtwvkz  exFpl4TDKyv31DtE5RQjf/hCsEUm6wo8uYz9FQuu3bT4gxqFKNhyYwWKO1rsD2fDhm  KeFnnVkYBxeupSsihrZ35YeRDKX6oQ/kyn+TAA1I=",
+                "from": "CSS Weekly <newsletter@css-weekly.com> ",
+                "reply-to": "CSS Weekly <newsletter@css-weekly.com> ",
+                "to": "<frontender@email2webhook.com> ",
+                "date": "Sun, 10 May 2020 21:06:38 +0000 ",
+                "message-id": "<22abf1e39f850260e7d9af1c9cbf5c2b31e.20200510210638@mail10.mcsignup.com> ",
+                "x-mailer": "MailChimp Mailer - **CID5d8e945702cbf5c2b31e** ",
+                "x-campaign": "mailchimp22abf1e39f850260e7d9af1c9.5d8e945702 ",
+                "x-campaignid": "mailchimp22abf1e39f850260e7d9af1c9.5d8e945702 ",
+                "x-report-abuse": "Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=22abf1e39f850260e7d9af1c9&id=5d8e945702&e=cbf5c2b31e ",
+                "x-mc-user": "22abf1e39f850260e7d9af1c9 ",
+                "x-feedback-id": "6854562:6854562.5d8e945702:us2:mc ",
+                "x-auto-response-suppress": "OOF, AutoReply ",
+                "x-accounttype": "pd ",
+                "subject": "CSS Weekly: Please Confirm Subscription ",
+                "form-sub": "v=1;ip4=162.158.91.224 ",
+                "mime-version": "1.0",
+                "content-type": "multipart/alternative; boundary=\"_----------=_MCPart_1212611887\""
+            }
+        }
+    },
+    "headers": {
+        "host": "mail.frontender.info",
+        "x-real-ip": "172.68.146.209",
+        "x-forwarded-for": "45.77.45.57, 172.68.146.209",
+        "x-forwarded-proto": "https",
+        "connection": "close",
+        "content-length": "3464",
+        "accept-encoding": "gzip",
+        "cf-ipcountry": "SG",
+        "cf-ray": "5916a035a891ddfd-SIN",
+        "cf-visitor": "{\"scheme\":\"https\"}",
+        "accept": "*/*",
+        "content-type": "application/json",
+        "cf-request-id": "02a20275860000ddfd288d7200000001",
+        "cf-connecting-ip": "45.77.45.57",
+        "cdn-loop": "cloudflare"
+    }
+}
