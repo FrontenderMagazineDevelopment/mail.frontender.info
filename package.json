@@ -4,7 +4,11 @@
   "description": "Mail parser to get article links from the emails",
   "main": "server.mjs",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "node --experimental-loader ./resolver.mjs --experimental-modules server.mjs",
+    "build": "docker build ./ -t frontendermagazine/mailparser --label frontendermagazine",
+    "publish": "docker push frontendermagazine/mailparser"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SilentImp/emailParser.git"

@@ -43,7 +43,8 @@ server.post('/', {
 
   if (from === FORWARDED_EMAIL) {
     const isForwarded = text.includes('---------- Forwarded message ---------')
-    from = text.match(/---------- Forwarded message ---------\nFrom:[^/<]+<([^>]+)/i)[1];
+    const fromMatch = text.match(/---------- Forwarded message ---------\nFrom:[^/<]+<([^>]+)/i);
+    from = fromMatch && fromMatch.length > 1 ? fromMatch[1] : from;
     console.log('from updated to: ', from);
   }
 
