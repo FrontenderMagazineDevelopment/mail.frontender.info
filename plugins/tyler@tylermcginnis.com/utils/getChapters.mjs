@@ -1,15 +1,17 @@
 import getFromTo from '@utils/getFromTo.mjs';
 
 const parts = [
-'Frontend Focus', // from 0
+'ARTICLES', // from 0
 // part 1
-'Jobs', // to 1
+'SPONSORED LINKS', // to 1
 // skipped
-'News, Tutorials & Opinion', // from 2
+'TUTORIALS', // from 2
 // part 2
-'Code, Tools and Resources', // to 3
+'RESOURCES', // to 3
 // skipped
-'Web Font of the Week',
+'PROJECTS',
+// skipped
+'VIDEOS',
 ];
 
 export default (text) => [

@@ -6,7 +6,7 @@ import removeAnalytics from '@utils/removeAnalytics';
 import removeDuplicates from '@utils/removeDuplicates';
 import getChapters from './utils/getChapters';
 
-const vendor = 'csslayout.news';
+const vendor = 'reactjsnewsletter.com';
 
 const helpers = [
   getChapters,

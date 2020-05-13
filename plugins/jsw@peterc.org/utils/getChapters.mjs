@@ -1,4 +1,4 @@
-import getFromTo from '../../../utils/getFromTo.mjs';
+import getFromTo from '@utils/getFromTo.mjs';
 
 const parts = [
 'JavaScript Weekly', // from 0

@@ -1,4 +1,4 @@
-import getFromTo from '../../../utils/getFromTo.mjs';
+import getFromTo from '@utils/getFromTo.mjs';
 
 const parts = [
 'view online version', // from 1
