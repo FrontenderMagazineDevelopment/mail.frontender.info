@@ -4,15 +4,13 @@ import filterVendorLinks from '@utils/filterVendorLinks';
 import banVendors from '@utils/banVendors';
 import removeAnalytics from '@utils/removeAnalytics';
 import removeDuplicates from '@utils/removeDuplicates';
-// import getArticleLinks from './utils/getArticleLinks';
 import getChapters from './utils/getChapters';
 
-const vendor = 'css-weekly';
+const vendor = 'gamedevjsweekly';
 
 const helpers = [
   getChapters,
   getLinksFromText,
-  // getArticleLinks,
   getRedirects,
   filterVendorLinks(vendor),
   banVendors,
