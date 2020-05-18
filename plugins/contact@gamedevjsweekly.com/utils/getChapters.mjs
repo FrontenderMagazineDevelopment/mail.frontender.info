@@ -1,5 +1,6 @@
 import getFromTo from '@utils/getFromTo.mjs';
 
+// Look like some chapters could be skipped
 const parts = [
 'Articles:', // from 0
 // skipped
@@ -16,6 +17,13 @@ const parts = [
 'Games:'
 ];
 
-export default (text) => [
-  getFromTo(parts[2], parts[3], text)
-].join('\n\n');
+const findChapter = (name, chapters) => {
+  const startWith = new RegExp(`^[\\s]*${name}`,'im');
+  return chapters.find((chapter) => (chapter.match(startWith) !== null));
+};
+
+export default (text) => {
+  const chapters = text.split('**');
+  const res = findChapter('Tutorials:', chapters);
+  return res;
+}

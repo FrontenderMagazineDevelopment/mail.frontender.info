@@ -1,0 +1,51 @@
+{
+  "sender": "bounce-mc.us19_100459230.4448632-971331a3b6@mail119.atl231.mcsv.net",
+  "size": "32945",
+  "recipient": "email2webhook@email2webhook.com",
+  "content": {
+      "to": [
+          {
+              "display": "Frontender",
+              "address": "frontender@email2webhook.com",
+              "is_group": false
+          }
+      ],
+      "from": [
+          {
+              "display": "Gamedev.js Weekly",
+              "address": "contact@gamedevjsweekly.com",
+              "is_group": false
+          }
+      ],
+      "cc": [],
+      "subject": "Issue #332: mazes and crosswords, Phaser Editor, and SpaceX docking",
+      "body": "Weekly newsletter about HTML5 Game Development.\n------------------------------------------------------------\nhttps://mailchi.mp/62c01010df31/gamedevjsweekly332?e=971331a3b6\n27ee4fc9-8cd1-4951-a082-bcb47e7673fc.png\n\n\n** Issue #332 - May 15th 2020\n------------------------------------------------------------\n\nIf you have anything you want to share with the HTML5 game development community please let me know by sending an email to andrzej.mazur@end3r.com (mailto:andrzej.mazur@end3r.com?subject=Gamedev.js%20Weekly) .\nI'm also open for related sponsorship opportunities and job listings.\n\n\n** Articles:\n------------------------------------------------------------\n\nEpic Games: Unreal Engine 5 will bring a generational change to graphics (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=3764ebdda4&e=971331a3b6)\nEpic took the wraps off its Unreal Engine 5, showing in a demo video how the game engine behind Fortnite will be able to generate outstanding realistic graphics in real time.\nDean Takahashi at VentureBeat\n\nGTA 5 is free on the Epic Games Store (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=616061379d&e=971331a3b6)\nGrab it before May 21.\nFraser Brown at PC Gamer\n\nMojang returns to its indie roots with Minecraft Dungeons (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=53fa614c33&e=971331a3b6)\nThe 25-person team on turning one of the world's biggest games into a dungeon crawler for everyone.\nChristopher Dring at GamesIndustryBiz\n\nOne of VRâs best games finally comes to Oculus Quest (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=6015f2b454&e=971331a3b6)\nTetris Effect is the perfect fit for Oculus Quest.\nBen Kuchera at Polygon\n\n\n** Jobs:\n------------------------------------------------------------\n\nGame developers are in demand on Vettery (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=2c6ec9e643&e=971331a3b6)\nReady for a bold career move? Make a free profile, name your salary, and connect with hiring managers from top employers today.\n\n\n** Tutorials:\n------------------------------------------------------------\n\nBe a-Maze-d (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=d0d217e84e&e=971331a3b6)\nJoin me as we write a phaser web application to generate and display a maze.\nDave Odonnel's blog\n\nHow to let players choose a character in Phaser 3 (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=cda9b921eb&e=971331a3b6)\nCreate different characters dynamically based on player selection.\nTommy Leung at Ourcade\n\nBuilding a crossword puzzle generator with JavaScript (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=1f166c8750&e=971331a3b6)\nThis will be the most complex code Iâve introduced to date.\nMitchum's blog\n\n\n** Tools:\n------------------------------------------------------------\n\nPhaser Editor 2D v3 released (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=94137f5219&e=971331a3b6)\n\nKite launches AI-powered JavaScript completions (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=3df5d5cc29&e=971331a3b6)\n\n\n** Resources:\n------------------------------------------------------------\n\nZork - source code of a 1977 version (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=c00224ae61&e=971331a3b6)\n\n\n** Demos:\n------------------------------------------------------------\n\nSpaceX ISS docking simulator (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=36baca7221&e=971331a3b6)\n\n\n** Videos:\n------------------------------------------------------------\n\nPlaying games on a 60s computer (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=68b789df09&e=971331a3b6)\n\nTony Hawk's Pro Skater 1 and 2 remaster trailer (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=147e2efcbc&e=971331a3b6)\n\n\n** Games:\n------------------------------------------------------------\n\nZOOM-BE (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=6588e70172&e=971331a3b6)\n\n============================================================\n** follow on Twitter (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=ab11371703&e=971331a3b6)\n| ** like on Facebook (https://gamedevjsweekly.us19.list-manage.com/track/click?u=40a827baebf8abf580f4fae15&id=9d95f740c0&e=971331a3b6)\n| ** forward to a friend (http://us19.forward-to-friend.com/forward?u=40a827baebf8abf580f4fae15&id=2c3fca4d1f&e=971331a3b6)\n\nCopyright Â© 2020 Enclave Games, All rights reserved.\n You are receiving this email because you opted in via our website.\n\n Email Marketing Powered by Mailchimp\nhttp://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&utm_medium=email&utm_campaign=referral_marketing&aid=40a827baebf8abf580f4fae15&afl=1\n** unsubscribe from this list (https://gamedevjsweekly.us19.list-manage.com/unsubscribe?u=40a827baebf8abf580f4fae15&id=ceada9aa7e&e=971331a3b6&c=2c3fca4d1f)\n| ** update subscription preferences (https://gamedevjsweekly.us19.list-manage.com/profile?u=40a827baebf8abf580f4fae15&id=ceada9aa7e&e=971331a3b6)",
+      "headers": {
+          "received-spf": "Pass (mailfrom) identity=mailfrom; client-ip=198.2.141.119; helo=mail119.atl231.mcsv.net; envelope-from=bounce-mc.us19_100459230.4448632-971331a3b6@mail119.atl231.mcsv.net; receiver=<UNKNOWN> ",
+          "authentication-results": "email2webhook.com; dkim=pass (1024-bit key; unprotected) header.d=gamedevjsweekly.com header.i=contact@gamedevjsweekly.com header.b=\"XuoK39i9\"; dkim-atps=neutral",
+          "received": [
+              "from mail119.atl231.mcsv.net (mail119.atl231.mcsv.net [198.2.141.119]) by email2webhook.com (Postfix) with ESMTPS id 5D714407C7 for <frontender@email2webhook.com>; Fri, 15 May 2020 18:30:47 +0530 (IST)",
+              "from localhost (localhost [127.0.0.1]) by mail119.atl231.mcsv.net (Mailchimp) with ESMTP id 49NpRw6Lkdz9K95jg for <frontender@email2webhook.com>; Fri, 15 May 2020 13:00:44 +0000 (GMT)"
+          ],
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gamedevjsweekly.com; s=k1; t=1589547644; i=contact@gamedevjsweekly.com; bh=mSS/rIQQSJJkcyE93z+VOD5Ws6E0ZnzBfoYkKMjegrE=; h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:  Content-Type:MIME-Version; b=XuoK39i9cLqhkuaNjE0bQgRON1irH9B7TxSqUzk1FPOSANun0hpIk3vk9pkN5S2j0  HbGbqamctgBYOBUudlW4ci68kyKrmZ3JuUasixzthK4IYBCTHmGjZmlaJVoXMlpOY/  GBIicNes1sjZclBWNRCl90qq+/Z4yDGzslbkOtXU=",
+          "subject": "Issue #332: mazes and crosswords, Phaser Editor, and SpaceX docking",
+          "from": "Gamedev.js Weekly <contact@gamedevjsweekly.com>",
+          "reply-to": "Gamedev.js Weekly <contact@gamedevjsweekly.com>",
+          "to": "Frontender <frontender@email2webhook.com>",
+          "date": "Fri, 15 May 2020 12:59:38 +0000",
+          "message-id": "<40a827baebf8abf580f4fae15.971331a3b6.20200515125931.2c3fca4d1f.1277e024@mail119.atl231.mcsv.net>",
+          "x-mailer": "MailChimp Mailer - **CID2c3fca4d1f971331a3b6**",
+          "x-campaign": "mailchimp40a827baebf8abf580f4fae15.2c3fca4d1f",
+          "x-campaignid": "mailchimp40a827baebf8abf580f4fae15.2c3fca4d1f",
+          "x-report-abuse": "Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=40a827baebf8abf580f4fae15&id=2c3fca4d1f&e=971331a3b6",
+          "x-mc-user": "40a827baebf8abf580f4fae15",
+          "feedback-id": "100459230:100459230.4448632:us19:mc",
+          "list-id": "40a827baebf8abf580f4fae15mc list <40a827baebf8abf580f4fae15.8663.list-id.mcsv.net>",
+          "x-accounttype": "ff",
+          "list-unsubscribe": "<https://gamedevjsweekly.us19.list-manage.com/unsubscribe?u=40a827baebf8abf580f4fae15&id=ceada9aa7e&e=971331a3b6&c=2c3fca4d1f>, <mailto:unsubscribe-mc.us19_40a827baebf8abf580f4fae15.2c3fca4d1f-971331a3b6@mailin.mcsv.net?subject=unsubscribe>",
+          "list-unsubscribe-post": "List-Unsubscribe=One-Click",
+          "content-type": "multipart/alternative; boundary=\"_----------=_MCPart_1339719445\"",
+          "mime-version": "1.0"
+      }
+  }
+}
