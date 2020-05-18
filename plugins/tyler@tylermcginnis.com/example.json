@@ -1,0 +1,41 @@
+{
+  "sender": "msprvs1=18403VcEFXRC1=bounces-20206@sparkpostmail.com",
+  "size": "62959",
+  "recipient": "email2webhook@email2webhook.com",
+  "content": {
+      "to": [
+          {
+              "display": "frontender@email2webhook.com",
+              "address": "frontender@email2webhook.com",
+              "is_group": false
+          }
+      ],
+      "from": [
+          {
+              "display": "TylerMcGinnis.com",
+              "address": "tyler@tylermcginnis.com",
+              "is_group": false
+          }
+      ],
+      "cc": [],
+      "subject": "React Newsletter - Rebuilding Facebook? ð¤¯",
+      "body": "React Newsletter\nRebuilding Facebook? ð¤¯ - May 14th 2020\n\nRead this issue on the web\nhttp://reactjsnewsletter.com/issues/212?sid=dhfAm5D\n\n\n### News\n\nreason-react v0.8.0\nhttps://cur.at/8CZOo60?m=email&sid=dhfAm5D\nIf ReasonML is your thing, v0.8.0 of `reason-react` is a huge release that includes several breaking changes, maintenance fixes and documentation updates.\n\n### Articles\n\nRebuilding our tech stack for a new Facebook.com \nhttps://cur.at/UP0djtr?m=email&sid=dhfAm5D\n\"A complete rewrite is extremely rare, but in this case we knew it was the only way weâd be able to achieve our goals.\"  This fascinating article from Facebook Engineering shares the lessons they learned while rearchitecting Facebook.com using React and Relay, and explores what the future of Facebook.com will look like.\n\nHow to CSS Style in React\nhttps://cur.at/2v6qaPx?m=email&sid=dhfAm5D\nThere are many ways to style a modern React app with CSS. In this article, [Robin Wieruch](https://cur.at/jVrFvQx?m=email&sid=dhfAm5D) uses helpful code snippets and detailed explanations to demonstrate the following approaches:\r\n\r\n* CSS-in-CSS (e.g. CSS, Sass, CSS Modules, or CSS Modules with Sass)\r\n* CSS-in-JS (e.g. Styled Components, Emotion)\r\n* Utility-First-CSS (e.g. Tailwind CSS)\n\n### Sponsored Links\n\nReact developers are in demand on Vettery\nhttps://cur.at/jSGBEbw?m=email&sid=dhfAm5D\nVettery is an online hiring marketplace that's changing the way people hire and get hired. Ready for a bold career move? Make a free profile, name your salary, and connect with hiring managers from top employers today. [Get started today](https://cur.at/EqDnLe1?m=email&sid=dhfAm5D).\n\n### Tutorials\n\nMaking a Podcast App with React Native\nhttps://cur.at/b8wzrrE?m=email&sid=dhfAm5D\nIn this tutorial, Christopher walks through creating a Podcast app with React Native that has the following features. \r\n\r\n* Searching for podcasts\r\n* Fetching podcast data, including artwork\r\n* Rendering podcast artwork, and making it possible to subscribe to a podcast\r\n* Listing tracks in the podcast, and allowing the listener to play a track\r\n* Controlling playback, through actions like âpauseâ, âresumeâ, and âstopâ\n\nUsing Expo in Gatsby\nhttps://cur.at/Q1wen2N?m=email&sid=dhfAm5D\nSÃ©bastien shows us that it's possible to use ReactNative and Expo APIs in a Gatsby site. His MDX blog post embed runnable ReactNative code demos.\n\n### Resources\n\nKite launches AI-powered JavaScript completions\nhttps://cur.at/k5CVDIZ?m=email&sid=dhfAm5D\nKiteâs AI-powered autocomplete tool was already popular with Python developers, and they just launched for JavaScript and all major frameworks and libraries (including React). \n\nâï¸ react-virtual: hooks for virtualizing scrollable elements in React\nhttps://cur.at/7IylEm?m=email&sid=dhfAm5D\nA React hook for virtual scrolling of rows, columns and grids in fixed, variable, and dynamic measurement modes. Built by [Tanner Linsley](https://cur.at/rhEvLZf?m=email&sid=dhfAm5D), its most distinguishing feature is that it's just one single custom hook instead of a set of components (aka \"headless\" ).\n\nReact Native for Windows + Mac \nhttps://cur.at/81kHlaN?m=email&sid=dhfAm5D\nReact Native for Windows + Mac brings React Native support for the Windows 10 SDK as well as the MacOS 10.12 SDK. With this, you can use Javascript to build native Windows apps for all devices supported by Windows 10 including PCs, tablets, 2-in-1s, Xbox, Mixed reality devices, etc., as well as the MacOS desktop and laptop ecosystems.\n\nImmutable Alley Eden, Utah\n\nReact Newsletter 2020 | [Privacy Policy](http://reactjsnewsletter.com/privacy?sid=dhfAm5D) | [Twitter](http://twitter.com/reactnewsletter)\n\nUnsubscribe from React Newsletter\nhttp://reactjsnewsletter.com/unsubscribes/dhfAm5D\n",
+      "headers": {
+          "received-spf": "Pass (mailfrom) identity=mailfrom; client-ip=192.174.90.150; helo=mta-90-150.sparkpostmail.com; envelope-from=msprvs1=18403vcefxrc1=bounces-20206@sparkpostmail.com; receiver=<UNKNOWN> ",
+          "authentication-results": "email2webhook.com; dkim=pass (1024-bit key; unprotected) header.d=tylermcginnis.com header.i=@tylermcginnis.com header.b=\"G8f+FIGz\"; dkim-atps=neutral",
+          "received": "from mta-90-150.sparkpostmail.com (mta-90-150.sparkpostmail.com [192.174.90.150]) by email2webhook.com (Postfix) with ESMTPS id 8E64540786 for <frontender@email2webhook.com>; Fri, 15 May 2020 01:36:24 +0530 (IST)",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=tylermcginnis.com; s=curated; t=1589486782; i=@tylermcginnis.com; bh=t1Q/2lmgbzBhMv/YXiv/68PWJNhC/3LeZwKA/v/q3Jk=; h=To:Message-ID:Date:Content-Type:Subject:From; b=G8f+FIGzVBGbHxuz1Pg3qldLTDy070QQUM2tISt8a4nAdVvEB/S5A4dPIAcnnurZy  GTfuauOHcOuRFd67StIWXnPdIh4LbIhfR+4BepJ08BquEPbLpp7kqKF8bF4biasDou  3YOzaNQEjH09SfzQ2nOS1jC6HFUzKYmoTM1AbtgE=",
+          "x-msfbl": "TLNxpmG5NIbt3OwoyaJrEZRpwd0xupi70EjUYn/klz4=|eyJjdXN0b21lcl9pZCI 6IjIwMjA2IiwidGVuYW50X2lkIjoic3BjIiwic3ViYWNjb3VudF9pZCI6IjAiLCJ tZXNzYWdlX2lkIjoiMDAyYWJlYTRiZDVlNTY2YTI5MjEiLCJyIjoiZnJvbnRlbmR lckBlbWFpbDJ3ZWJob29rLmNvbSJ9",
+          "to": "frontender@email2webhook.com",
+          "message-id": "<92.12.27222.EB4ADBE5@ap.mta1vrest.cc.prd.sparkpost>",
+          "date": "Thu, 14 May 2020 20:06:18 +0000",
+          "content-type": "multipart/alternative; boundary=\"_----osbX45MmcacJwwJTVjaekQ===_A8/F0-27222-9B4ADBE5\"",
+          "mime-version": "1.0",
+          "reply-to": "tyler@tylermcginnis.com",
+          "subject": "React Newsletter - Rebuilding Facebook? ð¤¯",
+          "from": "\"TylerMcGinnis.com\" <tyler@tylermcginnis.com>",
+          "list-unsubscribe": "<mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:RwR6DrfX_CkvKbyhcWP2kL5beVwEHT6J1N6JXj_HUlo~|eyAicmNwdF90byI6ICJmcm9udGVuZGVyQGVtYWlsMndlYmhvb2suY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMjAyMDYiLCAibWVzc2FnZV9pZCI6ICIwMDJhYmVhNGJkNWU1NjZhMjkyMSIsICJzdWJhY2NvdW50X2lkIjogIjAiIH0~>",
+          "list-id": "<spc.20206.0.sparkpostmail.com>"
+      }
+  }
+}
