@@ -4,6 +4,9 @@ import banVendors from '@utils/banVendors';
 import removeAnalytics from '@utils/removeAnalytics';
 import removeDuplicates from '@utils/removeDuplicates';
 import getChapters from './utils/getChapters';
+import removeHash from '@utils/removeHash';
+import removeSearch from '@utils/removeSearch';
+import removeRootURL from '@utils/removeRootURL';
 
 const vendor = 'frontendfoc.us';
 
@@ -13,6 +16,9 @@ const helpers = [
   filterVendorLinks(vendor),
   banVendors,
   removeAnalytics,
+  removeHash,
+  removeSearch,
+  removeRootURL,
   removeDuplicates,
 ];
 

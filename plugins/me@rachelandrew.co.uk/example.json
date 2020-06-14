@@ -1,0 +1,41 @@
+{
+  "sender": "msprvs1=18429XukSBfHM=bounces-20206@sparkpostmail.com",
+  "size": "49913",
+  "recipient": "email2webhook@email2webhook.com",
+  "content": {
+      "to": [
+          {
+              "display": "frontender@email2webhook.com",
+              "address": "frontender@email2webhook.com",
+              "is_group": false
+          }
+      ],
+      "from": [
+          {
+              "display": "CSS Layout News",
+              "address": "me@rachelandrew.co.uk",
+              "is_group": false
+          }
+      ],
+      "cc": [],
+      "subject": "CSS Layout News - Issue 254",
+      "body": "CSS Layout News\nIssue 254 - 9th June 2020\n\nRead this issue on the web\nhttps://csslayout.news/issues/254?sid=4V3JKLk\n\n\n### News\n\nIssue 254\n\nOver the next two weeks I have a whole bunch of online things taking place. Later today, if you are quick you can sign up for the free of charge [Smashing Meets event](https://cur.at/Y3g6Z5h?m=email&sid=4V3JKLk). I'll be speaking on the Evolution of Responsive Design. Then on Thursday and Friday I will be running my [CSS Layout Masterclass](https://cur.at/2v9kphr?m=email&sid=4V3JKLk) - there are a few tickets left if you would like to join me.\r\n\r\nNext week I will be speaking at the very first [An Event Apart Online Together](https://cur.at/HSyvSUk?m=email&sid=4V3JKLk), your chance to hear a talk I won't be doing anything like as many times I thought I would this year! An Event Apart are the sponsor of the newsletter this week, in addition to the event next week, they are running a second event dedicated to Human-centered design. Take a look at the details in the footer of this email.\nRachel Andrew, CSS Layout News\n\n### Learn\n\nWeb Platform Contribution Guide\nhttps://cur.at/we87okW?m=email&sid=4V3JKLk\nThis is great. A guide to contributing to the web platform.\n\nQuick Tips for High Contrast Mode | Sarah Higley\nhttps://cur.at/7XSW3EZ?m=email&sid=4V3JKLk\nA post with a round-up of tips and resources for learning about Windows High Contrast Mode.\n\nEquivalent Experiences: Thinking Equivalently â Smashing Magazine\nhttps://cur.at/bvgRz6t?m=email&sid=4V3JKLk\nIn this article Eric discusses learning how to embrace an equivalent, inclusive mindset. Providing practical, robust ways to improve your websites and web apps by providing solutions to common, everyday barriers.\n\nA userâs guide to CSS variables â Increment: Frontend\nhttps://cur.at/iPMpGra?m=email&sid=4V3JKLk\nAn excellent guide to CSS custom properties.\n\nOn fixed elements and backgrounds\nhttps://cur.at/UxvnC6m?m=email&sid=4V3JKLk\nA really good rundown on fixed positioning, containing blocks and other related things from Chen Hui Jing.\n\n### Interesting\n\nThe Mad Magazine Fold-In Effect in CSS | Thomas Park\nhttps://cur.at/MRcAWkY?m=email&sid=4V3JKLk\nThis is a fun technique, using CSS transforms.\n\n### Our Sponsor\n\nHuman-Centered Design: Learn how to handle unexpected design scenarios and unusual situations.\nhttps://cur.at/xLYH52p?m=email&sid=4V3JKLk\nJoin us Monday, July 20 for [An Event Apart: Online Together](https://cur.at/Sy0FbF5?m=email&sid=4V3JKLk), a single-day online web design conference focused on human-centered designâall the ways our work can impact users in personal ways, even when we donât intend to be so personal.\r\n\r\nYouâll hear from:\r\n\r\n- **Margot Bloomstein**, I Brake For Users: Content Strategy for Slower Experiences\r\n- **Ron Bronson**, The Researcherâs Role in Reducing Consequence Design\r\n- **Scott Jehl**, Performance is Accessibility\r\n- **Jeremy Keith**, Design Principles for the Web\r\n- **Morten Rand-Hendriksen**, Practical Ethics for the Modern Web Designer\r\n- **Aarron Walter**, Designing for Emotion Revisited\r\n\r\nAll sessions will remain available to attendees, on-demand, for at least six months after the event is over, including the recordings of live Q&A sessions with the speakers. As we always aim for with our events, youâll come away not only inspired, but ready to put new techniques and ideas immediately into practice.\r\n\r\n[See the full agenda and register now](https://cur.at/Sy0FbF5?m=email&sid=4V3JKLk).\n\nSpike Island 133 Cumberland Rd Bristol BS1 6UX\n\nCSS Layout News 2020 | [Privacy Policy](https://csslayout.news/privacy?sid=4V3JKLk) | Curated by [Rachel Andrew](https://rachelandrew.co.uk).\n\nUnsubscribe from CSS Layout News\nhttps://csslayout.news/unsubscribes/4V3JKLk\n",
+      "headers": {
+          "received-spf": "Pass (mailfrom) identity=mailfrom; client-ip=192.174.90.149; helo=mta-90-149.sparkpostmail.com; envelope-from=msprvs1=18429xuksbfhm=bounces-20206@sparkpostmail.com; receiver=<UNKNOWN> ",
+          "authentication-results": "email2webhook.com; dkim=pass (1024-bit key; unprotected) header.d=rachelandrew.co.uk header.i=@rachelandrew.co.uk header.b=\"Wg9kQpJj\"; dkim-atps=neutral",
+          "received": "from mta-90-149.sparkpostmail.com (mta-90-149.sparkpostmail.com [192.174.90.149]) by email2webhook.com (Postfix) with ESMTPS id 4A9A9403E4 for <frontender@email2webhook.com>; Tue,  9 Jun 2020 21:06:41 +0530 (IST)",
+          "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=rachelandrew.co.uk; s=curated; t=1591716999; i=@rachelandrew.co.uk; bh=/fp5W/fGThR6bfA50EvGZWpXOnzCzaY4u9zUoycoQiE=; h=To:Message-ID:Date:Content-Type:Subject:From; b=Wg9kQpJjC0+odR8Zi2BoYa5kB8XPSZKu0KwYW1n/0kBVmejTWk4RSjSlVaNbEXdKO  B7x8xtmaCTKMGeym9hcbqgNYFWk/vv/lddINFbTRW9mAJdPifVqy5+7xcPsrTf+mVp  5M2UBjUmm7CKsJIs4caJCrdo0zNs8gcFGjehLigA=",
+          "x-msfbl": "+52g5Wh1KJiZ5bsbeGKMCnjsBHp2Ft7n1wBloZKfb5s=|eyJzdWJhY2NvdW50X2l kIjoiMCIsImN1c3RvbWVyX2lkIjoiMjAyMDYiLCJ0ZW5hbnRfaWQiOiJzcGMiLCJ yIjoiZnJvbnRlbmRlckBlbWFpbDJ3ZWJob29rLmNvbSIsIm1lc3NhZ2VfaWQiOiI wMDFiODdhY2RmNWVkNjVjODA2ZSJ9",
+          "to": "frontender@email2webhook.com",
+          "message-id": "<08.E6.23766.78CAFDE5@aa.mta1vrest.cc.prd.sparkpost>",
+          "date": "Tue, 09 Jun 2020 15:36:36 +0000",
+          "content-type": "multipart/alternative; boundary=\"_----DsPoU6H/TnitGYZNPxDuGw===_37/56-23766-48CAFDE5\"",
+          "mime-version": "1.0",
+          "reply-to": "me@rachelandrew.co.uk",
+          "subject": "CSS Layout News - Issue 254",
+          "from": "\"CSS Layout News\" <me@rachelandrew.co.uk>",
+          "list-unsubscribe": "<mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:wte4pEA3eLhldf7lojmN0TajyrjUQmGEdXFDSfDCrGs~|eyAicmNwdF90byI6ICJmcm9udGVuZGVyQGVtYWlsMndlYmhvb2suY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMjAyMDYiLCAic3ViYWNjb3VudF9pZCI6ICIwIiwgIm1lc3NhZ2VfaWQiOiAiMDAxYjg3YWNkZjVlZDY1YzgwNmUiIH0~>",
+          "list-id": "<spc.20206.0.sparkpostmail.com>"
+      }
+  }
+}

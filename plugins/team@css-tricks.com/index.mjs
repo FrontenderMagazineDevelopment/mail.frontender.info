@@ -1,27 +1,24 @@
 import getRedirects from '@utils/getRedirects';
 import getLinksFromText from '@utils/getLinksFromText';
-import filterVendorLinks from '@utils/filterVendorLinks';
-import banVendors from '@utils/banVendors';
 import removeAnalytics from '@utils/removeAnalytics';
 import removeDuplicates from '@utils/removeDuplicates';
-import removeRootURL from '@utils/removeRootURL';
-import getChapters from './utils/getChapters';
+import banVendors from '@utils/banVendors';
 import removeHash from '@utils/removeHash';
 import removeSearch from '@utils/removeSearch';
-
-const vendor = 'reactjsnewsletter.com';
+import removeRootURL from '@utils/removeRootURL';
+import removeSponsor from './utils/removeSponsor';
+import removeListControls from './utils/removeListControls';
 
 const helpers = [
-  getChapters,
+  removeSponsor,
   getLinksFromText,
-  getRedirects,
-  filterVendorLinks(vendor),
   banVendors,
-  removeAnalytics,
   removeHash,
   removeSearch,
+  removeAnalytics,
   removeRootURL,
   removeDuplicates,
+  removeListControls,
 ];
 
 export default async (text) => helpers.reduce(async (text, helper) => {

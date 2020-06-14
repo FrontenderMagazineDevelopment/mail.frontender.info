@@ -3,7 +3,7 @@ export default (from, to, text) => {
   const lowerCaseFrom = from.toLowerCase();
   const lowerCaseTo = to.toLowerCase();
   const fromIndex = lowerCaseText.indexOf(lowerCaseFrom);
-  const toIndex = lowerCaseText.indexOf(lowerCaseTo);
+  const toIndex = lowerCaseText.indexOf(lowerCaseTo, fromIndex);
   const length = toIndex - fromIndex;
   return text.substr(fromIndex, length);
 }

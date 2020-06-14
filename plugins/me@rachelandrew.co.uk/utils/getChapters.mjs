@@ -1,21 +1,13 @@
 import getFromTo from '@utils/getFromTo.mjs';
 
 const parts = [
-'Articles:', // from 0
-// skipped
-'Jobs:', // to 1
-// skipped
-'Tutorials:', // from 2
+'Learn', // from 0
 // part 1
-'Competitions:', // to 3
+'Interesting', // to 1
 // skipped
-'Tools:',
-// skipped
-'Demos:',
-// skipped
-'Games:'
+'Our Sponsor', // from 2
 ];
 
 export default (text) => [
-  getFromTo(parts[2], parts[3], text)
+  getFromTo(parts[0], "##", text)
 ].join('\n\n');

@@ -37,9 +37,9 @@ server.post('/', {
   const text = request.body.content.body;
   const subject = request.body.content.subject;
 
-  console.log('from: ', from);
-  console.log('subject: ', subject);
-  console.log(JSON.stringify(request.body));
+  // console.log('from: ', from);
+  // console.log('subject: ', subject);
+  // console.log(JSON.stringify(request.body));
 
   if (from === FORWARDED_EMAIL) {
     const isForwarded = text.includes('---------- Forwarded message ---------')
