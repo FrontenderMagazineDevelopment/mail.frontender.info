@@ -19,7 +19,7 @@ const queue = 'bus';
 
 dotenv.config();
 
-const { FORWARDED_EMAIL, PORT = 3000 } = process.env;
+const { FORWARDED_EMAIL, RABIITMQ_HOST, PORT = 3000 } = process.env;
 
 const server = fastify({ logger: true });
 server.register(shutdown);
@@ -74,7 +74,10 @@ server.post('/', {
   const links = await plugin(request.body.content.body);
   console.log(links);
 
-  const msg = JSON.stringify(links);
+  const msg = JSON.stringify({
+    name: "ARTICLE_LINKS",
+    payload: links,
+  });
   await channel.sendToQueue(queue, Buffer.from(msg));
   console.log(" [x] Sent %s", msg);
 
@@ -84,7 +87,7 @@ const startServer = async () => {
   try {  
     await server.listen(PORT, '0.0.0.0');
     // connecting to the rebbitmq bus
-    connection = await amqp.connect('amqp://localhost');
+    connection = await amqp.connect(`amqp://${RABIITMQ_HOST}`);
     channel = await connection.createChannel();
     await channel.assertQueue(queue, {
       durable: false
