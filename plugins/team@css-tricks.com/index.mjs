@@ -6,6 +6,7 @@ import banVendors from '@utils/banVendors';
 import removeHash from '@utils/removeHash';
 import removeSearch from '@utils/removeSearch';
 import removeRootURL from '@utils/removeRootURL';
+import removeNewsletter from './utils/removeNewsletter';
 import removeSponsor from './utils/removeSponsor';
 import removeListControls from './utils/removeListControls';
 
@@ -17,6 +18,7 @@ const helpers = [
   removeSearch,
   removeAnalytics,
   removeRootURL,
+  removeNewsletter,
   removeDuplicates,
   removeListControls,
 ];
