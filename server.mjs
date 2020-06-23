@@ -13,9 +13,25 @@ import amqp from 'amqplib';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-let channel;
-let connection;
-const queue = 'bus';
+
+const sendMessage = async (links) => {
+  const queue = 'bus';
+  const connection = await amqp.connect(`amqp://${RABIITMQ_HOST}`);
+  const channel = await connection.createChannel();
+  await channel.assertQueue(queue, {
+    durable: false
+  });
+
+  const msg = JSON.stringify({
+    name: "ARTICLE_LINKS",
+    payload: links,
+  });
+  await channel.sendToQueue(queue, Buffer.from(msg));
+  console.log(" [x] Sent %s", msg);
+
+  await channel.close();
+  await connection.close();
+}
 
 dotenv.config();
 
@@ -74,29 +90,16 @@ server.post('/', {
   const links = await plugin(request.body.content.body);
   console.log(links);
 
-  const msg = JSON.stringify({
-    name: "ARTICLE_LINKS",
-    payload: links,
-  });
-  await channel.sendToQueue(queue, Buffer.from(msg));
-  console.log(" [x] Sent %s", msg);
+
+  await sendMessage(links);
 
 });
 
 const startServer = async () => {
   try {  
     await server.listen(PORT, '0.0.0.0');
-    // connecting to the rebbitmq bus
-    connection = await amqp.connect(`amqp://${RABIITMQ_HOST}`);
-    channel = await connection.createChannel();
-    await channel.assertQueue(queue, {
-      durable: false
-    });
-
   } catch (error) {
     // shutting down rabbitmq connection
-    if (channel) await channel.close();
-    if (connection) await connection.close();
     server.log.error(error);
     process.exit(1);
   }
